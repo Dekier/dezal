@@ -1,0 +1,136 @@
+.Offer {
+  &__main-container {
+    display: flex;
+    width: 100%;
+    background: $color-white;
+  }
+
+  &__center-container {
+    width: 1200px;
+    margin: auto;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 300;
+    color: $color-title;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    margin: auto;
+    margin-bottom: 60px;
+    line-height: 25px;
+    width: 60%;
+    text-align: center;
+    color: $color-text;
+    font-size: 15px;
+  }
+
+  &__boxes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 340px;
+    padding: 15px 15px 50px;
+    border-bottom: 1px dashed  $color-text;
+    margin-bottom: 30px;
+  }
+
+  &__box-title {
+    font-size: 18px;
+    font-weight: 300;
+    color: $color-title;
+    text-transform: uppercase;
+    margin: 10px 0 25px;
+    cursor: default;
+  }
+
+  &__box-image-container {
+    height: 190px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__box-image {
+    height: 190px;
+    width: 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 400ms;
+  }
+
+  &__box:hover &__box-image {
+    transform: scale(1.04)
+  }
+
+  &__box-text {
+    color: $color-text;
+    font-size: 15px;
+    margin-top: 25px;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    cursor: default;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+  }
+
+  &__box-btn {
+    margin-top: 25px;
+    background-color: $color-yellow;
+    padding: 10px;
+    width: max-content;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: $color-title;
+  }
+
+  &__box-arrow {
+    transition: all 400ms;
+    height: 15px;
+    margin-top: 2px;
+    margin-left: 2px;
+    position: relative;
+    right: 0;
+  }
+
+  &__box:hover &__box-arrow {
+    animation: arrow 700ms infinite;
+  }
+
+  
+  @media only screen and (max-width: 1200px) {
+    &__center-container {
+      width: 100%;
+    }
+
+    &__box {
+      margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: 540px) {
+    &__description {
+      width: 80%;
+    }
+  }
+}
+
+@keyframes arrow {
+  from {right: 0; opacity: 1}
+  to {right: -8px; opacity: 0}
+}

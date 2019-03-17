@@ -1,0 +1,286 @@
+.Contact {
+  &__main-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  &__top-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__information-container, &__form-container {
+    display: flex;
+    padding: 50px;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  &__information-container {
+    background-image: url('/image/contact.jpg');
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    position: relative;
+  }
+
+  &__information-dark-background {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    margin: 150px 290px auto auto;
+    cursor: default;
+  }
+
+  &__information-title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    color: $color-white;
+    svg {
+      position: relative;
+      top: -2px;
+      margin-right: 20px;    
+    }
+  }
+
+  &__information-text, &__information-link {
+    margin-bottom: 30px;
+    line-height: 25px;
+    padding-left: 40px;
+    color: $color-yellow;
+    font-size: 15px;
+  }
+
+  &__information-link {
+    text-decoration: none;
+    width: max-content;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom-container {
+    width: 100%;
+    height: 650px;
+    iframe {
+      width: 100%;
+      height: 650px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-title {
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  &__label {
+    border: 1px solid $color-border;
+    border-bottom: none;
+    padding: 0px 25px;
+    min-height: 55px;
+    box-sizing: border-box;
+    line-height: 55px;
+    width: 450px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: $color-text;
+    margin-top: 15px;
+  }
+
+  &__select {
+    width: 450px;
+    min-height: 55px;
+    border: 1px solid $color-border;
+    line-height: 55px;
+    padding: 0px 25px;
+    margin: 0 auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__select-arrow {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 20px;
+    transform: rotate(90deg);
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+    min-height: 55px;
+    margin: 0 auto;
+  }
+
+  &__input-half {
+    border: 1px solid $color-border;
+    padding: 0px 25px;
+    width: 50%;
+
+    &:last-child {
+      border-left: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #ccc;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #ccc;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #ccc;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #ccc;
+    }
+  }
+
+  &__input {
+    border: 1px solid $color-border;
+    padding: 0px 25px;
+    width: 100%;
+    width: 450px;
+    min-height: 55px;
+    margin: 0 auto;
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #ccc;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #ccc;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #ccc;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #ccc;
+    }
+  }
+
+  &__textarea {
+    border: 1px solid $color-border;
+    padding: 10px 25px;
+    width: 100%;
+    width: 450px;
+    min-height: 100px;
+    margin: 0 auto;
+    resize: none;
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #ccc;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #ccc;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #ccc;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #ccc;
+    }
+  }
+
+  &__submit {
+    border: none;
+    padding: 20px 25px;
+    width: 100%;
+    width: 200px;
+    margin: 30px auto;
+    resize: none;
+    color: $color-title;
+    background: $color-yellow;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #ccc;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: #ccc;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: #ccc;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: #ccc;
+    }
+  }
+
+
+
+  
+  @media only screen and (max-width: 1200px) {
+
+    &__information {
+      margin: 100px auto auto auto;
+    }
+  }
+
+  @media only screen and (max-width: 1050px) {
+    &__top-container {
+      flex-direction: column;
+    }
+
+    &__information-container, &__form-container {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    &__form-container {
+      padding: 15px;
+    }
+
+    &__information {
+      margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    &__textarea, &__label, &__input, &__row {
+      width: 100%;
+    }
+  }
+}
