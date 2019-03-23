@@ -24,6 +24,12 @@
         </span>
         <span
           class="Realization__filter"
+          :class="{ 'Realization__filter--active': currentFilter === 'MATERIAŁOWE' }"
+          @click="setFilter('MATERIAŁOWE')">
+            MATERIAŁOWE
+        </span>
+        <span
+          class="Realization__filter"
           :class="{ 'Realization__filter--active': currentFilter === 'RZYMSKIE' }"
           @click="setFilter('RZYMSKIE')">
             RZYMSKIE
@@ -61,7 +67,7 @@
           v-for="(imageData, index) in allImages"
           :key="imageData.id">
           <div class="Realization__project-image"
-          :style="{'background-image': `url(${imageData.image})`}">
+          :style="{'background-image': `url(${imageData.url})`}">
           </div>
           <div
           @click="showBigGallery(index)"
@@ -101,20 +107,40 @@ export default {
     return {
       currentFilter: 'ALL',
       imagesData: [
-        {id: 1, url: "https://picsum.photos/g/200?image=122", category: 'DZIENOC'},
-        {id: 2, url: "https://picsum.photos/g/200?image=116", category: 'DZIENOC'},
-        {id: 3, url: "https://picsum.photos/g/200?image=121", category: 'MATERIALOWE'},
-        {id: 4, url: "https://picsum.photos/g/200?image=133", category: 'RZYMSKIE'},
-        {id: 5, url: "https://picsum.photos/g/200?image=134", category: 'MATERIALOWE'},
-        {id: 6, url: "https://picsum.photos/g/200?image=115", category: 'PLISY'},
-        {id: 7, url: "https://picsum.photos/g/200?image=115", category: 'DZIENOC'},
-        {id: 8, url: "https://picsum.photos/g/200?image=115", category: 'ZALUZJE'},
-        {id: 9, url: "https://picsum.photos/g/200?image=115", category: 'VERTICALE'},
-        {id: 10, url: "https://picsum.photos/g/200?image=115", category: 'MASKITIERY'},
-        {id: 11, url: "https://picsum.photos/g/200", category: 'RZYMSKIE'}
+        {id: 1, url: "/image/rolety/dziennoc1.jpg", category: 'DZIENOC'},
+        {id: 2, url: "/image/rolety/dziennoc2.jpg", category: 'DZIENOC'},
+        {id: 3, url: "/image/rolety/dziennoc3.jpg", category: 'DZIENOC'},
+        {id: 4, url: "/image/rolety/dziennoc4.jpg", category: 'DZIENOC'},
+        {id: 5, url: "/image/rolety/dziennoc5.jpg", category: 'DZIENOC'},
+        {id: 6, url: "/image/rolety/dziennoc6.jpg", category: 'DZIENOC'},
+        {id: 7, url: "/image/rolety/dziennoc7.jpg", category: 'DZIENOC'},
+        {id: 8, url: "/image/plisy/1.jpg", category: 'PLISY'},
+        {id: 9, url: "/image/plisy/2.jpg", category: 'PLISY'},
+        {id: 10, url: "/image/plisy/3.jpg", category: 'PLISY'},
+        {id: 11, url: "/image/rolety/materialowe1.jpg", category: 'MATERIAŁOWE'},
+        {id: 12, url: "/image/rolety/materialowe2.jpg", category: 'MATERIAŁOWE'},
+        {id: 13, url: "/image/rolety/materialowe3.jpg", category: 'MATERIAŁOWE'},
+        {id: 14, url: "/image/rolety/rzymskie.jpg", category: 'RZYMSKIE'},
+        {id: 15, url: "/image/rolety/rzymskie1.jpg", category: 'RZYMSKIE'},
+        {id: 16, url: "/image/zaluzje/drewniane1.jpg", category: 'ZALUZJE'},
+        {id: 17, url: "/image/zaluzje/drewniane2.jpg", category: 'ZALUZJE'},
+        {id: 18, url: "/image/zaluzje/drewniane3.jpg", category: 'ZALUZJE'},
+        {id: 19, url: "/image/zaluzje/aluminiowe1.jpg", category: 'ZALUZJE'},
+        {id: 20, url: "/image/verticale/1.jpg", category: 'VERTICALE'},
+        {id: 21, url: "/image/moskitiery/1.jpg", category: 'MASKITIERY'}
       ],
       activeGallery: false,
-      activeImageIndex: null
+      activeImageIndex: null,
+      title: ''
+    }
+  },
+
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'My custom description' }
+      ]
     }
   },
 
