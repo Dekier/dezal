@@ -31,7 +31,8 @@ export default {
       bottomImages: [
         { id: 1, url: '/image/plisy/1.jpg' },
         { id: 2, url: '/image/plisy/2.jpg' },
-        { id: 3, url: '/image/plisy/3.jpg' }
+        { id: 3, url: '/image/plisy/3.jpg' },
+        { id: 4, url: '/image/plisy/4.jpg' }
       ],
       offerData: {
         title: 'Zobacz również',
