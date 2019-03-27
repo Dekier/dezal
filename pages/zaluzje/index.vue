@@ -31,7 +31,8 @@ export default {
       realizationDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Przykładowe realizacje naszych',
       bottomImages: [
         { id: 1, url: '/image/zaluzje/drewniane2.jpg' },
-        { id: 2, url: '/image/zaluzje/drewniane3.jpg' }
+        { id: 2, url: '/image/zaluzje/drewniane3.jpg' },
+        { id: 3, url: '/image/zaluzje/drewniane4.jpg' }
       ],
       offerData: {
         title: 'Zobacz również',

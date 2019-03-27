@@ -31,7 +31,8 @@ export default {
       bottomImages: [
         { id: 1, url: '/image/rolety/materialowe1.jpg' },
         { id: 2, url: '/image/rolety/materialowe2.jpg' },
-        { id: 3, url: '/image/rolety/materialowe3.jpg' }
+        { id: 3, url: '/image/rolety/materialowe3.jpg' },
+        { id: 4, url: '/image/rolety/materialowe4.jpg' }
       ],
       offerData: {
         title: 'Zobacz również',

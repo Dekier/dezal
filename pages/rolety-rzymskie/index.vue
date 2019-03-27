@@ -29,7 +29,9 @@ export default {
       ],
       realizationDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Przykładowe realizacje naszych',
       bottomImages: [
-        { id: 1, url: '/image/rolety/rzymskie1.jpg' }
+        { id: 1, url: '/image/rolety/rzymskie1.jpg' },
+        { id: 2, url: '/image/rolety/rzymskie2.jpg' },
+        { id: 3, url: '/image/rolety/rzymskie3.jpg' }
       ],
       offerData: {
         title: 'Zobacz również',
