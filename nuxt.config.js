@@ -9,7 +9,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli' },
+      { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli jak i kolorów.' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600'

@@ -40,14 +40,14 @@ export default {
         description: 'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: ['plisy', 'materialowe', 'rzymskie', 'zaluzje', 'verticale', 'moskitiery']
       },
-      title: ''
+      title: 'Rolety dzień-noc w Poznaniu od firmy Deżal.'
     }
   },
   head () {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
+        { hid: 'description', name: 'description', content: 'Rolety dzień-noc w Poznaniu na Piątkowie. Montaż w cene!' }
       ]
     }
   }

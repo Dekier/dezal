@@ -38,14 +38,14 @@ export default {
         description: 'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: ['dzien-noc', 'materialowe', 'plisy', 'zaluzje', 'verticale', 'moskitiery']
       },
-      title: ''
+      title: 'Rolety Rzymskie w Poznaniu od firmy Deżal.'
     }
   },
   head () {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
+        { hid: 'description', name: 'description', content: 'Rolety Rzymskie w Poznaniu na Piątkowie. Montaż w cene!' }
       ]
     }
   }

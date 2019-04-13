@@ -39,14 +39,14 @@ export default {
         description: 'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: ['dzien-noc', 'materialowe', 'rzymskie', 'plisy', 'verticale', 'moskitiery']
       },
-      title: ''
+      title: 'Żaluzje drewniane/aluminiowe w Poznaniu od firmy Deżal.'
     }
   },
   head () {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
+        { hid: 'description', name: 'description', content: 'Żaluzje drewniane/aluminiowe w Poznaniu na Piątkowie. Montaż w cene!' }
       ]
     }
   }

@@ -107,14 +107,6 @@
     background-repeat: no-repeat;
   }
 
-  &__project:hover &__hover-background {
-    display: block;
-  }
-
-  &__project:hover &__project-image {
-    transform: scale(1.1);
-  }
-
   &__hover-background {
     display: none;
     position: absolute;
@@ -123,6 +115,10 @@
     background: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
+  }
+
+  &__project:hover &__hover-background {
+    display: block;
   }
 
   &__hover-icon {
@@ -135,6 +131,10 @@
   @media (max-width: 1200px) {
     &__projects {
       width: auto;
+    }
+
+    &__project:hover &__hover-background {
+      display: none;
     }
   
     &__filters-container {
