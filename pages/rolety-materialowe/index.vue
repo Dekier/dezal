@@ -39,14 +39,14 @@ export default {
         description: 'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: ['dzien-noc', 'plisy', 'rzymskie', 'zaluzje', 'verticale', 'moskitiery']
       },
-      title: ''
+      title: 'Rolety Materiałowe w Poznaniu od firmy Deżal.'
     }
   },
   head () {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
+        { hid: 'description', name: 'description', content: 'Rolety Materiałowe w Poznaniu na Piątkowie. Montaż w cene!' }
       ]
     }
   }

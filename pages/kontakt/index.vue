@@ -190,7 +190,7 @@ export default {
         number: '',
         text: ''
       },
-      title: ''
+      title: 'Deżal - Kontakt'
     }
   },
 
@@ -198,7 +198,7 @@ export default {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
+        { hid: 'description', name: 'description', content: 'Szybki telefon, szybka odpowiedź.' }
       ]
     }
   }

@@ -65,7 +65,7 @@
         <div
           class="Realization__project"
           v-for="(imageData, index) in allImages"
-          :key="imageData.id + imageData.url">
+          :key="imageData.id">
           <div class="Realization__project-image"
           :style="{'background-image': `url(${imageData.url})`}">
           </div>
@@ -114,39 +114,39 @@ export default {
         {id: 5, url: "/image/rolety/dziennoc5.jpg", category: 'DZIENOC'},
         {id: 6, url: "/image/rolety/dziennoc6.jpg", category: 'DZIENOC'},
         {id: 7, url: "/image/rolety/dziennoc7.jpg", category: 'DZIENOC'},
-        {id: 7, url: "/image/rolety/dziennoc8.jpg", category: 'DZIENOC'},
-        {id: 8, url: "/image/plisy/1.jpg", category: 'PLISY'},
-        {id: 9, url: "/image/plisy/2.jpg", category: 'PLISY'},
-        {id: 10, url: "/image/plisy/3.jpg", category: 'PLISY'},
-        {id: 11, url: "/image/plisy/4.jpg", category: 'PLISY'},
-        {id: 12, url: "/image/plisy/5.jpg", category: 'PLISY'},
-        {id: 13, url: "/image/plisy/6.jpg", category: 'PLISY'},
-        {id: 14, url: "/image/plisy/7.jpg", category: 'PLISY'},
-        {id: 15, url: "/image/plisy/8.jpg", category: 'PLISY'},
-        {id: 16, url: "/image/rolety/materialowe1.jpg", category: 'MATERIAŁOWE'},
-        {id: 17, url: "/image/rolety/materialowe2.jpg", category: 'MATERIAŁOWE'},
-        {id: 18, url: "/image/rolety/materialowe3.jpg", category: 'MATERIAŁOWE'},
-        {id: 19, url: "/image/rolety/materialowe4.jpg", category: 'MATERIAŁOWE'},
-        {id: 20, url: "/image/rolety/materialowe5.jpg", category: 'MATERIAŁOWE'},
-        {id: 21, url: "/image/rolety/materialowe6.jpg", category: 'MATERIAŁOWE'},
-        {id: 22, url: "/image/rolety/materialowe7.jpg", category: 'MATERIAŁOWE'},
-        {id: 23, url: "/image/rolety/rzymskie.jpg", category: 'RZYMSKIE'},
-        {id: 24, url: "/image/rolety/rzymskie1.jpg", category: 'RZYMSKIE'},
-        {id: 25, url: "/image/rolety/rzymskie2.jpg", category: 'RZYMSKIE'},
-        {id: 26, url: "/image/rolety/rzymskie3.jpg", category: 'RZYMSKIE'},
-        {id: 27, url: "/image/rolety/rzymskie4.jpg", category: 'RZYMSKIE'},
-        {id: 28, url: "/image/rolety/rzymskie5.jpg", category: 'RZYMSKIE'},
-        {id: 29, url: "/image/zaluzje/drewniane1.jpg", category: 'ZALUZJE'},
-        {id: 30, url: "/image/zaluzje/drewniane2.jpg", category: 'ZALUZJE'},
-        {id: 31, url: "/image/zaluzje/drewniane3.jpg", category: 'ZALUZJE'},
-        {id: 32, url: "/image/zaluzje/drewniane4.jpg", category: 'ZALUZJE'},
-        {id: 33, url: "/image/zaluzje/aluminiowe1.jpg", category: 'ZALUZJE'},
-        {id: 34, url: "/image/verticale/1.jpg", category: 'VERTICALE'},
-        {id: 35, url: "/image/moskitiery/1.jpg", category: 'MASKITIERY'}
+        {id: 8, url: "/image/rolety/dziennoc8.jpg", category: 'DZIENOC'},
+        {id: 9, url: "/image/plisy/1.jpg", category: 'PLISY'},
+        {id: 10, url: "/image/plisy/2.jpg", category: 'PLISY'},
+        {id: 11, url: "/image/plisy/3.jpg", category: 'PLISY'},
+        {id: 12, url: "/image/plisy/4.jpg", category: 'PLISY'},
+        {id: 13, url: "/image/plisy/5.jpg", category: 'PLISY'},
+        {id: 14, url: "/image/plisy/6.jpg", category: 'PLISY'},
+        {id: 15, url: "/image/plisy/7.jpg", category: 'PLISY'},
+        {id: 16, url: "/image/plisy/8.jpg", category: 'PLISY'},
+        {id: 17, url: "/image/rolety/materialowe1.jpg", category: 'MATERIAŁOWE'},
+        {id: 18, url: "/image/rolety/materialowe2.jpg", category: 'MATERIAŁOWE'},
+        {id: 19, url: "/image/rolety/materialowe3.jpg", category: 'MATERIAŁOWE'},
+        {id: 20, url: "/image/rolety/materialowe4.jpg", category: 'MATERIAŁOWE'},
+        {id: 21, url: "/image/rolety/materialowe5.jpg", category: 'MATERIAŁOWE'},
+        {id: 22, url: "/image/rolety/materialowe6.jpg", category: 'MATERIAŁOWE'},
+        {id: 23, url: "/image/rolety/materialowe7.jpg", category: 'MATERIAŁOWE'},
+        {id: 24, url: "/image/rolety/rzymskie.jpg", category: 'RZYMSKIE'},
+        {id: 25, url: "/image/rolety/rzymskie1.jpg", category: 'RZYMSKIE'},
+        {id: 26, url: "/image/rolety/rzymskie2.jpg", category: 'RZYMSKIE'},
+        {id: 27, url: "/image/rolety/rzymskie3.jpg", category: 'RZYMSKIE'},
+        {id: 28, url: "/image/rolety/rzymskie4.jpg", category: 'RZYMSKIE'},
+        {id: 29, url: "/image/rolety/rzymskie5.jpg", category: 'RZYMSKIE'},
+        {id: 30, url: "/image/zaluzje/drewniane1.jpg", category: 'ZALUZJE'},
+        {id: 31, url: "/image/zaluzje/drewniane2.jpg", category: 'ZALUZJE'},
+        {id: 32, url: "/image/zaluzje/drewniane3.jpg", category: 'ZALUZJE'},
+        {id: 33, url: "/image/zaluzje/drewniane4.jpg", category: 'ZALUZJE'},
+        {id: 34, url: "/image/zaluzje/aluminiowe1.jpg", category: 'ZALUZJE'},
+        {id: 35, url: "/image/verticale/1.jpg", category: 'VERTICALE'},
+        {id: 36, url: "/image/moskitiery/1.jpg", category: 'MASKITIERY'}
       ],
       activeGallery: false,
       activeImageIndex: null,
-      title: ''
+      title: 'Plisty, Rolety, Moskitery, Rzymskie w Poznaniu od firmy Deżal.'
     }
   },
 
@@ -154,7 +154,7 @@ export default {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
+        { hid: 'description', name: 'description', content: 'Realizacje naszych usług.' }
       ]
     }
   },
@@ -184,6 +184,7 @@ export default {
     showBigGallery (index) {
       this.activeGallery = true
       this.activeImageIndex = index
+      console.log(index)
     },
 
     exitGallery () {
