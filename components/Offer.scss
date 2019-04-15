@@ -43,7 +43,7 @@
     box-sizing: border-box;
     width: 340px;
     padding: 15px 15px 50px;
-    border-bottom: 1px dashed  $color-text;
+    border-bottom: 1px dashed $color-text;
     margin-bottom: 30px;
   }
 
@@ -69,6 +69,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 400ms;
+    will-change: transform;
   }
 
   &__box:hover &__box-image {
@@ -106,13 +107,14 @@
     margin-left: 2px;
     position: relative;
     right: 0;
+    will-change: right;
   }
 
   &__box:hover &__box-arrow {
     animation: arrow 700ms infinite;
   }
 
-  
+
   @media only screen and (max-width: 1200px) {
     &__center-container {
       width: 100%;
@@ -131,6 +133,13 @@
 }
 
 @keyframes arrow {
-  from {right: 0; opacity: 1}
-  to {right: -8px; opacity: 0}
+  from {
+    right: 0;
+    opacity: 1
+  }
+
+  to {
+    right: -8px;
+    opacity: 0
+  }
 }

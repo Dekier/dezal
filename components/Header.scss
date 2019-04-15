@@ -82,7 +82,7 @@
     top: 35%;
     transform: translate(-50%, -50%);
   }
-  
+
   &__dropdown {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -102,8 +102,9 @@
     text-decoration: none;
     text-transform: uppercase;
     line-height: 40px;
+
     &:hover {
-      background:#fff290;
+      background: #fff290;
     }
   }
 
@@ -112,7 +113,7 @@
     display: none;
   }
 
-  
+
   &__links-container-mobile {
     display: none;
   }
@@ -163,7 +164,7 @@
       position: absolute;
       transform: rotate(45deg)
     }
-    
+
     &__hamburger-line-second {
       position: absolute;
       transform: rotate(-45deg)
@@ -177,7 +178,7 @@
       margin-top: 30px;
       display: block;
     }
-  
+
     &__link-mobile {
       text-decoration: none;
       font-size: 16px;
@@ -200,7 +201,7 @@
 
     &__dropdown-link-mobile {
       padding: 12px;
-      color: rgba(32,33,33,0.74118);
+      color: rgba(32, 33, 33, 0.74118);
       text-decoration: none;
       font-size: 14px;
       text-transform: uppercase;
@@ -214,22 +215,20 @@
   stroke: $color-yellow;
   fill: none;
   stroke-dasharray: 200;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
-  -webkit-transform: translateX(100px);
   transform: translateX(100px);
-
+  will-change: transform;
 }
+
 .svg-top-left,
 .svg-bottom-left {
   stroke-width: 5;
   stroke: $color-yellow;
   fill: none;
   stroke-dasharray: 200;
-  -webkit-transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
-  -webkit-transform: translateX(-100px);
   transform: translateX(-100px);
+  will-change: transform;
 }
 
 .Header__link:hover svg line.svg-top-left,
