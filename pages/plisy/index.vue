@@ -1,11 +1,7 @@
 <template>
   <div>
-    <ProductInformation
-      :pageData="pageData"
-      :realizationDescription="realizationDescription"
-      :bottom-images="bottomImages"
-    />
-    <Offer :offerData="offerData"/>
+    <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
+    <Offer :offerData="offerData" />
   </div>
 </template>
 
@@ -34,8 +30,6 @@ export default {
             'Plisy to jedne z nielicznych osłon okiennych, które umożliwiają otwarcie skrzydła okiennego pod kątem 90 stopni, czyli na całą szerokość. Stosujemy je do różnych nietypowych kształtów okien. Materiał przesuwamy w górę i w dół w zależności od wybranego modelu. Plisy typu duette różnią się od zwykłej plisy budową tkaniny, która jest w kształcie plastra miodu, co powoduje lepszą izolację termiczną. Posiadamy w swojej ofercie ponad 1000 wzorów tkanin. Wszystkie materiały możemy prać w 30 stopniach według zaleceń producenta.'
         }
       ],
-      realizationDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Przykładowe realizacje naszych',
       bottomImages: [
         { id: 1, url: '/image/plisy/1.jpg' },
         { id: 2, url: '/image/plisy/2.jpg' },

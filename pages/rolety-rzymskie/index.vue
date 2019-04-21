@@ -1,10 +1,7 @@
 <template>
   <div>
-    <ProductInformation
-      :pageData="pageData"
-      :realizationDescription="realizationDescription"
-      :bottom-images="bottomImages"/>
-    <Offer :offerData="offerData"/>
+    <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
+    <Offer :offerData="offerData" />
   </div>
 </template>
 
@@ -25,9 +22,14 @@ export default {
   data() {
     return {
       pageData: [
-        { id: 0, title: 'Rolety rzymskie', url: '/image/rolety/rzymskie.jpg', description: 'Rolety rzymskie coraz częściej stanowią dekorację okna. Wykorzystywane do aranżacji wnętrz klasycznych, nowoczesnych jak i stylowych, zastępują zasłony i firany. Mechanizm łańcuszkowy jest tak zbudowany, aby płynnie podnosić materiał, który układa się w fale. Zdejmowanie materiału jest bardzo proste i szybkie. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.'}
+        {
+          id: 0,
+          title: 'Rolety rzymskie',
+          url: '/image/rolety/rzymskie.jpg',
+          description:
+            'Rolety rzymskie coraz częściej stanowią dekorację okna. Wykorzystywane do aranżacji wnętrz klasycznych, nowoczesnych jak i stylowych, zastępują zasłony i firany. Mechanizm łańcuszkowy jest tak zbudowany, aby płynnie podnosić materiał, który układa się w fale. Zdejmowanie materiału jest bardzo proste i szybkie. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.'
+        }
       ],
-      realizationDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Przykładowe realizacje naszych',
       bottomImages: [
         { id: 1, url: '/image/rolety/rzymskie1.jpg' },
         { id: 2, url: '/image/rolety/rzymskie2.jpg' },
@@ -35,17 +37,29 @@ export default {
       ],
       offerData: {
         title: 'Zobacz również',
-        description: 'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
-        showBoxes: ['dzien-noc', 'materialowe', 'plisy', 'zaluzje', 'verticale', 'moskitiery']
+        description:
+          'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
+        showBoxes: [
+          'dzien-noc',
+          'materialowe',
+          'plisy',
+          'zaluzje',
+          'verticale',
+          'moskitiery'
+        ]
       },
       title: 'Rolety Rzymskie w Poznaniu od firmy Deżal.'
     }
   },
-  head () {
+  head() {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Rolety Rzymskie w Poznaniu na Piątkowie. Montaż w cene!' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Rolety Rzymskie w Poznaniu na Piątkowie. Montaż w cene!'
+        }
       ]
     }
   }

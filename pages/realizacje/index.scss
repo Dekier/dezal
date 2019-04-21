@@ -82,6 +82,7 @@
     justify-content: center;
     width: 1200px;
     margin: auto;
+    will-change: transform, opacity;
   }
 
   &__project {
@@ -160,13 +161,13 @@
 
 .projects-enter {
   will-change: transform, opacity;
-  transform: scale(0.5) translatey(-80px);
+  transform: scale(0.5) translateY(-180px);
   opacity: 0;
 }
 
 .projects-leave-to {
   will-change: transform, opacity;
-  transform: translatey(30px);
+  transform: translateY(30px);
   opacity: 0;
 }
 

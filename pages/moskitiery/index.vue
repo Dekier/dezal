@@ -1,11 +1,7 @@
 <template>
   <div>
-    <ProductInformation
-      :pageData="pageData"
-      :realizationDescription="realizationDescription"
-      :bottom-images="bottomImages"
-    />
-    <Offer :offerData="offerData"/>
+    <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
+    <Offer :offerData="offerData" />
   </div>
 </template>
 
@@ -34,8 +30,6 @@ export default {
             'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.'
         }
       ],
-      realizationDescription:
-        'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.',
       bottomImages: [{ id: 1, url: '/image/moskitiery/1.jpg' }],
       offerData: {
         title: 'Zobacz również',
