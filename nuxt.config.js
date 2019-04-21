@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'universal',
+  mode: 'Universal',
 
   /*
    ** Headers of the page
@@ -9,13 +9,16 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli jak i kolorów.' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600'
-      }
+      { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli jak i kolorów.' }
+
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      {
+        rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600'
+      }]
   },
 
   /*
@@ -33,7 +36,8 @@ module.exports = {
    */
   plugins: [
     { src: '~/plugins/aos.js', ssr: false },
-    { src: '~/plugins/vue-scrollto.js', ssr: false }
+    { src: '~/plugins/vue-scrollto.js', ssr: false },
+    { src: '~plugins/ga.js', ssr: false }
   ],
 
   /*

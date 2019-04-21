@@ -1,8 +1,8 @@
 {
   "name": "dezal",
   "version": "1.0.0",
-  "description": "My cool Nuxt.js project",
-  "author": "MArcin  Dekier &amp; Ola Sip",
+  "description": "Project company Deżal",
+  "author": "Marcin  Dekier & Ola Sip",
   "private": true,
   "scripts": {
     "dev": "nuxt",

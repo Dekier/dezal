@@ -1,11 +1,7 @@
 <template>
   <div>
-    <ProductInformation
-      :pageData="pageData"
-      :realizationDescription="realizationDescription"
-      :bottom-images="bottomImages"
-    />
-    <Offer :offerData="offerData"/>
+    <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
+    <Offer :offerData="offerData" />
   </div>
 </template>
 
@@ -34,8 +30,6 @@ export default {
             'Jedno z najnowocześniejszych rozwiązań na rynku dekoracji okien ostatnich latach. Największą zaletą materiałów dzień-noc jest możliwość regulowania światła za pomocą poziomych pasów transparentnych i zaciemniających. Dzięki temu możemy dostosować ilość promieni słonecznych w danym pomieszczeniu według własnego uznania. Tak płynna regulacja jest niewątpliwie bardzo dużą zaletą tego produktu. Roleta dzień-noc tworzy niepowtarzalny klimat danego wnętrza, w którym zostanie założona.'
         }
       ],
-      realizationDescription:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Przykładowe realizacje naszych',
       bottomImages: [
         { id: 1, url: '/image/rolety/dziennoc1.jpg' },
         { id: 2, url: '/image/rolety/dziennoc7.jpg' },

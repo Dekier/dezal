@@ -1,7 +1,5 @@
 <template>
-  <div
-  id="offer"
-  class="Offer__main-container">
+  <div id="offer" class="Offer__main-container">
     <div class="Offer__center-container">
       <div class="Offer__title">
         {{ offerData.title }}
@@ -10,30 +8,26 @@
         {{ offerData.description }}
       </div>
       <div class="Offer__boxes-container">
-        <div
-          v-for="(box, index) in showBoxes"
-          :key="index" 
-          class="Offer__box">
+        <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
           <div class="Offer__box-title">
             {{ box.title }}
           </div>
           <div class="Offer__box-image-container">
-            <div
-              :style="urlStyle(box.url)" 
-              class="Offer__box-image" />
+            <div :style="urlStyle(box.url)" class="Offer__box-image" />
           </div>
           <div class="Offer__box-text" style="-webkit-box-orient: vertical;">
             {{ box.text }}
           </div>
-          <nuxt-link
-            :to="box.link"
-            class="Offer__box-btn">
+          <nuxt-link :to="box.link" class="Offer__box-btn">
             Czytaj więcej
             <svg
               class="Offer__box-arrow"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 129 129">
-              <path d="M40.4 121.3c-.8.8-1.8 1.2-2.9 1.2s-2.1-.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8 0l53.9 53.9c1.6 1.6 1.6 4.2 0 5.8l-53.9 53.9z"/>
+              viewBox="0 0 129 129"
+            >
+              <path
+                d="M40.4 121.3c-.8.8-1.8 1.2-2.9 1.2s-2.1-.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8 0l53.9 53.9c1.6 1.6 1.6 4.2 0 5.8l-53.9 53.9z"
+              />
             </svg>
           </nuxt-link>
         </div>
@@ -53,8 +47,10 @@ export default {
   },
 
   computed: {
-    showBoxes () {
-      const newList = this.boxesData.filter(box => this.offerData.showBoxes.includes(box.type))
+    showBoxes() {
+      const newList = this.boxesData.filter(box =>
+        this.offerData.showBoxes.includes(box.type)
+      )
       return newList
     }
   },
@@ -66,7 +62,7 @@ export default {
         {
           title: 'Rolety Dzień-noc',
           text:
-            'Jedno z najnowocześniejszych rozwiązao na rynku dekoracji okien ostatnich latach. Największą zaletą materiałów dzień-noc jest możliwośd regulowania światła za pomocą poziomych pasów transparentnych i zaciemniających. Dzięki temu możemy dostosowad ilośd promieni słonecznych w danym pomieszczeniu według własnego uznania. Tak płynna regulacja jest niewątpliwie bardzo dużą zaletą tego produktu. Roleta dzieo-noc tworzy niepowtarzalny klimat danego wnętrza, w którym zostanie założona.',
+            'Jedno z najnowocześniejszych rozwiązań na rynku dekoracji okien ostatnich latach. Największą zaletą materiałów dzień-noc jest możliwość regulowania światła za pomocą poziomych pasów transparentnych i zaciemniających. Dzięki temu możemy dostosowad ilośd promieni słonecznych w danym pomieszczeniu według własnego uznania. Tak płynna regulacja jest niewątpliwie bardzo dużą zaletą tego produktu. Roleta dzieo-noc tworzy niepowtarzalny klimat danego wnętrza, w którym zostanie założona.',
           url: '/image/rolety/dziennoc2.jpg',
           link: '/rolety-dzien-noc',
           type: 'dzien-noc'
@@ -106,14 +102,15 @@ export default {
         {
           title: 'Verticale',
           text:
-            'Verticale inaczej żaluzje pionowe SA idealnym rozwiązaniem dla dużych powierzchni okien w wszędzie tam, gdzie nie można zastosowad innych osłon okiennych jak biurach, instytucjach publicznych itp. Dobrze izolują wnętrze przed nadmiernym nagrzewaniem się, a także posiadają zalety dekoracyjne. Są przy tym proste w obsłudze i funkcjonalne. Występują w szerokościach lameli 89 mm i 127 mm.',
+            'Verticale inaczej żaluzje pionowe są idealnym rozwiązaniem dla dużych powierzchni okien wszędzie tam, gdzie nie można zastosowad innych osłon okiennych jak biurach, instytucjach publicznych itp. Dobrze izolują wnętrze przed nadmiernym nagrzewaniem się, a także posiadają zalety dekoracyjne. Są przy tym proste w obsłudze i funkcjonalne. Występują w szerokościach lameli 89 mm i 127 mm.',
           url: '/image/verticale/1.jpg',
           link: '/verticale',
           type: 'verticale'
         },
         {
           title: 'Moskitiery',
-          text: 'Moskitierę ramkową możemy zastosowad w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.',
+          text:
+            'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.',
           url: '/image/moskitiery/1.jpg',
           link: '/moskitiery',
           type: 'moskitiery'

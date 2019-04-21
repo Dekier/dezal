@@ -19,9 +19,11 @@
     top: 40px;
     border-radius: 50%;
     cursor: pointer;
+
     &:hover {
       background: rgba(255, 255, 255, 0.5);
     }
+
     svg {
       position: absolute;
       top: 50%;
@@ -40,9 +42,11 @@
     border-radius: 50%;
     cursor: pointer;
     transform: rotate(180deg);
+
     &:hover {
       background: rgba(255, 255, 255, 0.5);
     }
+
     svg {
       left: 12px;
       width: 30px;
@@ -60,9 +64,11 @@
     top: calc(50% - 20px);
     border-radius: 50%;
     cursor: pointer;
+
     &:hover {
       background: rgba(255, 255, 255, 0.5);
     }
+
     svg {
       left: 12px;
       width: 30px;
@@ -72,8 +78,8 @@
   }
 
   &__image {
-    width: 50%;
-    height: 50%;
+    width: 65%;
+    height: 65%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -83,7 +89,7 @@
     background-size: contain;
   }
 
-  
+
   @media only screen and (max-width: 800px) {
     &__main-container {
       display: none;
