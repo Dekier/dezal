@@ -169,6 +169,7 @@
   }
 
   @media only screen and (max-width: 1200px) {
+
     &__center-container {
       width: 100%;
       display: flex;
@@ -194,6 +195,13 @@
       margin-top: 110px;
     }
   }
+
+  @media only screen and (max-width: 800px) {
+    &__hover-background {
+      display: none;
+    }
+  }
+
 
   @media only screen and (max-width: 550px) {
     &__main-picture {
