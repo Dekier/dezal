@@ -90,7 +90,6 @@
 
   &__box-btn {
     margin-top: 25px;
-    background-color: $color-yellow;
     padding: 10px;
     width: max-content;
     cursor: pointer;
@@ -98,6 +97,9 @@
     flex-direction: row;
     text-decoration: none;
     color: $color-title;
+    position: relative;
+    background-color: $color-yellow;
+    border: 1px solid $color-title;
   }
 
   &__box-arrow {

@@ -4,7 +4,7 @@
     <div class="Hero__hero-background" />
     <div class="Hero__center-container">
       <h1 class="Hero__title">
-        Witamy na stronie firmy Deżal
+        Witamy na stronie firmy DEŻAL
       </h1>
       <h2 class="Hero__description">
         Jeżeli szukasz najlepszych rozwiązań osłon okiennych znajdziesz je na

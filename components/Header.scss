@@ -35,10 +35,10 @@
 
   &__logo {
     height: 70px;
-    width: 150px;
-    background-image: url('/image/logo.png');
+    width: 132px;
+    background-image: url('/image/logo2.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     box-shadow: 0px 0px 5px 0px $color-gray;
     margin: auto 0;
     justify-content: flex-start;
@@ -134,7 +134,7 @@
 
     &__logo {
       height: 40px;
-      width: 85px;
+      width: 76px;
     }
 
     &__hamburger-container {
