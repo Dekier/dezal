@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'Universal',
+  mode: 'Spa',
 
   /*
    ** Headers of the page
