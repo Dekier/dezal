@@ -23,7 +23,7 @@
             Adres
           </div>
           <div class="Contact__information-text">
-            ul. Jaroczyńskiego 41 <br >
+            ul. Jaroczyńskiego 41 <br />
             60-692 Poznań Piątkowo
           </div>
           <div class="Contact__information-title">
@@ -83,7 +83,7 @@
             Godziny Otwarcia
           </div>
           <div class="Contact__information-text">
-            pon. : 12:00 - 18:00 <br >
+            pon. : 12:00 - 18:00 <br />
             wt.-pt. : 09:00 - 17:00
           </div>
           <div class="Contact__information-title">
@@ -103,17 +103,48 @@
           <a
             href="https://www.facebook.com/rolety.dezal.poznan/"
             target="_blank"
-            class="Contact__information-link">
+            class="Contact__information-link"
+          >
             Facebook
           </a>
+          <div class="Contact__information-title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 490.1 490.1"
+            >
+              <path
+                fill="#fff"
+                d="M385.9 14.2H104.3c-28.2 0-51.1 22.9-51.1 51.1v233.1l-32.3-32.3c-4.8-4.8-12.5-4.8-17.3 0s-4.8 12.5 0 17.3l53.3 53.3c2.4 2.4 5.5 3.6 8.7 3.6s6.3-1.2 8.7-3.6l53.3-53.3c4.8-4.8 4.8-12.5 0-17.3-4.8-4.8-12.5-4.8-17.3 0l-32.4 32.4V65.3c0-14.7 11.9-26.6 26.6-26.6H386c14.7 0 26.6 11.9 26.6 26.6v34c0 6.8 5.5 12.3 12.3 12.3s12.3-5.5 12.3-12.3v-34c-.3-28.1-23.2-51.1-51.3-51.1zM416 153.5l-53.3 53.3c-4.8 4.8-4.8 12.5 0 17.3 2.4 2.4 5.5 3.6 8.7 3.6s6.3-1.2 8.7-3.6l32.4-32.4v233.1c0 14.7-11.9 26.6-26.6 26.6H104.3c-14.7 0-26.6-11.9-26.6-26.6v-34c0-6.8-5.5-12.3-12.3-12.3s-12.3 5.5-12.3 12.3v34c0 28.2 22.9 51.1 51.1 51.1h281.5c28.2 0 51.1-22.9 51.1-51.1V191.7l32.4 32.4c4.8 4.8 12.5 4.8 17.3 0s4.8-12.5 0-17.3l-53.3-53.3c-4.4-4.6-12.6-4.6-17.2 0z"
+              />
+              <path
+                fill="#fff"
+                d="M245.1 136.7c-6.8 0-12.3 5.5-12.3 12.3v18.8h-1.6c-23.4 0-42.5 20.1-42.5 44.7s19.1 44.7 42.5 44.7h27.6c9.9 0 18 9.1 18 20.2 0 11.2-8.1 20.2-18 20.2h-49.6c-6.8 0-12.3 5.5-12.3 12.3s5.5 12.3 12.3 12.3h23.6v19.1c0 6.8 5.5 12.3 12.3 12.3s12.3-5.5 12.3-12.3v-19.2h2.1c23.2-.3 41.9-20.3 41.9-44.7 0-24.7-19.1-44.7-42.5-44.7h-27.6c-9.9 0-18-9.1-18-20.2s8.1-20.2 18-20.2H280c6.8 0 12.3-5.5 12.3-12.3s-5.5-12.3-12.3-12.3h-22.6v-18.8c-.1-6.7-5.5-12.2-12.3-12.2z"
+              />
+            </svg>
+            Dane do przelewu
+          </div>
+          <div class="Contact__information-text">
+            Z.P.H.U. DEŻAL Dariusz Dekier <br />
+            ul. Jaroczyńskiego 41, 60-692 Poznań<br />
+            ING BANK ŚLĄSKI S.A. 83 1050 1520 1000 0090 6935 0826
+          </div>
         </div>
       </div>
       <div class="Contact__form-container">
         <form
           class="Contact__form"
-          :action="`mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${formData.name} ${formData.surname}%0A%0AMój nr telefonu to: ${formData.number} %0A%0AMoja wiadomość: %0A${formData.text}`"
+          :action="
+            `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${
+              formData.name
+            } ${formData.surname}%0A%0AMój nr telefonu to: ${
+              formData.number
+            } %0A%0AMoja wiadomość: %0A${formData.text}`
+          "
           method="post"
-          enctype="text/plain">
+          enctype="text/plain"
+        >
           <div class="Contact__form-title">
             Wyślij wiadomość
           </div>
@@ -122,45 +153,46 @@
           </label>
           <div class="Contact__row">
             <input
-              class="Contact__input-half" 
+              class="Contact__input-half"
               v-model="formData.name"
               type="text"
-              placeholder="Imię" >
+              placeholder="Imię"
+            />
             <input
               class="Contact__input-half"
               v-model="formData.surname"
               type="text"
               placeholder="Nazwisko"
-            >
+            />
           </div>
           <label class="Contact__label">
             TWÓJ EMAIL *
           </label>
           <input
-            class="Contact__input" 
+            class="Contact__input"
             type="email"
             placeholder="Email"
             name="email"
-            v-model="formData.email">
+            v-model="formData.email"
+          />
           <label class="Contact__label">
             TWÓJ NUMER
           </label>
           <input
-            class="Contact__input" 
+            class="Contact__input"
             type="text"
             v-model="formData.number"
-            placeholder="Numer" >
+            placeholder="Numer"
+          />
           <label class="Contact__label">
             TWOJA WIADOMOŚĆ
           </label>
           <textarea
-            class="Contact__textarea" 
+            class="Contact__textarea"
             v-model="formData.text"
-            placeholder="Wiadomość" />
-          <input
-            class="Contact__submit" 
-            type="submit"
-            value="WYŚLIJ" >
+            placeholder="Wiadomość"
+          />
+          <input class="Contact__submit" type="submit" value="WYŚLIJ" />
         </form>
       </div>
     </div>
@@ -178,10 +210,10 @@
 <script>
 export default {
   name: 'Contact',
-  
+
   transition: 'bounce',
 
-  data () {
+  data() {
     return {
       formData: {
         name: '',
@@ -194,11 +226,15 @@ export default {
     }
   },
 
-  head () {
+  head() {
     return {
       title: this.title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Szybki telefon, szybka odpowiedź.' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Szybki telefon, szybka odpowiedź.'
+        }
       ]
     }
   }
