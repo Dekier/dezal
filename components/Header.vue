@@ -123,13 +123,13 @@
         <nuxt-link
           class="Header__link-mobile"
           @click.native=";(showMobileBtn = false), (showMobileDropDown = false)"
-          to="realizacje"
+          to="/realizacje"
           >REALIZACJE</nuxt-link
         >
         <nuxt-link
           class="Header__link-mobile"
           @click.native=";(showMobileBtn = false), (showMobileDropDown = false)"
-          to="kontakt"
+          to="/kontakt"
           >KONTAKT</nuxt-link
         >
       </div>
@@ -252,7 +252,7 @@
         <nuxt-link
           @mouseover.native="showDropDown = false"
           class="Header__link"
-          to="realizacje"
+          to="/realizacje"
         >
           REALIZACJE
           <svg class="Header__link-border" width="200" height="50">
@@ -275,7 +275,7 @@
         <nuxt-link
           class="Header__link"
           @mouseover.native="showDropDown = false"
-          to="kontakt"
+          to="/kontakt"
         >
           KONTAKT
           <svg class="Header__link-border" width="200" height="50">

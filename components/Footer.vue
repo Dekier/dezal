@@ -2,74 +2,49 @@
   <div class="Footer__main-container">
     <div class="Footer__center-container">
       <div class="Footer__links-container">
-        <nuxt-link
-          class="Footer__link Footer__link-title" 
-          to="/">
+        <nuxt-link class="Footer__link Footer__link-title" to="/">
           MENU
         </nuxt-link>
-        <nuxt-link
-          v-scroll-to="'#hero'"
-          class="Footer__link" 
-          to="/">
+        <nuxt-link v-scroll-to="'#hero'" class="Footer__link" to="/">
           Strona Główna
         </nuxt-link>
-        <nuxt-link
-          v-scroll-to="'#aboutCompany'"
-          class="Footer__link"
-          to="/">
+        <nuxt-link v-scroll-to="'#aboutCompany'" class="Footer__link" to="/">
           O Nas
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="realizacje">
+        <nuxt-link class="Footer__link" to="/realizacje">
           Realizacja
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="kontakt">
+        <nuxt-link class="Footer__link" to="/kontakt">
           Kontakt
         </nuxt-link>
       </div>
       <div class="Footer__offer-container">
         <nuxt-link
           v-scroll-to="'#offer'"
-          class="Footer__link Footer__link-title" 
-          to="/">
+          class="Footer__link Footer__link-title"
+          to="/"
+        >
           OFERTA
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="rolety-dzien-noc">
+        <nuxt-link class="Footer__link" to="rolety-dzien-noc">
           Rolety Dzień-noc
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="rolety-materialowe">
+        <nuxt-link class="Footer__link" to="rolety-materialowe">
           Rolety Materiałowe
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="rolety-rzymskie">
+        <nuxt-link class="Footer__link" to="rolety-rzymskie">
           Rolety Rzymskie
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="plisy">
+        <nuxt-link class="Footer__link" to="plisy">
           Plisy
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="zaluzje">
+        <nuxt-link class="Footer__link" to="zaluzje">
           Żaluzje
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="verticale">
+        <nuxt-link class="Footer__link" to="verticale">
           Verticale
         </nuxt-link>
-        <nuxt-link
-          class="Footer__link" 
-          to="moskitiery">
+        <nuxt-link class="Footer__link" to="moskitiery">
           Moskitiery
         </nuxt-link>
       </div>
@@ -80,7 +55,8 @@
         <a
           href="https://www.pracownia-krawiecka.pl/"
           target="_blank"
-          class="Footer__recomended-link">
+          class="Footer__recomended-link"
+        >
           <div class="Footer__recomended-text">
             Pracownia Krawiecka
           </div>
