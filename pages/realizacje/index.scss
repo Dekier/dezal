@@ -148,6 +148,17 @@
       display: inline-block;
       margin: 5px;
     }
+
+    &__title-container,
+    &__image,
+    &__background {
+      height: 200px;
+    }
+
+    &__title {
+      font-size: 30px;
+      margin-top: 110px;
+    }
   }
 }
 
