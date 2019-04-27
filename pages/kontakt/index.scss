@@ -10,7 +10,8 @@
     flex-direction: row;
   }
 
-  &__information-container, &__form-container {
+  &__information-container,
+  &__form-container {
     display: flex;
     padding: 50px;
     width: 50%;
@@ -50,14 +51,16 @@
     flex-direction: row;
     margin-bottom: 10px;
     color: $color-white;
+
     svg {
       position: relative;
       top: -2px;
-      margin-right: 20px;    
+      margin-right: 20px;
     }
   }
 
-  &__information-text, &__information-link {
+  &__information-text,
+  &__information-link {
     margin-bottom: 30px;
     line-height: 25px;
     padding-left: 40px;
@@ -68,6 +71,7 @@
   &__information-link {
     text-decoration: none;
     width: max-content;
+
     &:hover {
       text-decoration: underline;
     }
@@ -76,6 +80,7 @@
   &__bottom-container {
     width: 100%;
     height: 650px;
+
     iframe {
       width: 100%;
       height: 650px;
@@ -155,16 +160,23 @@
       outline: none;
     }
 
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
       color: #ccc;
     }
-    &::-moz-placeholder { /* Firefox 19+ */
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
       color: #ccc;
     }
-    &:-ms-input-placeholder { /* IE 10+ */
+
+    &:-ms-input-placeholder {
+      /* IE 10+ */
       color: #ccc;
     }
-    &:-moz-placeholder { /* Firefox 18- */
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
       color: #ccc;
     }
   }
@@ -176,20 +188,28 @@
     width: 450px;
     min-height: 55px;
     margin: 0 auto;
+
     &:focus {
       outline: none;
     }
 
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
       color: #ccc;
     }
-    &::-moz-placeholder { /* Firefox 19+ */
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
       color: #ccc;
     }
-    &:-ms-input-placeholder { /* IE 10+ */
+
+    &:-ms-input-placeholder {
+      /* IE 10+ */
       color: #ccc;
     }
-    &:-moz-placeholder { /* Firefox 18- */
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
       color: #ccc;
     }
   }
@@ -202,20 +222,28 @@
     min-height: 100px;
     margin: 0 auto;
     resize: none;
+
     &:focus {
       outline: none;
     }
 
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
       color: #ccc;
     }
-    &::-moz-placeholder { /* Firefox 19+ */
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
       color: #ccc;
     }
-    &:-ms-input-placeholder { /* IE 10+ */
+
+    &:-ms-input-placeholder {
+      /* IE 10+ */
       color: #ccc;
     }
-    &:-moz-placeholder { /* Firefox 18- */
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
       color: #ccc;
     }
   }
@@ -230,31 +258,43 @@
     color: $color-title;
     background: $color-yellow;
     cursor: pointer;
+
     &:focus {
       outline: none;
     }
 
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    &::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
       color: #ccc;
     }
-    &::-moz-placeholder { /* Firefox 19+ */
+
+    &::-moz-placeholder {
+      /* Firefox 19+ */
       color: #ccc;
     }
-    &:-ms-input-placeholder { /* IE 10+ */
+
+    &:-ms-input-placeholder {
+      /* IE 10+ */
       color: #ccc;
     }
-    &:-moz-placeholder { /* Firefox 18- */
+
+    &:-moz-placeholder {
+      /* Firefox 18- */
       color: #ccc;
     }
   }
 
 
 
-  
+
   @media only screen and (max-width: 1200px) {
 
     &__information {
       margin: 100px auto auto auto;
+    }
+
+    &__main-container {
+      padding-top: 70px;
     }
   }
 
@@ -263,7 +303,8 @@
       flex-direction: column;
     }
 
-    &__information-container, &__form-container {
+    &__information-container,
+    &__form-container {
       width: 100%;
     }
   }
@@ -279,7 +320,11 @@
   }
 
   @media only screen and (max-width: 500px) {
-    &__textarea, &__label, &__input, &__row {
+
+    &__textarea,
+    &__label,
+    &__input,
+    &__row {
       width: 100%;
     }
   }
