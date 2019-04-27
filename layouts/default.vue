@@ -33,7 +33,6 @@ export default {
 
   methods: {
     hideCookies() {
-      console.log('lol')
       this.visibleCookies = false
       localStorage.cookies = false
     }
