@@ -19,7 +19,6 @@ export default {
 
   methods: {
     hideCookies() {
-      console.log('lol2')
       this.$emit('hideCookies')
     }
   }
