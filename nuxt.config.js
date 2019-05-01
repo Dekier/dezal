@@ -40,6 +40,12 @@ module.exports = {
     { src: '~plugins/ga.js', ssr: false }
   ],
 
+  manifest: {
+    name: 'Deżal Rolety Poznań',
+    short_name: 'Deżal',
+    theme_color: '##ffe100',
+    lang: 'pl'
+  },
   /*
    ** Nuxt.js modules
    */
@@ -47,6 +53,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    '@nuxtjs/pwa',
     'nuxt-sass-resources-loader'
   ],
 
