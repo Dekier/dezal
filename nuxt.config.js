@@ -9,6 +9,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'theme-color', content: '#ffe100' },
       { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli jak i kolorów.' }
 
     ],

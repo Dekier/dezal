@@ -25,15 +25,15 @@ export default {
         {
           id: 0,
           title: 'Rolety rzymskie',
-          url: '/image/rolety/rzymskie.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-0.jpg',
           description:
             'Rolety rzymskie coraz częściej stanowią dekorację okna. Wykorzystywane do aranżacji wnętrz klasycznych, nowoczesnych jak i stylowych, zastępują zasłony i firany. Mechanizm łańcuszkowy jest tak zbudowany, aby płynnie podnosić materiał, który układa się w fale. Zdejmowanie materiału jest bardzo proste i szybkie. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.'
         }
       ],
       bottomImages: [
-        { id: 1, url: '/image/rolety/rzymskie1.jpg' },
-        { id: 2, url: '/image/rolety/rzymskie2.jpg' },
-        { id: 3, url: '/image/rolety/rzymskie4.jpg' }
+        { id: 1, url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg' },
+        { id: 2, url: '/image/rolety/dezal-poznan-roleta-rzymska-2.jpg' },
+        { id: 3, url: '/image/rolety/dezal-poznan-roleta-rzymska-4.jpg' }
       ],
       offerData: {
         title: 'Zobacz również',

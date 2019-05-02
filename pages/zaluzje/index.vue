@@ -25,22 +25,22 @@ export default {
         {
           id: 0,
           title: 'Żaluzje Aluminiowe',
-          url: '/image/zaluzje/aluminiowe1.jpg',
+          url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.jpg',
           description:
             'Żaluzje aluminiowe to produkt ponadczasowy, który dobrze chroni wnętrze przed promieniami słonecznymi, czyli nadmiernym nagrzewaniem się. Dużą zaletą tego produktu jest płynna regulacja, która powoduje ustawienie lameli w taki sposób, że jesteśmy niewidoczni, a słońce nam nie świeci. Żaluzje aluminiowe występują w szerokościach 25 mm i 50 mm . Posiadamy w swojej ofercie bogatą gamę kolorów.'
         },
         {
           id: 1,
-          title: 'Żaluzje Drewniane',
-          url: '/image/zaluzje/drewniane1.jpg',
+          title: 'Żaluzje deżal-poznań-żaluzja-drewniana-',
+          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
           description:
-            'Żaluzje drewniane to wyrób naturalny z drewna lub bambusa pasujący do każdego pomieszczenia nowoczesnego jak i stylowego, który nadaje ciepły i niepowtarzalny klimat. Szeroki wachlarz kolorystyki pozwala na dopasowanie do każdego wnętrza. Żaluzje występują w szerokościach 25 mm i 50 mm.'
+            'Żaluzje deżal-poznań-żaluzja-drewniana- to wyrób naturalny z drewna lub bambusa pasujący do każdego pomieszczenia nowoczesnego jak i stylowego, który nadaje ciepły i niepowtarzalny klimat. Szeroki wachlarz kolorystyki pozwala na dopasowanie do każdego wnętrza. Żaluzje występują w szerokościach 25 mm i 50 mm.'
         }
       ],
       bottomImages: [
-        { id: 1, url: '/image/zaluzje/drewniane2.jpg' },
-        { id: 2, url: '/image/zaluzje/drewniane3.jpg' },
-        { id: 3, url: '/image/zaluzje/drewniane4.jpg' }
+        { id: 1, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-2.jpg' },
+        { id: 2, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-3.jpg' },
+        { id: 3, url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-4.jpg' }
       ],
       offerData: {
         title: 'Zobacz również',
@@ -55,7 +55,8 @@ export default {
           'moskitiery'
         ]
       },
-      title: 'Żaluzje drewniane/aluminiowe w Poznaniu od firmy Deżal.'
+      title:
+        'Żaluzje deżal-poznań-żaluzja-drewniana-/aluminiowe w Poznaniu od firmy Deżal.'
     }
   },
   head() {
@@ -66,7 +67,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Żaluzje drewniane/aluminiowe w Poznaniu na Piątkowie. Montaż w cene!'
+            'Żaluzje deżal-poznań-żaluzja-drewniana-/aluminiowe w Poznaniu na Piątkowie. Montaż w cene!'
         }
       ]
     }
