@@ -25,16 +25,16 @@ export default {
         {
           id: 0,
           title: 'Plisy',
-          url: '/image/plisy/1.jpg',
+          url: '/image/plisy/deżal-poznań-plisa-1.jpg',
           description:
             'Plisy to jedne z nielicznych osłon okiennych, które umożliwiają otwarcie skrzydła okiennego pod kątem 90 stopni, czyli na całą szerokość. Stosujemy je do różnych nietypowych kształtów okien. Materiał przesuwamy w górę i w dół w zależności od wybranego modelu. Plisy typu duette różnią się od zwykłej plisy budową tkaniny, która jest w kształcie plastra miodu, co powoduje lepszą izolację termiczną. Posiadamy w swojej ofercie ponad 1000 wzorów tkanin. Wszystkie materiały możemy prać w 30 stopniach według zaleceń producenta.'
         }
       ],
       bottomImages: [
-        { id: 1, url: '/image/plisy/1.jpg' },
-        { id: 2, url: '/image/plisy/2.jpg' },
-        { id: 3, url: '/image/plisy/3.jpg' },
-        { id: 4, url: '/image/plisy/4.jpg' }
+        { id: 1, url: '/image/plisy/deżal-poznań-plisa-1.jpg' },
+        { id: 2, url: '/image/plisy/deżal-poznań-plisa-2.jpg' },
+        { id: 3, url: '/image/plisy/deżal-poznań-plisa-3.jpg' },
+        { id: 4, url: '/image/plisy/deżal-poznań-plisa-4.jpg' }
       ],
       offerData: {
         title: 'Zobacz również',

@@ -25,12 +25,14 @@ export default {
         {
           id: 0,
           title: 'Moskitiery',
-          url: '/image/moskitiery/1.jpg',
+          url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
           description:
             'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.'
         }
       ],
-      bottomImages: [{ id: 1, url: '/image/moskitiery/1.jpg' }],
+      bottomImages: [
+        { id: 1, url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg' }
+      ],
       offerData: {
         title: 'Zobacz również',
         description:
