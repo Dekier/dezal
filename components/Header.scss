@@ -64,15 +64,12 @@
     color: #202121bd;
     line-height: 40px;
     position: relative;
-    padding: 8px;
+    padding: 6px;
     display: flex;
     position: relative;
     cursor: pointer;
     overflow: hidden;
-
-    // &:hover {
-    //   color: $color-yellow;
-    // }
+    margin: auto 2px;
   }
 
   &__link-arrow {
@@ -106,9 +103,10 @@
     text-decoration: none;
     text-transform: uppercase;
     line-height: 40px;
+    width: 100% !important;
 
     &:hover {
-      background: #fff290;
+      background: $color-yellow;
     }
   }
 
@@ -245,4 +243,27 @@
 .Header__link:hover svg line.svg-bottom-right {
   -webkit-transform: translateX(0);
   transform: translateX(0);
+}
+
+.svg-bottom-right--active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.svg-bottom-left--active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+  {
+  opacity: 0;
 }

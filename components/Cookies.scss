@@ -36,4 +36,16 @@
       transform: translate(-50%, -50%) scale(0.2);
     }
   }
+
+  @media only screen and (max-width: 800px) {
+    &__main-container {
+      padding-right: 40px;
+    }
+
+    &__btn {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+  }
 }
