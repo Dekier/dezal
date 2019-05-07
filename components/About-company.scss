@@ -42,6 +42,7 @@
     text-align: center;
     padding: 10px 0 20px;
     color: $color-title;
+
     &--active {
       color: $color-yellow;
     }
@@ -69,26 +70,33 @@
 
     svg {
       margin: auto;
-      display: flex;
+      display: block;
       padding-bottom: 30px;
     }
 
-    & + & {
+    &+& {
       border-left: none;
     }
   }
 
-  
+
   @media (max-width: 1200px) {
+    &__main-container {
+      padding: 70px 15px;
+    }
+
     &__center-container {
       width: auto;
     }
+
     &__boxes {
       flex-direction: column;
     }
+
     &__box {
       margin: auto;
-      & + & {
+
+      &+& {
         border: 1px solid #f2f2f2;
       }
     }
