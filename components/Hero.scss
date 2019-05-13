@@ -121,4 +121,11 @@
       bottom: -30px;
     }
   }
+
+  @media only screen and (max-width: 400px) {
+    &__description {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
 }

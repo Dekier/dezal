@@ -405,7 +405,6 @@ export default {
     showBigGallery(index) {
       this.activeGallery = true
       this.activeImageIndex = index
-      console.log(index)
     },
 
     exitGallery() {
