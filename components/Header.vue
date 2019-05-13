@@ -5,7 +5,7 @@
     @mouseleave="showDropDown = false"
   >
     <div class="Header__center-container">
-      <nuxt-link to="/">
+      <nuxt-link @click.native="pageActive = 'home'" to="/">
         <div class="Header__logo" />
       </nuxt-link>
       <div
@@ -176,6 +176,7 @@
           </svg>
         </nuxt-link>
         <nuxt-link
+          @click.native="pageActive = 'about'"
           @mouseover.native="showDropDown = false"
           v-scroll-to="'#aboutCompany'"
           class="Header__link"
@@ -243,48 +244,49 @@
         >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native="showDropDown = false"
+            @click.native=";(showDropDown = false), (pageActive = 'offer')"
             to="/rolety-dzien-noc"
             >Rolety Dzien-Noc</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native="showDropDown = false"
+            @click.native=";(showDropDown = false), (pageActive = 'offer')"
             to="/rolety-materialowe"
             >Rolety Materiałowe</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native="showDropDown = false"
+            @click.native=";(showDropDown = false), (pageActive = 'offer')"
             to="/rolety-rzymskie"
             >Rolety Rzymskie</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native="showDropDown = false"
+            @click.native=";(showDropDown = false), (pageActive = 'offer')"
             to="/plisy"
             >PLISY</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native="showDropDown = false"
+            @click.native=";(showDropDown = false), (pageActive = 'offer')"
             to="/zaluzje"
             >zaluzje</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native="showDropDown = false"
+            @click.native=";(showDropDown = false), (pageActive = 'offer')"
             to="/verticale"
             >verticale</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native="showDropDown = false"
+            @click.native=";(showDropDown = false), (pageActive = 'offer')"
             to="/moskitiery"
             >moskitiery</nuxt-link
           >
         </div>
         <nuxt-link
+          @click.native="pageActive = 'real'"
           @mouseover.native="showDropDown = false"
           class="Header__link"
           to="/realizacje"
@@ -311,6 +313,7 @@
         </nuxt-link>
         <nuxt-link
           class="Header__link"
+          @click.native="pageActive = 'contact'"
           @mouseover.native="showDropDown = false"
           to="/kontakt"
         >
@@ -364,16 +367,18 @@ export default {
   },
   methods: {
     pageName() {
-      console.log(this.$route.path)
       switch (this.$route.path) {
         case '/':
-          this.home = 'home'
+          this.pageActive = 'home'
           break
         case '/realizacje':
-          this.home = 'real'
+          this.pageActive = 'real'
           break
         case '/kontakt':
-          this.home = 'contact'
+          this.pageActive = 'contact'
+          break
+        case '/rolety-materialowe':
+          this.pageActive = 'offer'
           break
         default:
           break

@@ -21,10 +21,15 @@
 
   &__link {
     cursor: pointer;
+    height: 48px;
   }
 
   &__link, &__open-hours, &__recomended-text {
     line-height: 1.5;
+  }
+
+  &__open-hours {
+    height: 48px;
   }
 
   &__link, &__recomended-container, &__open-hours, &__recomended-text, &__recomended-link{
@@ -42,7 +47,7 @@
   }
 
   &__recomended-title {
-    height: 23px;
+    height: 48px;
   }
   
   &__link-title, &__open-hours-title, &__recomended-title {

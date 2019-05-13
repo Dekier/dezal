@@ -10,15 +10,15 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#ffe100' },
-      { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli jak i kolorów.' }
-
+      { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli jak i kolorów.' },
+      { 'http-equiv': 'cache-control', content: 'max-age=604800, public' }
     ],
     link: [
       {
         rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
       },
       {
-        rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600'
+        rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat: 300,400'
       }]
   },
 
@@ -44,7 +44,7 @@ module.exports = {
   manifest: {
     name: 'Deżal Rolety Poznań',
     short_name: 'Deżal',
-    theme_color: '##ffe100',
+    theme_color: '#ffe100',
     lang: 'pl'
   },
   /*
