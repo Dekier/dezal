@@ -5,7 +5,7 @@
     @mouseleave="showDropDown = false"
   >
     <div class="Header__center-container">
-      <nuxt-link @click.native="pageActive = 'home'" to="/">
+      <nuxt-link @click.native="pageActive = 'home'" to="/" aria-label="Deżal">
         <div class="Header__logo" />
       </nuxt-link>
       <div

@@ -133,18 +133,7 @@
         </div>
       </div>
       <div class="Contact__form-container">
-        <form
-          class="Contact__form"
-          :action="
-            `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${
-              formData.name
-            } ${formData.surname}%0A%0AMój nr telefonu to: ${
-              formData.number
-            } %0A%0AMoja wiadomość: %0A${formData.text}`
-          "
-          method="post"
-          enctype="text/plain"
-        >
+        <form class="Contact__form" method="post" enctype="text/plain">
           <div class="Contact__form-title">
             Wyślij wiadomość
           </div>
@@ -192,7 +181,18 @@
             v-model="formData.text"
             placeholder="Wiadomość"
           />
-          <input class="Contact__submit" type="submit" value="WYŚLIJ" />
+          <a
+            :href="
+              `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${
+                formData.name
+              } ${formData.surname}%0A%0AMój nr telefonu to: ${
+                formData.number
+              } %0A%0AMoja wiadomość: %0A${formData.text}`
+            "
+            class="Contact__submit"
+          >
+            WYŚLIJ
+          </a>
         </form>
       </div>
     </div>

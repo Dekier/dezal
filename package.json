@@ -21,7 +21,7 @@
     "css-loader": "^2.1.0",
     "module": "^1.2.5",
     "node-sass": "^4.11.0",
-    "nuxt": "^2.6.3",
+    "nuxt": "2.8.1",
     "nuxt-sass-resources-loader": "^2.0.5",
     "sass-loader": "^7.1.0",
     "sass-resources-loader": "^2.0.0",

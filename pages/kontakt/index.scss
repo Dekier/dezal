@@ -250,14 +250,16 @@
 
   &__submit {
     border: none;
-    padding: 20px 25px;
+    padding: 15px 15px;
     width: 100%;
     width: 200px;
     margin: 30px auto;
     resize: none;
+    text-align: center;
     color: $color-title;
     background: $color-yellow;
     cursor: pointer;
+    text-decoration: none;
 
     &:focus {
       outline: none;

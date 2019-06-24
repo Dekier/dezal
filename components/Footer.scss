@@ -14,7 +14,8 @@
     justify-content: space-between;
   }
 
-  &__links-container, &__offer-container {
+  &__links-container,
+  &__offer-container {
     display: flex;
     flex-direction: column;
   }
@@ -24,7 +25,9 @@
     height: 48px;
   }
 
-  &__link, &__open-hours, &__recomended-text {
+  &__link,
+  &__open-hours,
+  &__recomended-text {
     line-height: 1.5;
   }
 
@@ -32,14 +35,18 @@
     height: 48px;
   }
 
-  &__link, &__recomended-container, &__open-hours, &__recomended-text, &__recomended-link{
+  &__link,
+  &__recomended-container,
+  &__open-hours,
+  &__recomended-text,
+  &__recomended-link {
     text-decoration: none;
-    color:  #efefef;
+    color: #efefef;
     font-weight: $weight-medium;
   }
 
   &__link:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 
   &__link-title:hover {
@@ -49,9 +56,11 @@
   &__recomended-title {
     height: 48px;
   }
-  
-  &__link-title, &__open-hours-title, &__recomended-title {
-    margin-bottom: 20px;
+
+  &__link-title,
+  &__open-hours-title,
+  &__recomended-title {
+    // margin-bottom: 20px;
     color: $color-yellow;
   }
 
@@ -82,10 +91,13 @@
       flex-wrap: wrap;
     }
 
-    &__links-container, &__offer-container, &__recomended-container, &__open-hours-container {
+    &__links-container,
+    &__offer-container,
+    &__recomended-container,
+    &__open-hours-container {
       margin: 0 20px 20px 0px;
     }
-      
+
     &__down-container {
       padding: 20px 0;
     }
