@@ -48,6 +48,32 @@
           Moskitiery
         </n-link>
       </div>
+      <div class="Footer__open-hours-container">
+        <div class="Footer__open-hours Footer__open-hours-title">
+          ADRES
+        </div>
+        <div class="Footer__open-hours">
+          ul. Jaroczyńskiego 41
+        </div>
+        <div class="Footer__open-hours">
+          60-692 Poznań Piątkowo
+        </div>
+        <div class="Footer__open-hours Footer__open-hours-title">
+          GODZINY OTWARCIA
+        </div>
+        <div class="Footer__open-hours">
+          pon.: 12:00-18:00
+        </div>
+        <div class="Footer__open-hours">
+          wt.-pt.: 9:00-17:00
+        </div>
+        <div class="Footer__open-hours Footer__open-hours-title">
+          TELEFON
+        </div>
+        <div class="Footer__open-hours">
+          +48 603 630 299
+        </div>
+      </div>
       <div class="Footer__recomended-container">
         <div class="Footer__recomended-title">
           POLECAMY
@@ -63,17 +89,6 @@
           </div>
           <div class="Footer__recomended-logo" />
         </a>
-      </div>
-      <div class="Footer__open-hours-container">
-        <div class="Footer__open-hours Footer__open-hours-title">
-          GODZINY OTWARCIA
-        </div>
-        <div class="Footer__open-hours">
-          pon.: 12:00-18:00
-        </div>
-        <div class="Footer__open-hours">
-          wt.-pt.: 9:00-17:00
-        </div>
       </div>
     </div>
     <div class="Footer__down-container">
