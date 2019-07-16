@@ -14,7 +14,7 @@ export default {
 
   components: {
     ProductInformation,
-    Offer
+    Offer,
   },
 
   transition: 'bounce',
@@ -27,26 +27,26 @@ export default {
           title: 'Verticale',
           url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
           description:
-            'Verticale inaczej żaluzje pionowe są idealnym rozwiązaniem dla dużych powierzchni okien w wszędzie tam, gdzie nie można zastosować innych osłon okiennych jak biurach, instytucjach publicznych itp. Dobrze izolują wnętrze przed nadmiernym nagrzewaniem się, a także posiadają zalety dekoracyjne. Są przy tym proste w obsłudze i funkcjonalne. Występują w szerokościach lameli 89 mm i 127 mm.'
-        }
+            'Verticale inaczej żaluzje pionowe są idealnym rozwiązaniem dla dużych powierzchni okien w wszędzie tam, gdzie nie można zastosować innych osłon okiennych jak biurach, instytucjach publicznych itp. Dobrze izolują wnętrze przed nadmiernym nagrzewaniem się, a także posiadają zalety dekoracyjne. Są przy tym proste w obsłudze i funkcjonalne. Występują w szerokościach lameli 89 mm i 127 mm.',
+        },
       ],
       bottomImages: [
-        { id: 1, url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg' }
+        { id: 1, url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg' },
       ],
       offerData: {
         title: 'Zobacz również',
         description:
-          'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
+          'Polecamy poza tym inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: [
           'dzien-noc',
           'materialowe',
           'rzymskie',
           'plisy',
           'zaluzje',
-          'moskitiery'
-        ]
+          'moskitiery',
+        ],
       },
-      title: 'Verticale w Poznaniu od firmy Deżal.'
+      title: 'Verticale w Poznaniu od firmy Deżal.',
     }
   },
   head() {
@@ -56,10 +56,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Verticale w Poznaniu na Piątkowie. Montaż w cene!'
-        }
-      ]
+          content: 'Verticale w Poznaniu na Piątkowie. Montaż w cene!',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

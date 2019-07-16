@@ -14,7 +14,7 @@ export default {
 
   components: {
     ProductInformation,
-    Offer
+    Offer,
   },
 
   transition: 'bounce',
@@ -27,28 +27,28 @@ export default {
           title: 'Rolety rzymskie',
           url: '/image/rolety/dezal-poznan-roleta-rzymska-0.jpg',
           description:
-            'Rolety rzymskie coraz częściej stanowią dekorację okna. Wykorzystywane do aranżacji wnętrz klasycznych, nowoczesnych jak i stylowych, zastępują zasłony i firany. Mechanizm łańcuszkowy jest tak zbudowany, aby płynnie podnosić materiał, który układa się w fale. Zdejmowanie materiału jest bardzo proste i szybkie. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.'
-        }
+            'Rolety rzymskie coraz częściej stanowią dekorację okna. Wykorzystywane do aranżacji wnętrz klasycznych, nowoczesnych jak i stylowych, zastępują zasłony i firany. Mechanizm łańcuszkowy jest tak zbudowany, aby płynnie podnosić materiał, który układa się w fale. Zdejmowanie materiału jest bardzo proste i szybkie. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.',
+        },
       ],
       bottomImages: [
         { id: 1, url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg' },
         { id: 2, url: '/image/rolety/dezal-poznan-roleta-rzymska-2.jpg' },
-        { id: 3, url: '/image/rolety/dezal-poznan-roleta-rzymska-4.jpg' }
+        { id: 3, url: '/image/rolety/dezal-poznan-roleta-rzymska-4.jpg' },
       ],
       offerData: {
         title: 'Zobacz również',
         description:
-          'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
+          'Polecamy poza tym inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: [
           'dzien-noc',
           'materialowe',
           'plisy',
           'zaluzje',
           'verticale',
-          'moskitiery'
-        ]
+          'moskitiery',
+        ],
       },
-      title: 'Rolety Rzymskie w Poznaniu od firmy Deżal.'
+      title: 'Rolety Rzymskie w Poznaniu od firmy Deżal.',
     }
   },
   head() {
@@ -58,10 +58,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Rolety Rzymskie w Poznaniu na Piątkowie. Montaż w cene!'
-        }
-      ]
+          content: 'Rolety Rzymskie w Poznaniu na Piątkowie. Montaż w cene!',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

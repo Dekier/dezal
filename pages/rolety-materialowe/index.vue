@@ -14,7 +14,7 @@ export default {
 
   components: {
     ProductInformation,
-    Offer
+    Offer,
   },
 
   transition: 'bounce',
@@ -27,29 +27,29 @@ export default {
           title: 'Rolety Materiałowe',
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
           description:
-            'Roleta materiałowa jest najczęściej wybieranym systemem dekoracji wnętrza w naszym kraju. To tradycyjna przesłona okienna, która chroni nas przed wzrokiem sąsiadów i promieniami słonecznymi. Nadaje się do każdego pomieszczenia. Posiadamy w swojej ofercie materiały w szerokiej gamie kolorów i deseni od transparentnych do 100% zaciemniających, rolety Poznań.'
-        }
+            'Roleta materiałowa jest najczęściej wybieranym systemem dekoracji wnętrza w naszym kraju. To tradycyjna przesłona okienna, która chroni nas przed wzrokiem sąsiadów i promieniami słonecznymi. Nadaje się do każdego pomieszczenia. Posiadamy w swojej ofercie materiały w szerokiej gamie kolorów i deseni od transparentnych do 100% zaciemniających, rolety Poznań.',
+        },
       ],
       bottomImages: [
         { id: 1, url: '/image/rolety/dezal-poznan-roleta-materiałowa-1.jpg' },
         { id: 2, url: '/image/rolety/dezal-poznan-roleta-materiałowa-2.jpg' },
         { id: 3, url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg' },
-        { id: 4, url: '/image/rolety/dezal-poznan-roleta-materiałowa-4.jpg' }
+        { id: 4, url: '/image/rolety/dezal-poznan-roleta-materiałowa-4.jpg' },
       ],
       offerData: {
         title: 'Zobacz również',
         description:
-          'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
+          'Polecamy poza tym inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: [
           'dzien-noc',
           'plisy',
           'rzymskie',
           'zaluzje',
           'verticale',
-          'moskitiery'
-        ]
+          'moskitiery',
+        ],
       },
-      title: 'Rolety Materiałowe w Poznaniu od firmy Deżal.'
+      title: 'Rolety Materiałowe w Poznaniu od firmy Deżal.',
     }
   },
   head() {
@@ -59,10 +59,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Rolety Materiałowe w Poznaniu na Piątkowie. Montaż w cene!'
-        }
-      ]
+          content: 'Rolety Materiałowe w Poznaniu na Piątkowie. Montaż w cene!',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

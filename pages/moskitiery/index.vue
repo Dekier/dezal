@@ -14,7 +14,7 @@ export default {
 
   components: {
     ProductInformation,
-    Offer
+    Offer,
   },
 
   transition: 'bounce',
@@ -27,26 +27,26 @@ export default {
           title: 'Moskitiery',
           url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
           description:
-            'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.'
-        }
+            'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.',
+        },
       ],
       bottomImages: [
-        { id: 1, url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg' }
+        { id: 1, url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg' },
       ],
       offerData: {
         title: 'Zobacz również',
         description:
-          'Polecamy również inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
+          'Polecamy poza tym inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
         showBoxes: [
           'dzien-noc',
           'materialowe',
           'rzymskie',
           'plisy',
           'zaluzje',
-          'verticale'
-        ]
+          'verticale',
+        ],
       },
-      title: 'Moskitiery w Poznaniu od firmy Deżal'
+      title: 'Moskitiery w Poznaniu od firmy Deżal',
     }
   },
   head() {
@@ -56,10 +56,10 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Maskitiery na okna w Poznaniu na Piątkowie. Montaż w cene!'
-        }
-      ]
+          content: 'Maskitiery na okna w Poznaniu na Piątkowie. Montaż w cene!',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

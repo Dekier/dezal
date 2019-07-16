@@ -11,7 +11,7 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: $font-size-title;
     font-weight: 300;
     color: $color-title;
     text-transform: uppercase;
@@ -43,12 +43,13 @@
     box-sizing: border-box;
     width: 340px;
     padding: 15px 15px 50px;
-    border-bottom: 1px dashed $color-text;
+    // border-bottom: 1px dashed $color-text;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
   }
 
   &__box-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: $color-title;
     text-transform: uppercase;
@@ -101,7 +102,14 @@
     color: $color-title;
     position: relative;
     background-color: $color-yellow;
-    border: 1px solid $color-title;
+    // border: 1px solid $color-title;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.34);
+    transition: box-shadow 300ms;
+    will-change: box-shadow;
+
+    &:hover {
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.54);
+    }
   }
 
   &__box-arrow {
@@ -136,6 +144,12 @@
   @media only screen and (max-width: 540px) {
     &__description {
       width: 80%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__title {
+      font-size: $font-size-title-mobile;
     }
   }
 }

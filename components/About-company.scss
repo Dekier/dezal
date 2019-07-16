@@ -13,7 +13,7 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: $font-size-title;
     font-weight: 300;
     color: $color-title;
     text-transform: uppercase;
@@ -55,6 +55,10 @@
     letter-spacing: -.2px;
     margin: auto;
     font-size: 15px;
+  }
+
+  &__box--active &__box-text {
+    color: #b7b7b7;
   }
 
   &__box {
@@ -110,6 +114,12 @@
 
     &__description {
       width: 90%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__title {
+      font-size: $font-size-title-mobile;
     }
   }
 }

@@ -10,9 +10,10 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#ffe100' },
-      { hid: 'description', name: 'description', content: 'Najlepsze rolety w poznaniu, duzy wybór modeli jak i kolorów.' },
+      { hid: 'description', name: 'description', content: 'Jeżeli szukasz najlepszych rozwiązań osłon okiennych znajdziesz je na poznańskim Piątkowie. Szeroki wybór rolet materiałowych, rolet dzień-noc, rolet rzymskich, plis, verticali, żaluzji drewnianych i aluminiowych' },
       { 'http-equiv': 'cache-control', content: 'max-age=604800, public' }
     ],
+
     link: [
       {
         rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'

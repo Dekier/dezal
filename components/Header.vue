@@ -27,7 +27,7 @@
         />
       </div>
       <transition name="fade">
-        <div v-if="showMobileBtn" class="Header__links-container-mobile">
+        <nav v-if="showMobileBtn" class="Header__links-container-mobile">
           <nuxt-link
             @mouseover="showDropDown = false"
             @click.native="
@@ -64,7 +64,6 @@
               ></path>
             </svg>
           </span>
-
           <transition name="fade">
             <div
               v-if="showMobileDropDown"
@@ -144,7 +143,7 @@
             to="/kontakt"
             >KONTAKT</nuxt-link
           >
-        </div>
+        </nav>
       </transition>
       <div class="Header__links-container">
         <nuxt-link
@@ -352,7 +351,7 @@ export default {
       showMobileBtn: false,
       showDropDown: false,
       showMobileDropDown: false,
-      pageActive: 'home'
+      pageActive: 'home',
     }
   },
 
@@ -363,7 +362,7 @@ export default {
   computed: {
     circleClass() {
       return `Header__circle--${this.activeTab}`
-    }
+    },
   },
   methods: {
     pageName() {
@@ -383,8 +382,8 @@ export default {
         default:
           break
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
