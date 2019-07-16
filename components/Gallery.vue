@@ -41,17 +41,17 @@ export default {
 
   props: {
     images: {
-      type: Array
+      type: Array,
     },
     index: {
-      type: Number
-    }
+      type: Number,
+    },
   },
 
   computed: {
     getImage() {
       return this.images[this.index].url
-    }
+    },
   },
 
   methods: {
@@ -63,8 +63,8 @@ export default {
     },
     nextImage() {
       this.$emit('nextImage')
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -5,7 +5,7 @@
     </div>
     <Hero />
     <AboutCompany />
-    <Offer :offerData="offerData"/>
+    <Offer :offerData="offerData" />
     <!-- <Weather/> -->
   </section>
 </template>
@@ -24,17 +24,26 @@ export default {
     return {
       offerData: {
         title: 'Oferta',
-        description: 'W naszej ofercie znajdziemy szeroki wybór kolorów i deseni materiałów. Polecamy:',
-        showBoxes: ['dzien-noc', 'materialowe', 'rzymskie', 'plisy', 'zaluzje', 'verticale', 'moskitiery']
-      }
+        description:
+          'W naszej ofercie znajdziemy szeroki wybór kolorów i deseni materiałów. Polecamy:',
+        showBoxes: [
+          'dzien-noc',
+          'materialowe',
+          'rzymskie',
+          'plisy',
+          'zaluzje',
+          'verticale',
+          'moskitiery',
+        ],
+      },
     }
   },
 
   components: {
     Offer,
     Hero,
-    AboutCompany
-  }
+    AboutCompany,
+  },
 }
 </script>
 

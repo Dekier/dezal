@@ -104,22 +104,23 @@
     display: flex;
     justify-content: left;
     margin: 20px 0 40px 0;
-    font-size: 24px;
+    font-size: $font-size-title;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
   }
 
   &__bottom-title {
     text-align: center;
-    font-size: 24px;
+    font-size: $font-size-title;
     margin: auto;
-    margin-bottom: 40px;
+    margin: 20px 0 40px 0;
   }
 
   &__bottom-container {
     max-width: 1200px;
     margin: auto;
     margin-bottom: 100px;
+    padding: 0 15px;
     cursor: pointer;
   }
 
@@ -242,6 +243,28 @@
 
     &__title {
       font-size: 30px;
+    }
+  }
+
+
+  @media (max-width: 450px) {
+
+    &__center-title,
+    &__bottom-title {
+      font-size: $font-size-title-mobile;
+    }
+  }
+
+  @media (max-width: 370px) {
+
+
+    &__bottom-realizations {
+      padding: 0px;
+      width: 100%;
+    }
+
+    &__bottom-realizations-image {
+      width: 100%;
     }
   }
 }
