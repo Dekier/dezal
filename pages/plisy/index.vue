@@ -1,13 +1,14 @@
 <template>
   <div>
     <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
-    <Offer :offerData="offerData" />
+    <Offer :offerData="offerData" :offer_data_boxes="offer_data_boxes" />
   </div>
 </template>
 
 <script>
 import ProductInformation from '~/components/Product-information.vue'
 import Offer from '~/components/Offer.vue'
+import { fireDb } from '~/plugins/firebase.js'
 
 export default {
   name: 'Plisy',
@@ -21,15 +22,6 @@ export default {
 
   data() {
     return {
-      pageData: [
-        {
-          id: 0,
-          title: 'Plisy',
-          url: '/image/plisy/deżal-poznań-plisa-1.jpg',
-          description:
-            'Plisy to jedne z nielicznych osłon okiennych, które umożliwiają otwarcie skrzydła okiennego pod kątem 90 stopni, czyli na całą szerokość. Stosujemy je do różnych nietypowych kształtów okien. Materiał przesuwamy w górę i w dół w zależności od wybranego modelu. Plisy typu duette różnią się od zwykłej plisy budową tkaniny, która jest w kształcie plastra miodu, co powoduje lepszą izolację termiczną. Posiadamy w swojej ofercie ponad 1000 wzorów tkanin. Wszystkie materiały możemy prać w 30 stopniach według zaleceń producenta.',
-        },
-      ],
       bottomImages: [
         { id: 1, url: '/image/plisy/deżal-poznań-plisa-1.jpg' },
         { id: 2, url: '/image/plisy/deżal-poznań-plisa-2.jpg' },
@@ -60,6 +52,27 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'Plisy w Poznaniu na Piątkowie. Montaż w cene!',
+        },
+      ],
+    }
+  },
+
+  async asyncData({ app, params, error }) {
+    const ref_offer = fireDb.collection('main').doc('offer')
+    let snap_offer
+    try {
+      snap_offer = await ref_offer.get()
+    } catch (e) {
+      console.error(e)
+    }
+    return {
+      offer_data_boxes: snap_offer.data(),
+      pageData: [
+        {
+          id: 0,
+          title: snap_offer.data().box_4_title,
+          url: '/image/plisy/deżal-poznań-plisa-1.jpg',
+          description: snap_offer.data().box_4_description,
         },
       ],
     }

@@ -3,18 +3,15 @@
     <div class="Hero__hero-image" />
     <div class="Hero__hero-background" />
     <div class="Hero__center-container">
-      <h1 class="Hero__title">
-        Witamy na stronie firmy DEŻAL
+      <h1 v-if="text_data && text_data.title" class="Hero__title">
+        {{ text_data.title }}
       </h1>
-      <h2 class="Hero__description">
-        Jeżeli szukasz najlepszych rozwiązań osłon okiennych znajdziesz je na
-        poznańskim Piątkowie. Szeroki wybór rolet materiałowych, rolet
-        dzień-noc, rolet rzymskich, plis, verticali, żaluzji drewnianych i
-        aluminiowych.
+      <h2 v-if="text_data && text_data.subtitle" class="Hero__description">
+        {{ text_data.subtitle }}
       </h2>
-      <div class="Hero__btns-container">
+      <div v-if="text_data && text_data.button" class="Hero__btns-container">
         <div v-scroll-to="'#offer'" class="Hero__button">
-          <span>Przejdź do Oferty</span>
+          <span>{{ text_data.button }}</span>
         </div>
       </div>
     </div>
@@ -24,6 +21,13 @@
 <script>
 export default {
   name: 'Hero',
+
+  props: {
+    text_data: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>
 
