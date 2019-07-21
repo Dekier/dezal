@@ -42,17 +42,21 @@ export default {
 
   props: {
     offerData: {
-      type: Object
-    }
+      type: Object,
+    },
+    offer_data_boxes: {
+      type: Object,
+      required: true,
+    },
   },
 
   computed: {
     showBoxes() {
-      const newList = this.boxesData.filter(box =>
+      const newList = this.boxesData.filter((box) =>
         this.offerData.showBoxes.includes(box.type)
       )
       return newList
-    }
+    },
   },
 
   data() {
@@ -60,70 +64,63 @@ export default {
       activeTab: '',
       boxesData: [
         {
-          title: 'Rolety Dzień-noc',
-          text:
-            'Jedno z najnowocześniejszych rozwiązań na rynku dekoracji okien ostatnich latach. Największą zaletą materiałów dzień-noc jest możliwość regulowania światła za pomocą poziomych pasów transparentnych i zaciemniających. Dzięki temu możemy dostosowad ilośd promieni słonecznych w danym pomieszczeniu według własnego uznania. Tak płynna regulacja jest niewątpliwie bardzo dużą zaletą tego produktu. Roleta dzieo-noc tworzy niepowtarzalny klimat danego wnętrza, w którym zostanie założona.',
+          title: this.offer_data_boxes.box_1_title,
+          text: this.offer_data_boxes.box_1_description,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
           link: '/rolety-dzien-noc',
-          type: 'dzien-noc'
+          type: 'dzien-noc',
         },
         {
-          title: 'Rolety Materiałowe',
-          text:
-            'Roleta materiałowa jest najczęściej wybieranym systemem dekoracji wnętrza w naszym kraju. To tradycyjna przesłona okienna, która chroni nas przed wzrokiem sąsiadów i promieniami słonecznymi. Nadaje się do każdego pomieszczenia. Posiadamy w swojej ofercie materiały w szerokiej gamie kolorów i deseni od transparentnych do 100% zaciemniających, rolety Poznań.',
+          title: this.offer_data_boxes.box_2_title,
+          text: this.offer_data_boxes.box_2_description,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
           link: '/rolety-materialowe',
-          type: 'materialowe'
+          type: 'materialowe',
         },
         {
-          title: 'Rolety Rzymskie',
-          text:
-            'Rolety rzymskie coraz częściej stanowią dekorację okna. Wykorzystywane do aranżacji wnętrz klasycznych, nowoczesnych jak i stylowych, zastępują zasłony i firany. Mechanizm łaocuszkowy jest tak zbudowany, aby płynnie podnosid materiał, który układa się w fale. Zdejmowanie materiału jest bardzo proste i szybkie. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.',
+          title: this.offer_data_boxes.box_3_title,
+          text: this.offer_data_boxes.box_3_description,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg',
           link: '/rolety-rzymskie',
-          type: 'rzymskie'
+          type: 'rzymskie',
         },
         {
-          title: 'Plisy',
-          text:
-            'Plisy to jedne z nielicznych osłon okiennych, które umożliwiają otwarcie skrzydła okiennego pod katem 90 stopni, czyli na całą szerokośd. Stosujemy je do różnych nietypowych kształtów okien. Materiał przesuwamy w górę i w dół w zależności od wybranego modelu. Plisy typu duette różnią się od zwykłej plisy budową tkaniny, która jest w kształcie plastra miodu, co powoduje lepszą izolację termiczną. Posiadamy w swojej ofercie ponad 1000 wzorów tkanin. Wszystkie materiały możemy prad w 30 stopniach według zaleceo producenta.',
+          title: this.offer_data_boxes.box_4_title,
+          text: this.offer_data_boxes.box_4_description,
           url: '/image/plisy/deżal-poznań-plisa-1.jpg',
           link: '/plisy',
-          type: 'plisy'
+          type: 'plisy',
         },
         {
-          title: 'Żaluzje',
-          text:
-            'Żaluzje aluminiowe to produkt ponadczasowy, który dobrze chroni wnętrze przed promieniami słonecznymi, czyli nadmiernym nagrzewaniem się. Dużą zaletą tego produktu jest płynna regulacja, która powoduje ustawienie lameli w taki sposób, że jesteśmy niewidoczni, a słooce nam nie świeci. Żaluzje aluminiowe występują w szerokościach 25 mm i 50 mm . Posiadamy w swojej ofercie bogatą gamę kolorów.',
+          title: this.offer_data_boxes.box_5_title,
+          text: this.offer_data_boxes.box_5_description,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
           link: '/zaluzje',
-          type: 'zaluzje'
+          type: 'zaluzje',
         },
         {
-          title: 'Verticale',
-          text:
-            'Verticale inaczej żaluzje pionowe są idealnym rozwiązaniem dla dużych powierzchni okien wszędzie tam, gdzie nie można zastosowad innych osłon okiennych jak biurach, instytucjach publicznych itp. Dobrze izolują wnętrze przed nadmiernym nagrzewaniem się, a także posiadają zalety dekoracyjne. Są przy tym proste w obsłudze i funkcjonalne. Występują w szerokościach lameli 89 mm i 127 mm.',
+          title: this.offer_data_boxes.box_6_title,
+          text: this.offer_data_boxes.box_6_description,
           url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
           link: '/verticale',
-          type: 'verticale'
+          type: 'verticale',
         },
         {
-          title: 'Moskitiery',
-          text:
-            'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.',
+          title: this.offer_data_boxes.box_7_title,
+          text: this.offer_data_boxes.box_7_description,
           url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
           link: '/moskitiery',
-          type: 'moskitiery'
-        }
-      ]
+          type: 'moskitiery',
+        },
+      ],
     }
   },
 
   methods: {
     urlStyle(url) {
       return `background-image: url(${url})`
-    }
-  }
+    },
+  },
 }
 </script>
 

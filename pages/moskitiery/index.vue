@@ -1,13 +1,14 @@
 <template>
   <div>
     <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
-    <Offer :offerData="offerData" />
+    <Offer :offerData="offerData" :offer_data_boxes="offer_data_boxes" />
   </div>
 </template>
 
 <script>
 import ProductInformation from '~/components/Product-information.vue'
 import Offer from '~/components/Offer.vue'
+import { fireDb } from '~/plugins/firebase.js'
 
 export default {
   name: 'Moskitiery',
@@ -21,15 +22,6 @@ export default {
 
   data() {
     return {
-      pageData: [
-        {
-          id: 0,
-          title: 'Moskitiery',
-          url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
-          description:
-            'Moskitierę ramkową możemy zastosować w ramie okiennej. Wykonana jest z plastikowej siatki naciągniętej na aluminiowym profilu. Mocowana za pomocą obrotowych rygli, które są dopasowane do grubości ramy okna. Profile i rygle są dobrane kolorystycznie do koloru okna.',
-        },
-      ],
       bottomImages: [
         { id: 1, url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg' },
       ],
@@ -57,6 +49,27 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'Maskitiery na okna w Poznaniu na Piątkowie. Montaż w cene!',
+        },
+      ],
+    }
+  },
+
+  async asyncData({ app, params, error }) {
+    const ref_offer = fireDb.collection('main').doc('offer')
+    let snap_offer
+    try {
+      snap_offer = await ref_offer.get()
+    } catch (e) {
+      console.error(e)
+    }
+    return {
+      offer_data_boxes: snap_offer.data(),
+      pageData: [
+        {
+          id: 0,
+          title: snap_offer.data().box_7_title,
+          url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
+          description: snap_offer.data().box_7_description,
         },
       ],
     }

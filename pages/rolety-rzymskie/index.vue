@@ -1,13 +1,14 @@
 <template>
   <div>
     <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
-    <Offer :offerData="offerData" />
+    <Offer :offerData="offerData" :offer_data_boxes="offer_data_boxes" />
   </div>
 </template>
 
 <script>
 import ProductInformation from '~/components/Product-information.vue'
 import Offer from '~/components/Offer.vue'
+import { fireDb } from '~/plugins/firebase.js'
 
 export default {
   name: 'RoletyRzymskie',
@@ -21,15 +22,6 @@ export default {
 
   data() {
     return {
-      pageData: [
-        {
-          id: 0,
-          title: 'Rolety rzymskie',
-          url: '/image/rolety/dezal-poznan-roleta-rzymska-0.jpg',
-          description:
-            'Rolety rzymskie coraz częściej stanowią dekorację okna. Wykorzystywane do aranżacji wnętrz klasycznych, nowoczesnych jak i stylowych, zastępują zasłony i firany. Mechanizm łańcuszkowy jest tak zbudowany, aby płynnie podnosić materiał, który układa się w fale. Zdejmowanie materiału jest bardzo proste i szybkie. Wszystkie tkaniny nadają się do prania lub czyszczenia chemicznego.',
-        },
-      ],
       bottomImages: [
         { id: 1, url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg' },
         { id: 2, url: '/image/rolety/dezal-poznan-roleta-rzymska-2.jpg' },
@@ -59,6 +51,27 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'Rolety Rzymskie w Poznaniu na Piątkowie. Montaż w cene!',
+        },
+      ],
+    }
+  },
+
+  async asyncData({ app, params, error }) {
+    const ref_offer = fireDb.collection('main').doc('offer')
+    let snap_offer
+    try {
+      snap_offer = await ref_offer.get()
+    } catch (e) {
+      console.error(e)
+    }
+    return {
+      offer_data_boxes: snap_offer.data(),
+      pageData: [
+        {
+          id: 0,
+          title: snap_offer.data().box_3_title,
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-0.jpg',
+          description: snap_offer.data().box_3_description,
         },
       ],
     }

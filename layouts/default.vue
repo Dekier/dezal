@@ -16,7 +16,7 @@ export default {
   components: {
     Header,
     Footer,
-    Cookies
+    Cookies,
   },
 
   mounted() {
@@ -27,7 +27,7 @@ export default {
 
   data() {
     return {
-      visibleCookies: true
+      visibleCookies: true,
     }
   },
 
@@ -35,8 +35,8 @@ export default {
     hideCookies() {
       this.visibleCookies = false
       localStorage.cookies = false
-    }
-  }
+    },
+  },
 }
 </script>
 
