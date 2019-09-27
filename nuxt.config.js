@@ -5,7 +5,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'Deżal pewna jakość, niskie ceny, krótkie terminy w Poznaniu.',
+    title: 'Deżal: Rolety dzień - noc w Poznaniu jak i Rolety Rzymskie, Plisy. Gwarantowana dobra jakość.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
