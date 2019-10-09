@@ -57,8 +57,13 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
-    'nuxt-sass-resources-loader'
+    'nuxt-sass-resources-loader',
+    '@nuxtjs/google-adsense'
   ],
+
+  'google-adsense': {
+    id: 'ca-pub-7591700063203288'
+  },
 
   styleResources: {
     scss: ['@/assets/stylesheets/mixins/*.scss', '@/assets/stylesheets/*.scss']
