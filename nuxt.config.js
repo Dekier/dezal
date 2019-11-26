@@ -5,22 +5,36 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'Deżal: Rolety dzień - noc w Poznaniu jak i Rolety Rzymskie, Plisy. Gwarantowana dobra jakość.',
+    htmlAttrs: {
+      lang: 'pl',
+      amp: true,
+    },
+    title:
+      'Deżal: Rolety dzień - noc w Poznaniu jak i Rolety Rzymskie, Plisy. Gwarantowana dobra jakość.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#ffe100' },
-      { hid: 'description', name: 'description', content: 'Jeżeli szukasz najlepszych rozwiązań osłon okiennych znajdziesz je na poznańskim Piątkowie. Szeroki wybór rolet materiałowych, rolet dzień-noc, rolet rzymskich, plis, verticali, żaluzji drewnianych i aluminiowych' },
-      { 'http-equiv': 'cache-control', content: 'max-age=604800, public' }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Szeroki wybór osłon okiennych w Poznaniu m.in. Rolet materiałowych, Rolet dzień-noc, Rolet rzymskich, Plis, Verticali, Żaluzji drewnianych i Aluminiowych.',
+      },
+      { 'http-equiv': 'cache-control', content: 'max-age=604800, public' },
     ],
 
     link: [
       {
-        rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
       },
       {
-        rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat: 300,400'
-      }]
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat: 300,400',
+      },
+    ],
   },
 
   /*
@@ -40,14 +54,14 @@ module.exports = {
     { src: '~/plugins/aos.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false },
-    '~/plugins/firebase.js'
+    '~/plugins/firebase.js',
   ],
 
   manifest: {
     name: 'Deżal Rolety Poznań',
     short_name: 'Deżal',
     theme_color: '#ffe100',
-    lang: 'pl'
+    lang: 'pl',
   },
   /*
    ** Nuxt.js modules
@@ -58,15 +72,10 @@ module.exports = {
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
     'nuxt-sass-resources-loader',
-    '@nuxtjs/google-adsense'
   ],
 
-  'google-adsense': {
-    id: 'ca-pub-7591700063203288'
-  },
-
   styleResources: {
-    scss: ['@/assets/stylesheets/mixins/*.scss', '@/assets/stylesheets/*.scss']
+    scss: ['@/assets/stylesheets/mixins/*.scss', '@/assets/stylesheets/*.scss'],
   },
 
   /*
@@ -86,7 +95,7 @@ module.exports = {
     extend(config, ctx) {
       // Run ESLint on save
       config.node = {
-        fs: 'empty'
+        fs: 'empty',
       }
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
@@ -95,10 +104,10 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
           options: {
-            fix: true
-          }
+            fix: true,
+          },
         })
       }
-    }
-  }
+    },
+  },
 }

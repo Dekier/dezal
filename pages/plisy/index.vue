@@ -41,7 +41,7 @@ export default {
           'moskitiery',
         ],
       },
-      title: 'Plisty w Poznaniu od firmy Deżal.',
+      title: 'Plisy w Poznaniu od firmy Deżal.',
     }
   },
   head() {
