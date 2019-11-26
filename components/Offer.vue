@@ -9,15 +9,15 @@
       </div>
       <div class="Offer__boxes-container">
         <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
-          <div class="Offer__box-title">
+          <h3 class="Offer__box-title">
             {{ box.title }}
-          </div>
+          </h3>
           <div class="Offer__box-image-container">
             <div :style="urlStyle(box.url)" class="Offer__box-image" />
           </div>
-          <div class="Offer__box-text" style="-webkit-box-orient: vertical;">
+          <p class="Offer__box-text" style="-webkit-box-orient: vertical;">
             {{ box.text }}
-          </div>
+          </p>
           <nuxt-link :to="box.link" class="Offer__box-btn">
             Czytaj więcej
             <svg
