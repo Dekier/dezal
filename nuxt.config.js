@@ -57,11 +57,16 @@ module.exports = {
     '~/plugins/firebase.js',
   ],
 
-  manifest: {
-    name: 'Deżal Rolety Poznań',
-    short_name: 'Deżal',
-    theme_color: '#ffe100',
-    lang: 'pl',
+  pwa: {
+    manifest: {
+      name: 'Deżal Rolety Poznań',
+      short_name: 'Deżal',
+      theme_color: '#ffe100',
+      lang: 'pl',
+    },
+    icon: {
+      iconFileName: 'logo-pwa.png',
+    },
   },
   /*
    ** Nuxt.js modules
