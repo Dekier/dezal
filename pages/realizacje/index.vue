@@ -12,80 +12,73 @@
           class="Realization__filter"
           :class="{ 'Realization__filter--active': currentFilter === 'ALL' }"
           @click="setFilter('ALL')"
-          >WSZYSTKO</span
-        ><span
+        >WSZYSTKO</span>
+        <span
           class="Realization__filter"
           :class="{
             'Realization__filter--active': currentFilter === 'rolety-dzień-noc'
           }"
           @click="setFilter('rolety-dzień-noc')"
-          >DZIEŃ-NOC</span
-        ><span
+        >DZIEŃ-NOC</span>
+        <span
           class="Realization__filter"
           :class="{
             'Realization__filter--active':
               currentFilter === 'rolety-materiałowe'
           }"
           @click="setFilter('rolety-materiałowe')"
-          >MATERIAŁOWE</span
-        ><span
+        >MATERIAŁOWE</span>
+        <span
           class="Realization__filter"
           :class="{
             'Realization__filter--active': currentFilter === 'żaluzje-rzymskie'
           }"
           @click="setFilter('żaluzje-rzymskie')"
-          >RZYMSKIE</span
-        ><span
+        >RZYMSKIE</span>
+        <span
           class="Realization__filter"
           :class="{ 'Realization__filter--active': currentFilter === 'PLISY' }"
           @click="setFilter('PLISY')"
-          >PLISY</span
-        ><span
+        >PLISY</span>
+        <span
           class="Realization__filter"
           :class="{
             'Realization__filter--active': currentFilter === 'ZALUZJE'
           }"
           @click="setFilter('ZALUZJE')"
-          >ŻALUZJE</span
-        ><span
+        >ŻALUZJE</span>
+        <span
           class="Realization__filter"
           :class="{
             'Realization__filter--active': currentFilter === 'VERTICALE'
           }"
           @click="setFilter('VERTICALE')"
-          >VERTICALE</span
-        ><span
+        >VERTICALE</span>
+        <span
           class="Realization__filter"
           :class="{
             'Realization__filter--active': currentFilter === 'MASKITIERY'
           }"
           @click="setFilter('MASKITIERY')"
-          >MOSKITIERY</span
-        >
+        >MOSKITIERY</span>
       </div>
-      <transition-group class="Realization__projects" name="projects"
-        ><div
+      <transition-group class="Realization__projects" name="projects">
+        <div
           class="Realization__project"
           v-for="(imageData, index) in allImages"
-          :key="imageData.id"
+          :key="imageData.id + index"
         >
-          <img
-            :src="imageData.url"
-            class="Realization__project-image"
-            :alt="imageAlt(imageData)"
-          />
-          <div
-            @click="showBigGallery(index)"
-            class="Realization__hover-background"
-          >
+          <img :src="imageData.url" class="Realization__project-image" :alt="imageAlt(imageData)" />
+          <div @click="showBigGallery(index)" class="Realization__hover-background">
             <svg class="Realization__hover-icon" viewBox="0 0 215.35 215.35">
               <path
                 d="M7.5 65.088a7.5 7.5 0 0 0 7.5-7.5V25.61l48.305 48.295a7.479 7.479 0 0 0 5.303 2.196c1.92 0 3.84-.732 5.304-2.197a7.498 7.498 0 0 0-.001-10.606L25.604 15.002h31.985a7.5 7.5 0 0 0 0-15H7.5a7.5 7.5 0 0 0-7.5 7.5v50.087a7.5 7.5 0 0 0 7.5 7.499zM207.85 150.262a7.5 7.5 0 0 0-7.5 7.5v31.979l-49.792-49.792a7.5 7.5 0 0 0-10.607 10.606l49.791 49.791h-31.977a7.5 7.5 0 0 0-7.5 7.5 7.5 7.5 0 0 0 7.5 7.5h50.086a7.5 7.5 0 0 0 7.5-7.5v-50.084a7.502 7.502 0 0 0-7.501-7.5zM64.792 139.949L15.005 189.74v-31.978c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v50.086a7.5 7.5 0 0 0 7.5 7.5h50.084a7.5 7.5 0 0 0 0-15H25.611l49.788-49.793a7.5 7.5 0 1 0-10.607-10.606zM207.85.002h-50.086a7.5 7.5 0 0 0-7.5 7.5 7.5 7.5 0 0 0 7.5 7.5h31.979l-48.298 48.301a7.5 7.5 0 0 0 5.304 12.803 7.482 7.482 0 0 0 5.304-2.197l48.298-48.301v31.98a7.5 7.5 0 0 0 7.5 7.5 7.5 7.5 0 0 0 7.5-7.5V7.502a7.501 7.501 0 0 0-7.501-7.5z"
                 fill="#fff"
-              ></path>
+              />
             </svg>
-          </div></div
-      ></transition-group>
+          </div>
+        </div>
+      </transition-group>
     </div>
     <Gallery
       v-if="activeGallery"
@@ -94,8 +87,9 @@
       @exit="exitGallery"
       @nextImage="nextImage"
       @beforeImage="beforeImage"
-    /></div
-></template><script>
+    />
+  </div>
+</template><script>
 import Gallery from '~/components/Gallery.vue'
 
 export default {
@@ -104,7 +98,7 @@ export default {
   transition: 'bounce',
 
   components: {
-    Gallery
+    Gallery,
   },
 
   data() {
@@ -114,252 +108,299 @@ export default {
         {
           id: 1,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-1.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 2,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 3,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-3.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 4,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-4.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 5,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-5.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 6,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-6.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 7,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-7.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 8,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-8.jpg',
-          category: 'rolety-dzień-noc'
+          category: 'rolety-dzień-noc',
         },
 
         {
           id: 9,
           url: '/image/plisy/deżal-poznań-plisa-1.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 10,
           url: '/image/plisy/deżal-poznań-plisa-2.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 11,
           url: '/image/plisy/deżal-poznań-plisa-3.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 12,
           url: '/image/plisy/deżal-poznań-plisa-4.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 13,
           url: '/image/plisy/deżal-poznań-plisa-5.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 14,
           url: '/image/plisy/deżal-poznań-plisa-6.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 15,
           url: '/image/plisy/deżal-poznań-plisa-7.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 16,
           url: '/image/plisy/deżal-poznań-plisa-8.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 17,
           url: '/image/plisy/deżal-poznań-plisa-9.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 18,
           url: '/image/plisy/deżal-poznań-plisa-10.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
         },
 
         {
           id: 19,
           url: '/image/plisy/deżal-poznań-plisa-11.jpg',
-          category: 'PLISY'
+          category: 'PLISY',
+        },
+
+        {
+          id: 234,
+          url: '/image/plisy/deżal-poznań-plisa-12.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 34534,
+          url: '/image/plisy/deżal-poznań-plisa-13.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 34343534,
+          url: '/image/plisy/deżal-poznań-plisa-14.jpg',
+          category: 'PLISY',
+        },
+        {
+          id: 34343534,
+          url: '/image/plisy/deżal-poznań-plisa-15.jpg',
+          category: 'PLISY',
         },
 
         {
           id: 20,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-1.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
         },
 
         {
           id: 21,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-2.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
         },
 
         {
           id: 22,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
         },
 
         {
           id: 23,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-4.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
         },
 
         {
           id: 25,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-6.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
         },
 
         {
           id: 26,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-7.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
         },
 
         {
           id: 27,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-8.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
         },
 
         {
-          id: 28,
+          id: 2558,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-9.jpg',
-          category: 'rolety-materiałowe'
+          category: 'rolety-materiałowe',
+        },
+
+        {
+          id: 444,
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-10.jpg',
+          category: 'rolety-materiałowe',
+        },
+
+        {
+          id: 2833,
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-11.jpg',
+          category: 'rolety-materiałowe',
         },
 
         {
           id: 29,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-0.jpg',
-          category: 'żaluzje-rzymskie'
+          category: 'żaluzje-rzymskie',
         },
 
         {
           id: 30,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg',
-          category: 'żaluzje-rzymskie'
+          category: 'żaluzje-rzymskie',
         },
 
         {
           id: 31,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-2.jpg',
-          category: 'żaluzje-rzymskie'
+          category: 'żaluzje-rzymskie',
         },
 
         {
           id: 34,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-4.jpg',
-          category: 'żaluzje-rzymskie'
+          category: 'żaluzje-rzymskie',
         },
 
         {
           id: 35,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-5.jpg',
-          category: 'żaluzje-rzymskie'
+          category: 'żaluzje-rzymskie',
         },
 
         {
           id: 36,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-6.jpg',
-          category: 'żaluzje-rzymskie'
+          category: 'żaluzje-rzymskie',
         },
 
         {
-          id: 37,
-          url: '/image/rolety/dezal-poznan-roleta-rzymska-7.jpg',
-          category: 'żaluzje-rzymskie'
+          id: 3567,
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-8.jpg',
+          category: 'żaluzje-rzymskie',
+        },
+
+        {
+          id: 3437,
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-9.jpg',
+          category: 'żaluzje-rzymskie',
+        },
+
+        {
+          id: 3327,
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-10.jpg',
+          category: 'żaluzje-rzymskie',
         },
 
         {
           id: 38,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
-          category: 'ZALUZJE'
+          category: 'ZALUZJE',
         },
 
         {
           id: 39,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-2.jpg',
-          category: 'ZALUZJE'
+          category: 'ZALUZJE',
         },
 
         {
           id: 40,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-3.jpg',
-          category: 'ZALUZJE'
+          category: 'ZALUZJE',
         },
 
         {
           id: 41,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-4.jpg',
-          category: 'ZALUZJE'
+          category: 'ZALUZJE',
         },
 
         {
           id: 42,
           url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.jpg',
-          category: 'ZALUZJE'
+          category: 'ZALUZJE',
         },
 
         {
           id: 43,
           url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
-          category: 'VERTICALE'
+          category: 'VERTICALE',
         },
 
         {
           id: 44,
           url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
-          category: 'MASKITIERY'
-        }
+          category: 'MASKITIERY',
+        },
       ],
       activeGallery: false,
       activeImageIndex: null,
-      title: 'Plisty, Rolety, Moskitery, Rzymskie w Poznaniu od firmy Deżal.'
+      title: 'Plisty, Rolety, Moskitery, Rzymskie w Poznaniu od firmy Deżal.',
     }
   },
 
@@ -370,9 +411,9 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Realizacje naszych usług.'
-        }
-      ]
+          content: 'Realizacje naszych usług.',
+        },
+      ],
     }
   },
 
@@ -383,7 +424,7 @@ export default {
       }
 
       const newList = this.imagesData.filter(
-        a => a.category === this.currentFilter
+        (a) => a.category === this.currentFilter
       )
       return newList
     },
@@ -392,9 +433,9 @@ export default {
       if (this.currentFilter === 'ALL') {
         return this.imagesData
       } else {
-        return this.imagesData.filter(i => i.category === this.currentFilter)
+        return this.imagesData.filter((i) => i.category === this.currentFilter)
       }
-    }
+    },
   },
 
   methods: {
@@ -428,8 +469,8 @@ export default {
     },
     imageAlt(img) {
       return 'deżal-poznań-' + img.category + '-' + img.id
-    }
-  }
+    },
+  },
 }
 </script><style lang="scss"scoped>
 @import 'index';
