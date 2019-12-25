@@ -10,7 +10,6 @@
     flex-wrap: wrap;
   }
 
-
   &__title-container {
     display: flex;
     flex-direction: column;
@@ -171,11 +170,10 @@
   }
 
   @media only screen and (max-width: 1200px) {
-
     &__center-container {
       width: 100%;
       display: flex;
-      margin: 20px auto 50px;
+      margin: 20px auto 30px;
       flex-direction: column;
     }
 
@@ -214,7 +212,6 @@
     }
   }
 
-
   @media only screen and (max-width: 550px) {
     &__main-picture {
       width: 100%;
@@ -231,7 +228,6 @@
     }
   }
 
-
   @media only screen and (max-width: 465px) {
     &__bottom-container {
       display: flex;
@@ -247,9 +243,7 @@
     }
   }
 
-
   @media (max-width: 450px) {
-
     &__center-title,
     &__bottom-title {
       font-size: $font-size-title-mobile;
@@ -257,8 +251,6 @@
   }
 
   @media (max-width: 370px) {
-
-
     &__bottom-realizations {
       padding: 0px;
       width: 100%;

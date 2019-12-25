@@ -94,6 +94,20 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
+  sitemap: {
+    routes: [
+      '/kontakt',
+      '/rolety-dzien-noc',
+      '/rolety-materialowe',
+      '/rolety-rzymskie',
+      '/plisy',
+      '/zaluzje',
+      '/verticale',
+      '/moskitiery',
+      '/realizacje',
+    ],
+  },
+
   /*
    ** Build configuration
    */
@@ -101,6 +115,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
+    analyze: true,
     extend(config, ctx) {
       // Run ESLint on save
       config.node = {

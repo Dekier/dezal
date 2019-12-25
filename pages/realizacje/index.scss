@@ -95,7 +95,7 @@
     align-items: center;
     margin: 10px;
     box-shadow: 0px 2px 8px lightgrey;
-    transition: all .35s;
+    transition: all 0.35s;
     border-radius: 3px;
     cursor: pointer;
   }
@@ -162,7 +162,6 @@
   }
 }
 
-
 @media (max-width: 640px) {
   .demo-btn {
     min-width: 0;
@@ -170,19 +169,19 @@
   }
 }
 
-.projects-enter {
-  will-change: transform, opacity;
-  transform: scale(0.5) translateY(-180px);
-  opacity: 0;
-}
+// .projects-enter {
+//   will-change: transform, opacity;
+//   transform: scale(0.5) translateY(-180px);
+//   opacity: 0;
+// }
 
-.projects-leave-to {
-  will-change: transform, opacity;
-  transform: translateY(30px);
-  opacity: 0;
-}
+// .projects-leave-to {
+//   will-change: transform, opacity;
+//   transform: translateY(30px);
+//   opacity: 0;
+// }
 
-.projects-leave-active {
-  position: absolute;
-  z-index: -1;
-}
+// .projects-leave-active {
+//   position: absolute;
+//   z-index: -1;
+// }

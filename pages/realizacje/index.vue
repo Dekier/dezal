@@ -62,7 +62,8 @@
           @click="setFilter('MASKITIERY')"
         >MOSKITIERY</span>
       </div>
-      <transition-group class="Realization__projects" name="projects">
+      <!-- <transition-group class="Realization__projects" name="projects"> -->
+      <div class="Realization__projects">
         <div
           class="Realization__project"
           v-for="(imageData, index) in allImages"
@@ -78,7 +79,8 @@
             </svg>
           </div>
         </div>
-      </transition-group>
+      </div>
+      <!-- </transition-group> -->
     </div>
     <Gallery
       v-if="activeGallery"

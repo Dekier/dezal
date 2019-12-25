@@ -38,14 +38,6 @@
             class="Header__link-mobile"
             to="/"
           >STRONA GŁÓWNA</nuxt-link>
-          <nuxt-link
-            @click.native="
-              ;(showMobileBtn = false), (showMobileDropDown = false)
-            "
-            v-scroll-to="'#aboutCompany'"
-            class="Header__link-mobile"
-            to="/"
-          >O NAS</nuxt-link>
           <span @click="showMobileDropDown = !showMobileDropDown" class="Header__link-mobile">
             OFERTA
             <svg class="Header__link-arrow" width="10" height="10" viewBox="0 0 129 129">
@@ -145,33 +137,6 @@
             <line
               class="svg-bottom-right"
               :class="{ 'svg-bottom-right--active': pageActive === 'home' }"
-              x1="100"
-              y1="50"
-              x2="300"
-              y2="50"
-            />
-          </svg>
-        </nuxt-link>
-        <nuxt-link
-          @click.native="pageActive = 'about'"
-          @mouseover.native="showDropDown = false"
-          v-scroll-to="'#aboutCompany'"
-          class="Header__link"
-          to="/"
-        >
-          O NAS
-          <svg class="Header__link-border" width="200" height="50">
-            <line
-              class="svg-bottom-left"
-              :class="{ 'svg-bottom-left--active': pageActive === 'about' }"
-              x1="-100"
-              y1="50"
-              x2="100"
-              y2="50"
-            />
-            <line
-              class="svg-bottom-right"
-              :class="{ 'svg-bottom-right--active': pageActive === 'about' }"
               x1="100"
               y1="50"
               x2="300"
