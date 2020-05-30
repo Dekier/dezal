@@ -31,7 +31,7 @@ export default {
       offerData: {
         title: 'Zobacz również',
         description:
-          'Polecamy poza tym inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
+          'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
         showBoxes: [
           'dzien-noc',
           'plisy',

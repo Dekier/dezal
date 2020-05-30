@@ -13,8 +13,7 @@ module.exports = {
       lang: 'pl',
       amp: true,
     },
-    title:
-      'Deżal: Rolety dzień - noc w Poznaniu jak i Rolety Rzymskie, Plisy. Gwarantowana dobra jakość.',
+    title: 'DEŻAL: nowoczesne żaluzje, plisy i rolety | Poznań i okolice.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,7 +22,7 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content:
-          'Szeroki wybór osłon okiennych w Poznaniu m.in. Rolet materiałowych, Rolet dzień-noc, Rolet rzymskich, Plis, Verticali, Żaluzji drewnianych i Aluminiowych.',
+          'Oferowane przez lokalną firmę DEŻAL Poznań rolety, plisy i żaluzje to najwyższej jakości osłony okienne. Indywidualna oferta, szczegółowy pomiar i szybka realizacja. Zadzwoń już dziś. ',
       },
       { 'http-equiv': 'cache-control', content: 'max-age=604800, public' },
     ],
@@ -115,7 +114,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    analyze: true,
+    analyze: false,
     extend(config, ctx) {
       // Run ESLint on save
       config.node = {

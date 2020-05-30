@@ -9,68 +9,83 @@
     <div class="Realization__center-container">
       <div class="Realization__filters-container">
         <span
-          class="Realization__filter"
           :class="{ 'Realization__filter--active': currentFilter === 'ALL' }"
+          class="Realization__filter"
           @click="setFilter('ALL')"
-        >WSZYSTKO</span>
+          >WSZYSTKO</span
+        >
         <span
-          class="Realization__filter"
           :class="{
-            'Realization__filter--active': currentFilter === 'rolety-dzień-noc'
+            'Realization__filter--active': currentFilter === 'rolety-dzień-noc',
           }"
-          @click="setFilter('rolety-dzień-noc')"
-        >DZIEŃ-NOC</span>
-        <span
           class="Realization__filter"
+          @click="setFilter('rolety-dzień-noc')"
+          >DZIEŃ-NOC</span
+        >
+        <span
           :class="{
             'Realization__filter--active':
-              currentFilter === 'rolety-materiałowe'
+              currentFilter === 'rolety-materiałowe',
           }"
+          class="Realization__filter"
           @click="setFilter('rolety-materiałowe')"
-        >MATERIAŁOWE</span>
+          >MATERIAŁOWE</span
+        >
         <span
-          class="Realization__filter"
           :class="{
-            'Realization__filter--active': currentFilter === 'żaluzje-rzymskie'
+            'Realization__filter--active': currentFilter === 'żaluzje-rzymskie',
           }"
+          class="Realization__filter"
           @click="setFilter('żaluzje-rzymskie')"
-        >RZYMSKIE</span>
+          >RZYMSKIE</span
+        >
         <span
-          class="Realization__filter"
           :class="{ 'Realization__filter--active': currentFilter === 'PLISY' }"
+          class="Realization__filter"
           @click="setFilter('PLISY')"
-        >PLISY</span>
+          >PLISY</span
+        >
         <span
-          class="Realization__filter"
           :class="{
-            'Realization__filter--active': currentFilter === 'ZALUZJE'
+            'Realization__filter--active': currentFilter === 'ZALUZJE',
           }"
+          class="Realization__filter"
           @click="setFilter('ZALUZJE')"
-        >ŻALUZJE</span>
+          >ŻALUZJE</span
+        >
         <span
-          class="Realization__filter"
           :class="{
-            'Realization__filter--active': currentFilter === 'VERTICALE'
+            'Realization__filter--active': currentFilter === 'VERTICALE',
           }"
+          class="Realization__filter"
           @click="setFilter('VERTICALE')"
-        >VERTICALE</span>
+          >VERTICALE</span
+        >
         <span
-          class="Realization__filter"
           :class="{
-            'Realization__filter--active': currentFilter === 'MASKITIERY'
+            'Realization__filter--active': currentFilter === 'MASKITIERY',
           }"
+          class="Realization__filter"
           @click="setFilter('MASKITIERY')"
-        >MOSKITIERY</span>
+          >MOSKITIERY</span
+        >
       </div>
       <!-- <transition-group class="Realization__projects" name="projects"> -->
       <div class="Realization__projects">
         <div
-          class="Realization__project"
           v-for="(imageData, index) in allImages"
-          :key="imageData.id + index"
+          :key="imageData.id"
+          class="Realization__project"
         >
-          <img :src="imageData.url" class="Realization__project-image" :alt="imageAlt(imageData)" />
-          <div @click="showBigGallery(index)" class="Realization__hover-background">
+          <img
+            :src="imageData.url"
+            :alt="imageAlt(imageData)"
+            class="Realization__project-image"
+          />
+          <div
+            class="Realization__hover-background"
+            @click="showBigGallery(index)"
+          >
             <svg class="Realization__hover-icon" viewBox="0 0 215.35 215.35">
               <path
                 d="M7.5 65.088a7.5 7.5 0 0 0 7.5-7.5V25.61l48.305 48.295a7.479 7.479 0 0 0 5.303 2.196c1.92 0 3.84-.732 5.304-2.197a7.498 7.498 0 0 0-.001-10.606L25.604 15.002h31.985a7.5 7.5 0 0 0 0-15H7.5a7.5 7.5 0 0 0-7.5 7.5v50.087a7.5 7.5 0 0 0 7.5 7.499zM207.85 150.262a7.5 7.5 0 0 0-7.5 7.5v31.979l-49.792-49.792a7.5 7.5 0 0 0-10.607 10.606l49.791 49.791h-31.977a7.5 7.5 0 0 0-7.5 7.5 7.5 7.5 0 0 0 7.5 7.5h50.086a7.5 7.5 0 0 0 7.5-7.5v-50.084a7.502 7.502 0 0 0-7.501-7.5zM64.792 139.949L15.005 189.74v-31.978c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v50.086a7.5 7.5 0 0 0 7.5 7.5h50.084a7.5 7.5 0 0 0 0-15H25.611l49.788-49.793a7.5 7.5 0 1 0-10.607-10.606zM207.85.002h-50.086a7.5 7.5 0 0 0-7.5 7.5 7.5 7.5 0 0 0 7.5 7.5h31.979l-48.298 48.301a7.5 7.5 0 0 0 5.304 12.803 7.482 7.482 0 0 0 5.304-2.197l48.298-48.301v31.98a7.5 7.5 0 0 0 7.5 7.5 7.5 7.5 0 0 0 7.5-7.5V7.502a7.501 7.501 0 0 0-7.501-7.5z"
@@ -91,8 +106,9 @@
       @beforeImage="beforeImage"
     />
   </div>
-</template><script>
-import Gallery from '~/components/Gallery.vue'
+</template>
+<script>
+import Gallery from '~/components/Gallery.vue';
 
 export default {
   name: 'Realization',
@@ -156,6 +172,36 @@ export default {
         },
 
         {
+          id: 813,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-13.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
+          id: 8123,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-12.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
+          id: 823,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-11.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
+          id: 323,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-9.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
+          id: 88,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-9.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
           id: 9,
           url: '/image/plisy/deżal-poznań-plisa-1.jpg',
           category: 'PLISY',
@@ -164,6 +210,24 @@ export default {
         {
           id: 10,
           url: '/image/plisy/deżal-poznań-plisa-2.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 57,
+          url: '/image/plisy/deżal-poznań-plisa-18.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 56,
+          url: '/image/plisy/deżal-poznań-plisa-17.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 55,
+          url: '/image/plisy/deżal-poznań-plisa-16.jpg',
           category: 'PLISY',
         },
 
@@ -216,12 +280,6 @@ export default {
         },
 
         {
-          id: 19,
-          url: '/image/plisy/deżal-poznań-plisa-11.jpg',
-          category: 'PLISY',
-        },
-
-        {
           id: 234,
           url: '/image/plisy/deżal-poznań-plisa-12.jpg',
           category: 'PLISY',
@@ -239,7 +297,7 @@ export default {
           category: 'PLISY',
         },
         {
-          id: 34343534,
+          id: 3433437,
           url: '/image/plisy/deżal-poznań-plisa-15.jpg',
           category: 'PLISY',
         },
@@ -359,6 +417,18 @@ export default {
         },
 
         {
+          id: 33227,
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-11.jpg',
+          category: 'żaluzje-rzymskie',
+        },
+
+        {
+          id: 33237,
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-12.jpg',
+          category: 'żaluzje-rzymskie',
+        },
+
+        {
           id: 38,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
           category: 'ZALUZJE',
@@ -389,6 +459,18 @@ export default {
         },
 
         {
+          id: 423,
+          url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-2.jpg',
+          category: 'ZALUZJE',
+        },
+
+        {
+          id: 424,
+          url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-3.jpg',
+          category: 'ZALUZJE',
+        },
+
+        {
           id: 43,
           url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
           category: 'VERTICALE',
@@ -403,7 +485,7 @@ export default {
       activeGallery: false,
       activeImageIndex: null,
       title: 'Plisty, Rolety, Moskitery, Rzymskie w Poznaniu od firmy Deżal.',
-    }
+    };
   },
 
   head() {
@@ -416,64 +498,65 @@ export default {
           content: 'Realizacje naszych usług.',
         },
       ],
-    }
+    };
   },
 
   computed: {
     allImages() {
       if (this.currentFilter === 'ALL') {
-        return this.imagesData
+        return this.imagesData;
       }
 
       const newList = this.imagesData.filter(
-        (a) => a.category === this.currentFilter
-      )
-      return newList
+        a => a.category === this.currentFilter
+      );
+      return newList;
     },
 
     images() {
       if (this.currentFilter === 'ALL') {
-        return this.imagesData
+        return this.imagesData;
       } else {
-        return this.imagesData.filter((i) => i.category === this.currentFilter)
+        return this.imagesData.filter(i => i.category === this.currentFilter);
       }
     },
   },
 
   methods: {
     setFilter(filter) {
-      this.currentFilter = filter
+      this.currentFilter = filter;
     },
 
     showBigGallery(index) {
-      this.activeGallery = true
-      this.activeImageIndex = index
+      this.activeGallery = true;
+      this.activeImageIndex = index;
     },
 
     exitGallery() {
-      this.activeGallery = false
+      this.activeGallery = false;
     },
 
     beforeImage() {
       if (this.activeImageIndex > 0) {
-        this.activeImageIndex--
+        this.activeImageIndex--;
       } else if (this.activeImageIndex === 0) {
-        this.activeImageIndex = this.images.length - 1
+        this.activeImageIndex = this.images.length - 1;
       }
     },
 
     nextImage() {
       if (this.images.length > this.activeImageIndex + 1) {
-        this.activeImageIndex++
+        this.activeImageIndex++;
       } else if (this.activeImageIndex + 1 === this.images.length) {
-        this.activeImageIndex = 0
+        this.activeImageIndex = 0;
       }
     },
     imageAlt(img) {
-      return 'deżal-poznań-' + img.category + '-' + img.id
+      return 'deżal-poznań-' + img.category + '-' + img.id;
     },
   },
-}
-</script><style lang="scss"scoped>
+};
+</script>
+<style lang="scss" scoped>
 @import 'index';
 </style>
