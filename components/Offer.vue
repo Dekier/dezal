@@ -1,23 +1,15 @@
 <template>
   <div id="offer" class="Offer__main-container">
     <div class="Offer__center-container">
-      <div class="Offer__title">
-        {{ offerData.title }}
-      </div>
-      <div class="Offer__description">
-        {{ offerData.description }}
-      </div>
+      <div class="Offer__title">{{ offerData.title }}</div>
+      <div class="Offer__description">{{ offerData.description }}</div>
       <div class="Offer__boxes-container">
         <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
-          <h3 class="Offer__box-title">
-            {{ box.title }}
-          </h3>
+          <h3 class="Offer__box-title">{{ box.title }}</h3>
           <div class="Offer__box-image-container">
             <div :style="urlStyle(box.url)" class="Offer__box-image" />
           </div>
-          <p class="Offer__box-text" style="-webkit-box-orient: vertical;">
-            {{ box.text }}
-          </p>
+          <p class="Offer__box-text" style="-webkit-box-orient: vertical;">{{ box.text }}</p>
           <nuxt-link :to="box.link" class="Offer__box-btn">
             Czytaj więcej
             <svg
@@ -43,19 +35,11 @@ export default {
   props: {
     offerData: {
       type: Object,
+      required: true,
     },
     offer_data_boxes: {
       type: Object,
       required: true,
-    },
-  },
-
-  computed: {
-    showBoxes() {
-      const newList = this.boxesData.filter((box) =>
-        this.offerData.showBoxes.includes(box.type)
-      )
-      return newList
     },
   },
 
@@ -114,6 +98,15 @@ export default {
         },
       ],
     }
+  },
+
+  computed: {
+    showBoxes() {
+      const newList = this.boxesData.filter((box) =>
+        this.offerData.showBoxes.includes(box.type)
+      )
+      return newList
+    },
   },
 
   methods: {

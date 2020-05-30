@@ -4,15 +4,11 @@
       <div
         v-if="about_company_data && about_company_data.title"
         class="AboutCompany__title"
-      >
-        {{ about_company_data.title }}
-      </div>
+      >{{ about_company_data.title }}</div>
       <div
         v-if="about_company_data && about_company_data.subtitle"
         class="AboutCompany__description"
-      >
-        {{ about_company_data.subtitle }}
-      </div>
+      >{{ about_company_data.subtitle }}</div>
       <div class="AboutCompany__boxes">
         <div
           @mouseover="activeBox = 1"
@@ -34,15 +30,11 @@
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 1 }"
             v-if="about_company_data && about_company_data.box_1_title"
-          >
-            {{ about_company_data.box_1_title }}
-          </div>
+          >{{ about_company_data.box_1_title }}</div>
           <div
             v-if="about_company_data && about_company_data.box_1_description"
             class="AboutCompany__box-text"
-          >
-            {{ about_company_data.box_1_description }}
-          </div>
+          >{{ about_company_data.box_1_description }}</div>
         </div>
         <div
           @mouseover="activeBox = 2"
@@ -65,15 +57,11 @@
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 2 }"
             v-if="about_company_data && about_company_data.box_2_title"
-          >
-            {{ about_company_data.box_2_title }}
-          </div>
+          >{{ about_company_data.box_2_title }}</div>
           <div
             class="AboutCompany__box-text"
             v-if="about_company_data && about_company_data.box_2_description"
-          >
-            {{ about_company_data.box_2_description }}
-          </div>
+          >{{ about_company_data.box_2_description }}</div>
         </div>
         <div
           @mouseover="activeBox = 3"
@@ -95,15 +83,11 @@
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 3 }"
             v-if="about_company_data && about_company_data.box_3_title"
-          >
-            {{ about_company_data.box_3_title }}
-          </div>
+          >{{ about_company_data.box_3_title }}</div>
           <div
             class="AboutCompany__box-text"
             v-if="about_company_data && about_company_data.box_2_description"
-          >
-            {{ about_company_data.box_2_description }}
-          </div>
+          >{{ about_company_data.box_3_description }}</div>
         </div>
       </div>
     </div>

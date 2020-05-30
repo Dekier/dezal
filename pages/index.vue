@@ -20,6 +20,12 @@ export default {
 
   transition: 'bounce',
 
+  components: {
+    Offer,
+    Hero,
+    AboutCompany,
+  },
+
   data() {
     return {
       writeSuccessful: false,
@@ -27,7 +33,7 @@ export default {
       offerData: {
         title: 'Oferta',
         description:
-          'W naszej ofercie znajdziemy szeroki wybór kolorów i deseni materiałów. Polecamy:',
+          'Tworzymy projekty wnętrz łączące w sobie ciekawe formy i funkcjonalność naszych produktów. W naszej ofercie znajdziecie szeroki wybór kolorów i deseni materiałów. Mieszkasz lub pracujesz w Poznaniu bądź okolicy? Potrzebujesz rolet lub żaluzji? Sprawdź koniecznie naszą ofertę! ',
         showBoxes: [
           'dzien-noc',
           'materialowe',
@@ -39,12 +45,6 @@ export default {
         ],
       },
     }
-  },
-
-  components: {
-    Offer,
-    Hero,
-    AboutCompany,
   },
 
   async asyncData({ app, params, error }) {
