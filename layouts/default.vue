@@ -2,7 +2,7 @@
   <div class="layout">
     <Header />
     <nuxt />
-    <div v-if="isActiveInfo" class="popup">
+    <!-- <div v-if="isActiveInfo" class="popup">
       <div class="popup-text">
         W trosce o nasze wspólne bezpieczeństwo prosimy o umówienie się poprzez
         kontakt telefoniczny.
@@ -10,16 +10,16 @@
         <span>+48 603 630 299</span>
         <div class="popup-btn" @click="isActiveInfo = false">ROZUMIEM</div>
       </div>
-    </div>
+    </div> -->
     <Cookies v-if="visibleCookies" @hideCookies="hideCookies" />
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
-import Cookies from '~/components/Cookies.vue'
+import Header from '~/components/Header.vue';
+import Footer from '~/components/Footer.vue';
+import Cookies from '~/components/Cookies.vue';
 
 export default {
   components: {
@@ -28,26 +28,26 @@ export default {
     Cookies,
   },
 
-  mounted() {
-    if (Boolean(localStorage.cookies)) {
-      this.visibleCookies = !Boolean(localStorage.cookies)
-    }
-  },
-
   data() {
     return {
       visibleCookies: true,
       isActiveInfo: true,
+    };
+  },
+
+  mounted() {
+    if (Boolean(localStorage.cookies)) {
+      this.visibleCookies = !Boolean(localStorage.cookies);
     }
   },
 
   methods: {
     hideCookies() {
-      this.visibleCookies = false
-      localStorage.cookies = false
+      this.visibleCookies = false;
+      localStorage.cookies = false;
     },
   },
-}
+};
 </script>
 
 <style style="scss">

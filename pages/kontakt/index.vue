@@ -183,11 +183,7 @@
           />
           <a
             :href="
-              `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${
-                formData.name
-              } ${formData.surname}%0A%0AMój nr telefonu to: ${
-                formData.number
-              } %0A%0AMoja wiadomość: %0A${formData.text}`
+              `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${formData.name} ${formData.surname}%0A%0AMój nr telefonu to: ${formData.number} %0A%0AMoja wiadomość: %0A${formData.text}`
             "
             class="Contact__submit"
           >
@@ -220,10 +216,10 @@ export default {
         surname: '',
         email: '',
         number: '',
-        text: ''
+        text: '',
       },
-      title: 'Deżal - Kontakt'
-    }
+      title: 'Deżal - Kontakt - Rolety Poznań',
+    };
   },
 
   head() {
@@ -233,12 +229,12 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Szybki telefon, szybka odpowiedź.'
-        }
-      ]
-    }
-  }
-}
+          content: 'Szybki telefon, szybka odpowiedź.',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

@@ -22,7 +22,7 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content:
-          'Oferowane przez lokalną firmę DEŻAL Poznań rolety, plisy i żaluzje to najwyższej jakości osłony okienne. Indywidualna oferta, szczegółowy pomiar i szybka realizacja. Zadzwoń już dziś. ',
+          'Oferowane przez lokalną firmę DEŻAL Poznań rolety, plisy i żaluzje to najwyższej jakości osłony okienne. Indywidualna oferta, szczegółowy pomiar i szybka realizacja.',
       },
       { 'http-equiv': 'cache-control', content: 'max-age=604800, public' },
     ],
@@ -71,6 +71,10 @@ module.exports = {
       iconFileName: 'logo-pwa.png',
     },
   },
+
+  router: {
+    middleware: ['redirect'],
+  },
   /*
    ** Nuxt.js modules
    */
@@ -80,6 +84,7 @@ module.exports = {
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
     'nuxt-sass-resources-loader',
+    '@nuxtjs/sitemap',
   ],
 
   styleResources: {
@@ -94,6 +99,8 @@ module.exports = {
   },
 
   sitemap: {
+    hostname: 'https://dezalroletypoznan.pl',
+    gzip: true,
     routes: [
       '/kontakt',
       '/rolety-dzien-noc',
@@ -119,7 +126,7 @@ module.exports = {
       // Run ESLint on save
       config.node = {
         fs: 'empty',
-      }
+      };
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -129,8 +136,8 @@ module.exports = {
           options: {
             fix: true,
           },
-        })
+        });
       }
     },
   },
-}
+};
