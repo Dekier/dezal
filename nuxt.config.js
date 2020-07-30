@@ -114,26 +114,38 @@ module.exports = {
   /*
    ** Build configuration
    */
+  // build: {
+  //   /*
+  //    ** You can extend webpack config here
+  //    */
+  //   analyze: false,
+  //   extend(config, ctx) {
+  //     // Run ESLint on save
+  //     config.node = {
+  //       fs: 'empty',
+  //     };
+  //     if (ctx.dev && ctx.isClient) {
+  //       config.module.rules.push({
+  //         enforce: 'pre',
+  //         test: /\.(js|vue)$/,
+  //         loader: 'eslint-loader',
+  //         exclude: /(node_modules)/,
+  //         options: {
+  //           fix: true,
+  //         },
+  //       });
+  //     }
+  //   },
+  // },
+
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    analyze: false,
-    extend(config, ctx) {
-      // Run ESLint on save
-      config.node = {
-        fs: 'empty',
-      };
-      if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-          options: {
-            fix: true,
-          },
-        });
+    extend(config, { isDev, isClient, isServer }) {
+      if (isServer) {
+        config.externals = {
+          '@firebase/app': 'commonjs @firebase/app',
+          '@firebase/firestore': 'commonjs @firebase/firestore',
+          //etc...
+        };
       }
     },
   },
