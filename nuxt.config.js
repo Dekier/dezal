@@ -56,6 +56,7 @@ module.exports = {
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false },
     '~/plugins/firebase.js',
+    '~/plugins/gtm'
   ],
 
   pwa: {
@@ -83,6 +84,7 @@ module.exports = {
     '@nuxtjs/pwa',
     'nuxt-sass-resources-loader',
     '@nuxtjs/sitemap',
+    '@nuxtjs/gtm'
   ],
 
   styleResources: {
