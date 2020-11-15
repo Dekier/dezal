@@ -196,8 +196,20 @@ export default {
         },
 
         {
-          id: 88,
-          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-9.jpg',
+          id: 300,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-300.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
+          id: 301,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-301.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
+          id: 302,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-302.jpg',
           category: 'rolety-dzień-noc',
         },
 
@@ -286,12 +298,6 @@ export default {
         },
 
         {
-          id: 34534,
-          url: '/image/plisy/deżal-poznań-plisa-13.jpg',
-          category: 'PLISY',
-        },
-
-        {
           id: 34343534,
           url: '/image/plisy/deżal-poznań-plisa-14.jpg',
           category: 'PLISY',
@@ -301,6 +307,38 @@ export default {
           url: '/image/plisy/deżal-poznań-plisa-15.jpg',
           category: 'PLISY',
         },
+
+        {
+          id: 112,
+          url: '/image/plisy/deżal-poznań-plisa-17.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 114,
+          url: '/image/plisy/deżal-poznań-plisa-19.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 115,
+          url: '/image/plisy/deżal-poznań-plisa-20.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 116,
+          url: '/image/plisy/deżal-poznań-plisa-21.jpg',
+          category: 'PLISY',
+        },
+
+        {
+          id: 117,
+          url: '/image/plisy/deżal-poznań-plisa-22.jpg',
+          category: 'PLISY',
+        },
+
+
 
         {
           id: 20,
@@ -339,12 +377,6 @@ export default {
         },
 
         {
-          id: 27,
-          url: '/image/rolety/dezal-poznan-roleta-materiałowa-8.jpg',
-          category: 'rolety-materiałowe',
-        },
-
-        {
           id: 2558,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-9.jpg',
           category: 'rolety-materiałowe',
@@ -359,6 +391,24 @@ export default {
         {
           id: 2833,
           url: '/image/rolety/dezal-poznan-roleta-materiałowa-11.jpg',
+          category: 'rolety-materiałowe',
+        },
+
+        {
+          id: 200,
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-200.jpg',
+          category: 'rolety-materiałowe',
+        },
+
+        {
+          id: 201,
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-201.jpg',
+          category: 'rolety-materiałowe',
+        },
+
+        {
+          id: 202,
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-202.jpg',
           category: 'rolety-materiałowe',
         },
 
