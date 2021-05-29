@@ -236,23 +236,19 @@
 
 .Header__link:hover svg line.svg-top-left,
 .Header__link:hover svg line.svg-bottom-left {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .Header__link:hover svg line.svg-top-right,
 .Header__link:hover svg line.svg-bottom-right {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .svg-bottom-right--active {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .svg-bottom-left--active {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -262,9 +258,6 @@
 }
 
 .fade-enter,
-.fade-leave-to
-
-/* .fade-leave-active below version 2.1.8 */
-  {
+.fade-leave-to {
   opacity: 0;
 }

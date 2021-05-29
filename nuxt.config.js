@@ -1,5 +1,8 @@
 module.exports = {
-  ssr: true,
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0', // default: localhost
+  },
 
   /*
    ** Headers of the page
@@ -35,11 +38,6 @@ module.exports = {
       },
     ],
   },
-
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
 
   /*
    ** Global CSS
@@ -82,7 +80,6 @@ module.exports = {
     '@nuxtjs/pwa',
     'nuxt-sass-resources-loader',
     '@nuxtjs/sitemap',
-    '@nuxtjs/gtm'
   ],
 
   styleResources: {
@@ -112,40 +109,12 @@ module.exports = {
     ],
   },
 
-  /*
-   ** Build configuration
-   */
-  // build: {
-  //   /*
-  //    ** You can extend webpack config here
-  //    */
-  //   analyze: false,
-  //   extend(config, ctx) {
-  //     // Run ESLint on save
-  //     config.node = {
-  //       fs: 'empty',
-  //     };
-  //     if (ctx.dev && ctx.isClient) {
-  //       config.module.rules.push({
-  //         enforce: 'pre',
-  //         test: /\.(js|vue)$/,
-  //         loader: 'eslint-loader',
-  //         exclude: /(node_modules)/,
-  //         options: {
-  //           fix: true,
-  //         },
-  //       });
-  //     }
-  //   },
-  // },
-
   build: {
-    extend(config, { isDev, isClient, isServer }) {
+    extend(config, { isServer }) {
       if (isServer) {
         config.externals = {
           '@firebase/app': 'commonjs @firebase/app',
           '@firebase/firestore': 'commonjs @firebase/firestore',
-          //etc...
         };
       }
     },

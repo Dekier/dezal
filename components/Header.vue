@@ -62,7 +62,7 @@
             >
               <nuxt-link
                 class="Header__dropdown-link-mobile"
-                to="/rolety-dzien-noc/"
+                to="/rolety-dzien-noc"
                 @click.native="
                   (showMobileDropDown = false), (showMobileBtn = false)
                 "
@@ -70,7 +70,7 @@
               >
               <nuxt-link
                 class="Header__dropdown-link-mobile"
-                to="/rolety-materialowe/"
+                to="/rolety-materialowe"
                 @click.native="
                   (showMobileDropDown = false), (showMobileBtn = false)
                 "
@@ -78,7 +78,7 @@
               >
               <nuxt-link
                 class="Header__dropdown-link-mobile"
-                to="/rolety-rzymskie/"
+                to="/rolety-rzymskie"
                 @click.native="
                   (showMobileDropDown = false), (showMobileBtn = false)
                 "
@@ -86,7 +86,7 @@
               >
               <nuxt-link
                 class="Header__dropdown-link-mobile"
-                to="/plisy/"
+                to="/plisy"
                 @click.native="
                   (showMobileDropDown = false), (showMobileBtn = false)
                 "
@@ -97,7 +97,7 @@
                 @click.native="
                   (showMobileDropDown = false), (showMobileBtn = false)
                 "
-                to="/zaluzje/"
+                to="/zaluzje"
                 >Żaluzje</nuxt-link
               >
               <nuxt-link
@@ -105,7 +105,7 @@
                 @click.native="
                   (showMobileDropDown = false), (showMobileBtn = false)
                 "
-                to="/verticale/"
+                to="/verticale"
                 >verticale</nuxt-link
               >
               <nuxt-link
@@ -113,14 +113,14 @@
                 @click.native="
                   (showMobileDropDown = false), (showMobileBtn = false)
                 "
-                to="/moskitiery/"
+                to="/moskitiery"
                 >moskitiery</nuxt-link
               >
             </div>
           </transition>
           <nuxt-link
             class="Header__link-mobile"
-            to="/realizacje/"
+            to="/realizacje"
             @click.native="
               (showMobileBtn = false), (showMobileDropDown = false)
             "
@@ -128,7 +128,7 @@
           >
           <nuxt-link
             class="Header__link-mobile"
-            to="/kontakt/"
+            to="/kontakt"
             @click.native="
               (showMobileBtn = false), (showMobileDropDown = false)
             "
@@ -208,43 +208,43 @@
           <nuxt-link
             class="Header__dropdown-link"
             @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-dzien-noc/"
+            to="/rolety-dzien-noc"
             >Rolety Dzień-Noc</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
             @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-materialowe/"
+            to="/rolety-materialowe"
             >Rolety Materiałowe</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
             @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-rzymskie/"
+            to="/rolety-rzymskie"
             >Rolety Rzymskie</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
             @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/plisy/"
+            to="/plisy"
             >PLISY</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
             @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/zaluzje/"
+            to="/zaluzje"
             >Żaluzje</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
             @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/verticale/"
+            to="/verticale"
             >verticale</nuxt-link
           >
           <nuxt-link
             class="Header__dropdown-link"
             @click.native="(showDropDown = false), (pageActive = 'offer')"
-            to="/moskitiery/"
+            to="/moskitiery"
             >moskitiery</nuxt-link
           >
         </div>
@@ -252,7 +252,7 @@
           @click.native="pageActive = 'real'"
           @mouseover.native="showDropDown = false"
           class="Header__link"
-          to="/realizacje/"
+          to="/realizacje"
         >
           REALIZACJE
           <svg class="Header__link-border" width="200" height="50">
@@ -278,7 +278,7 @@
           class="Header__link"
           @click.native="pageActive = 'contact'"
           @mouseover.native="showDropDown = false"
-          to="/kontakt/"
+          to="/kontakt"
         >
           KONTAKT
           <svg class="Header__link-border" width="200" height="50">
@@ -309,15 +309,13 @@
 export default {
   name: 'Header',
 
-  data() {
-    return {
-      mediaName: 'phone',
-      showMobileBtn: false,
-      showDropDown: false,
-      showMobileDropDown: false,
-      pageActive: 'home',
-    };
-  },
+  data: () => ({
+    mediaName: 'phone',
+    showMobileBtn: false,
+    showDropDown: false,
+    showMobileDropDown: false,
+    pageActive: 'home',
+  }),
 
   mounted() {
     this.pageName();
