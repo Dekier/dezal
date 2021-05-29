@@ -52,7 +52,6 @@ module.exports = {
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false },
     '~/plugins/firebase.js',
-    '~/plugins/gtm'
   ],
 
   pwa: {
@@ -112,10 +111,10 @@ module.exports = {
   build: {
     extend(config, { isServer }) {
       if (isServer) {
-        config.externals = {
-          '@firebase/app': 'commonjs @firebase/app',
-          '@firebase/firestore': 'commonjs @firebase/firestore',
-        };
+        // config.externals = {
+        //   '@firebase/app': 'commonjs @firebase/app',
+        //   '@firebase/firestore': 'commonjs @firebase/firestore',
+        // };
       }
     },
   },

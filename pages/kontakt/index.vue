@@ -209,18 +209,16 @@ export default {
 
   transition: 'bounce',
 
-  data() {
-    return {
-      formData: {
-        name: '',
-        surname: '',
-        email: '',
-        number: '',
-        text: '',
-      },
-      title: 'Deżal - Kontakt - Rolety Poznań',
-    };
-  },
+  data: () => ({
+    formData: {
+      name: '',
+      surname: '',
+      email: '',
+      number: '',
+      text: '',
+    },
+    title: 'Deżal - Kontakt - Rolety Poznań',
+  }),
 
   head() {
     return {

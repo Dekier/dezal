@@ -29,10 +29,10 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'Offer',
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
+  name: 'dupa',
 
   props: {
     offerData: {
@@ -50,50 +50,50 @@ export default {
     activeTab: '',
     boxesData: [
       {
-        title: 'this.offerDataBoxes.box_1_title',
-        text: 'this.offerDataBoxes.box_1_description',
+        title: this.offerDataBoxes.box_1_title,
+        text: this.offerDataBoxes.box_1_description,
         url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
         link: '/rolety-dzien-noc',
         type: 'dzien-noc',
       },
       {
-        title: 'this.offerDataBoxes.box_2_title',
-        text: 'this.offerDataBoxes.box_2_description',
+        title: this.offerDataBoxes.box_2_title,
+        text: this.offerDataBoxes.box_2_description,
         url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
         link: '/rolety-materialowe',
         type: 'materialowe',
       },
       {
-        title: 'this.offerDataBoxes.box_3_title',
-        text: 'this.offerDataBoxes.box_3_description',
+        title: this.offerDataBoxes.box_3_title,
+        text: this.offerDataBoxes.box_3_description,
         url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg',
         link: '/rolety-rzymskie',
         type: 'rzymskie',
       },
       {
-        title: 'this.offerDataBoxes.box_4_title',
-        text: 'this.offerDataBoxes.box_4_description',
+        title: this.offerDataBoxes.box_4_title,
+        text: this.offerDataBoxes.box_4_description,
         url: '/image/plisy/deżal-poznań-plisa-1.jpg',
         link: '/plisy',
         type: 'plisy',
       },
       {
-        title: 'this.offerDataBoxes.box_5_title',
-        text: 'this.offerDataBoxes.box_5_description',
+        title: this.offerDataBoxes.box_5_title,
+        text: this.offerDataBoxes.box_5_description,
         url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
         link: '/zaluzje',
         type: 'zaluzje',
       },
       {
-        title: 'this.offerDataBoxes.box_6_title',
-        text: 'this.offerDataBoxes.box_6_description',
+        title: this.offerDataBoxes.box_6_title,
+        text: this.offerDataBoxes.box_6_description,
         url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
         link: '/verticale',
         type: 'verticale',
       },
       {
-        title: 'this.offerDataBoxes.box_7_title',
-        text: 'this.offerDataBoxes.box_7_description',
+        title: this.offerDataBoxes.box_7_title,
+        text: this.offerDataBoxes.box_7_description,
         url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
         link: '/moskitiery',
         type: 'moskitiery',
@@ -103,16 +103,10 @@ export default {
 
   computed: {
     showBoxes() {
-      console.log(this.offerData);
       return this.boxesData.filter(box =>
         this.offerData.showBoxes.includes(box.type)
       );
     },
-  },
-
-  mounted() {
-    console.log('sdfjkbsdfkubdslkjfbaskj');
-    console.log('sdfsdf', this.offerDataBoxes);
   },
 
   methods: {
@@ -120,9 +114,9 @@ export default {
       return `background-image: url(${url})`;
     },
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
-@import 'Offer';
+@import './Offer';
 </style>

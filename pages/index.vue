@@ -3,9 +3,12 @@
     <div class="MainPage__hero">
       <div class="MainPage__hero-background" />
     </div>
-    <hero :text_data="text_data" />
-    <about-company :about_company_data="about_company_data" />
-    <offer :offerData="offerData" :offer_data_boxes="offer_data_boxes" />
+    <hero v-if="textData" :text-data="textData" />
+    <about-company
+      v-if="aboutCompanyData"
+      :about-company-data="aboutCompanyData"
+    />
+    <offer :offer-data="offerData" :offer-data-boxes="offerDataBoxes" />
   </section>
 </template>
 
@@ -55,25 +58,29 @@ export default {
     }
 
     const ref_about = fireDb.collection('main').doc('about_company');
-    let snap_about;
+    let snapAbout;
     try {
-      snap_about = await ref_about.get();
+      snapAbout = await ref_about.get();
     } catch (e) {
       console.error(e);
     }
 
     const ref_offer = fireDb.collection('main').doc('offer');
-    let snap_offer;
+    let snapOffer;
     try {
-      snap_offer = await ref_offer.get();
+      snapOffer = await ref_offer.get();
     } catch (e) {
       console.error(e);
     }
     return {
-      text_data: snap.data(),
-      about_company_data: snap_about.data(),
-      offer_data_boxes: snap_offer.data(),
+      textData: snap.data(),
+      aboutCompanyData: snapAbout.data(),
+      offerDataBoxes: snapOffer.data(),
     };
+  },
+
+  mounted() {
+    console.log('sdfjkdsn', this.dupa);
   },
 };
 </script>
@@ -81,8 +88,8 @@ export default {
 <style lang="scss" scoped>
 @import 'index';
 
-.container {
-  height: 200px;
-  margin-top: 200px;
-}
+// .container {
+//   height: 200px;
+//   margin-top: 200px;
+// }
 </style>
