@@ -21,7 +21,6 @@
     "@nuxtjs/style-resources": "^0.1.1",
     "@nuxtjs/vercel-builder": "^0.21.2",
     "cross-env": "^5.2.0",
-    "css-loader": "4.2.0",
     "eslint-config-prettier-standard": "^3.0.1",
     "eslint-config-standard": "^14.1.0",
     "firebase": "^8.6.3",
@@ -31,6 +30,7 @@
   "devDependencies": {
     "babel-eslint": "^8.2.1",
     "eslint": "^5.0.1",
+    "css-loader": "4.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-prettier": "^3.1.0",
