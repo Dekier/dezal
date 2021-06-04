@@ -1,7 +1,9 @@
 export default {
-    htmlAttrs: {
-      lang: 'pl',
-    },
+  target: 'server',
+
+  htmlAttrs: {
+    lang: 'pl',
+  },
 
   /*
    ** Headers of the page
