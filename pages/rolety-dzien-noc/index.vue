@@ -1,15 +1,14 @@
 <template>
   <div>
-    <product-information :pageData="pageData" :bottom-images="bottomImages" />
-    <offer :offerData="offerData" :offerDataBoxes="offerDataBoxes" />
+    <product-information :page-data="pageData" :bottom-images="bottomImages" />
+    <offer :offer-data="offerData" :offer-data-boxes="offer" />
   </div>
 </template>
 
 <script>
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import { fireDb } from '~/plugins/firebase.js';
-
+import { mapGetters } from 'vuex';
 export default {
   name: 'RoletyDzienNoc',
 
@@ -55,25 +54,18 @@ export default {
     };
   },
 
-  async asyncData() {
-    const ref_offer = fireDb.collection('main').doc('offer');
-    let snapOffer;
-    try {
-      snapOffer = await ref_offer.get();
-    } catch (e) {
-      console.error(e);
-    }
-    return {
-      offerDataBoxes: snapOffer.data(),
-      pageData: [
+  computed: {
+    ...mapGetters(['offer']),
+    pageData() {
+      return [
         {
           id: 0,
-          title: snapOffer.data().box_1_title,
+          title: this.offer.box_1_title,
           url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
-          description: snapOffer.data().box_1_description,
+          description: this.offer.box_1_description,
         },
-      ],
-    };
+      ];
+    },
   },
 };
 </script>

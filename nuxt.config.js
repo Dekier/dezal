@@ -1,17 +1,16 @@
-module.exports = {
+export default {
   server: {
     port: 3000, // default: 3000
     host: '0.0.0.0', // default: localhost
   },
+    htmlAttrs: {
+      lang: 'pl',
+    },
 
   /*
    ** Headers of the page
    */
   head: {
-    htmlAttrs: {
-      lang: 'pl',
-      amp: true,
-    },
     title: 'DEŻAL: nowoczesne żaluzje, plisy i rolety | Poznań i okolice.',
     meta: [
       { charset: 'utf-8' },
@@ -51,7 +50,6 @@ module.exports = {
     { src: '~/plugins/aos.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false },
-    '~/plugins/firebase.js',
   ],
 
   pwa: {
@@ -73,25 +71,16 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
     'nuxt-sass-resources-loader',
     '@nuxtjs/sitemap',
+    '@nuxtjs/firebase'
   ],
 
   styleResources: {
     scss: ['@/assets/stylesheets/mixins/*.scss', '@/assets/stylesheets/*.scss'],
   },
-
-  /*
-   ** Axios module configuration
-   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
-
   sitemap: {
     hostname: 'https://dezalroletypoznan.pl',
     gzip: true,
@@ -108,14 +97,23 @@ module.exports = {
     ],
   },
 
-  build: {
-    extend(config, { isServer }) {
-      if (isServer) {
-        // config.externals = {
-        //   '@firebase/app': 'commonjs @firebase/app',
-        //   '@firebase/firestore': 'commonjs @firebase/firestore',
-        // };
-      }
+  firebase: {
+    config: {
+      apiKey: 'AIzaSyAzEy6DqrnNLqqjLagqEnxmzYRMrJrYX8A',
+      authDomain: 'dezal-e34b9.firebaseapp.com',
+      databaseURL: 'https://dezal-e34b9.firebaseio.com',
+      projectId: 'dezal-e34b9',
+      storageBucket: 'dezal-e34b9.appspot.com',
+      messagingSenderId: '1098134824316',
+      appId: '1:1098134824316:web:03f74fc2d6433efa',
+    },
+    services: {
+      auth: {
+        ssr: true,
+      },
+      firestore: true
     },
   },
+
+  build: {},
 };

@@ -18,8 +18,9 @@
   </header>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
   name: 'Hero',
 
   props: {
@@ -28,9 +29,9 @@ export default {
       required: true,
     },
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>
-@import 'Hero';
+@import 'hero';
 </style>

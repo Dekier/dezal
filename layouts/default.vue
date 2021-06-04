@@ -1,26 +1,9 @@
 <template>
   <div class="layout">
-    <lazy-hydrate when-visible>
-      <header-nav />
-    </lazy-hydrate>
-    <lazy-hydrate ssr-only>
-      <nuxt />
-    </lazy-hydrate>
-    <!-- <div v-if="isActiveInfo" class="popup">
-      <div class="popup-text">
-        W trosce o nasze wspólne bezpieczeństwo prosimy o umówienie się poprzez
-        kontakt telefoniczny.
-        <br />
-        <span>+48 603 630 299</span>
-        <div class="popup-btn" @click="isActiveInfo = false">ROZUMIEM</div>
-      </div>
-    </div> -->
-    <lazy-hydrate when-visible>
-      <cookies v-if="visibleCookies" @hideCookies="hideCookies" />
-    </lazy-hydrate>
-    <lazy-hydrate when-visible>
-      <footer-nav />
-    </lazy-hydrate>
+    <header-nav />
+    <nuxt />
+    <cookies v-if="visibleCookies" @hideCookies="hideCookies" />
+    <footer-nav />
   </div>
 </template>
 
@@ -28,14 +11,12 @@
 import HeaderNav from '~/components/Header.vue';
 import FooterNav from '~/components/Footer.vue';
 import Cookies from '~/components/Cookies.vue';
-import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
   components: {
     HeaderNav,
     FooterNav,
     Cookies,
-    LazyHydrate,
   },
 
   data: () => ({

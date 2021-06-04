@@ -1,14 +1,14 @@
 <template>
   <div class="Plisy__main-container">
     <product-information :pageData="pageData" :bottom-images="bottomImages" />
-    <offer :offerData="offerData" :offerDataBoxes="offerDataBoxes" />
+    <offer :offer-data="offerData" :offer-data-boxes="offer" />
   </div>
 </template>
 
 <script>
 import ProductInformation from '~/components/Product-information.vue';
 import Offer from '~/components/Offer.vue';
-import { fireDb } from '~/plugins/firebase.js';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Zaluzje',
@@ -56,31 +56,24 @@ export default {
     };
   },
 
-  async asyncData() {
-    const ref_offer = fireDb.collection('main').doc('offer');
-    let snapOffer;
-    try {
-      snapOffer = await ref_offer.get();
-    } catch (e) {
-      console.error(e);
-    }
-    return {
-      offerDataBoxes: snapOffer.data(),
-      pageData: [
+  computed: {
+    ...mapGetters(['offer']),
+    pageData() {
+      return [
         {
           id: 0,
-          title: snapOffer.data().box_8_title,
+          title: this.offer.box_8_title,
           url: '/image/zaluzje/deżal-poznań-żaluzja-aluminiowa-1.jpg',
-          description: snapOffer.data().box_8_description,
+          description: this.offer.box_8_description,
         },
         {
           id: 1,
-          title: snapOffer.data().box_9_title,
+          title: this.offer.box_9_title,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
-          description: snapOffer.data().box_9_description,
+          description: this.offer.box_9_description,
         },
-      ],
-    };
+      ];
+    },
   },
 };
 </script>

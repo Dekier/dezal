@@ -3,21 +3,17 @@
     <div class="MainPage__hero">
       <div class="MainPage__hero-background" />
     </div>
-    <hero v-if="textData" :text-data="textData" />
-    <about-company
-      v-if="aboutCompanyData"
-      :about-company-data="aboutCompanyData"
-    />
-    <offer :offer-data="offerData" :offer-data-boxes="offerDataBoxes" />
+    <hero v-if="hero" :text-data="hero" />
+    <about-company v-if="aboutCompany" :about-company-data="aboutCompany" />
+    <offer v-if="!!offer" :offer-data="offerData" :offer-data-boxes="offer" />
   </section>
 </template>
 
 <script>
 import Offer from '~/components/Offer.vue';
-import Hero from '~/components/Hero.vue';
+import Hero from '~/components/hero.vue';
 import AboutCompany from '~/components/About-company.vue';
-import { fireDb } from '~/plugins/firebase.js';
-
+import { mapGetters } from 'vuex';
 export default {
   name: 'MainPage',
 
@@ -47,49 +43,12 @@ export default {
       ],
     },
   }),
-
-  async asyncData() {
-    const ref = fireDb.collection('main').doc('hero');
-    let snap;
-    try {
-      snap = await ref.get();
-    } catch (e) {
-      console.error(e);
-    }
-
-    const ref_about = fireDb.collection('main').doc('about_company');
-    let snapAbout;
-    try {
-      snapAbout = await ref_about.get();
-    } catch (e) {
-      console.error(e);
-    }
-
-    const ref_offer = fireDb.collection('main').doc('offer');
-    let snapOffer;
-    try {
-      snapOffer = await ref_offer.get();
-    } catch (e) {
-      console.error(e);
-    }
-    return {
-      textData: snap.data(),
-      aboutCompanyData: snapAbout.data(),
-      offerDataBoxes: snapOffer.data(),
-    };
-  },
-
-  mounted() {
-    console.log('sdfjkdsn', this.dupa);
+  computed: {
+    ...mapGetters(['hero', 'aboutCompany', 'offer']),
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import 'index';
-
-// .container {
-//   height: 200px;
-//   margin-top: 200px;
-// }
 </style>
