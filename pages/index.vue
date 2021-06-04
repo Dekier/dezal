@@ -3,15 +3,15 @@
     <div class="MainPage__hero">
       <div class="MainPage__hero-background" />
     </div>
-    <hero v-if="hero" :text-data="hero" />
-    <about-company v-if="aboutCompany" :about-company-data="aboutCompany" />
-    <offer v-if="!!offer" :offer-data="offerData" :offer-data-boxes="offer" />
+    <hero :text-data="hero" />
+    <about-company :about-company-data="aboutCompany" />
+    <offer :offer-data="offerData" :offer-data-boxes="offer" />
   </section>
 </template>
 
 <script>
 import Offer from '~/components/Offer.vue';
-import Hero from '~/components/hero.vue';
+import Hero from '~/components/Hero.vue';
 import AboutCompany from '~/components/About-company.vue';
 import { mapGetters } from 'vuex';
 export default {
