@@ -18,6 +18,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^0.1.1",
+    "@nuxtjs/vercel-builder": "^0.21.2",
     "aos": "^2.3.4",
     "cross-env": "^5.2.0",
     "css-loader": "4.2.0",
