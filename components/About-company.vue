@@ -1,14 +1,16 @@
 <template>
-  <div id="aboutCompany" class="AboutCompany__main-container">
+  <div
+    v-if="!!aboutCompanyData"
+    id="aboutCompany"
+    class="AboutCompany__main-container"
+  >
     <div class="AboutCompany__center-container">
-      <div
-        v-if="about_company_data && about_company_data.title"
-        class="AboutCompany__title"
-      >{{ about_company_data.title }}</div>
-      <div
-        v-if="about_company_data && about_company_data.subtitle"
-        class="AboutCompany__description"
-      >{{ about_company_data.subtitle }}</div>
+      <div class="AboutCompany__title">
+        {{ aboutCompanyData.title }}
+      </div>
+      <div class="AboutCompany__description">
+        {{ aboutCompanyData.subtitle }}
+      </div>
       <div class="AboutCompany__boxes">
         <div
           @mouseover="activeBox = 1"
@@ -29,12 +31,12 @@
           <div
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 1 }"
-            v-if="about_company_data && about_company_data.box_1_title"
-          >{{ about_company_data.box_1_title }}</div>
-          <div
-            v-if="about_company_data && about_company_data.box_1_description"
-            class="AboutCompany__box-text"
-          >{{ about_company_data.box_1_description }}</div>
+          >
+            {{ aboutCompanyData.box_1_title }}
+          </div>
+          <div class="AboutCompany__box-text">
+            {{ aboutCompanyData.box_1_description }}
+          </div>
         </div>
         <div
           @mouseover="activeBox = 2"
@@ -56,12 +58,12 @@
           <div
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 2 }"
-            v-if="about_company_data && about_company_data.box_2_title"
-          >{{ about_company_data.box_2_title }}</div>
-          <div
-            class="AboutCompany__box-text"
-            v-if="about_company_data && about_company_data.box_2_description"
-          >{{ about_company_data.box_2_description }}</div>
+          >
+            {{ aboutCompanyData.box_2_title }}
+          </div>
+          <div class="AboutCompany__box-text">
+            {{ aboutCompanyData.box_2_description }}
+          </div>
         </div>
         <div
           @mouseover="activeBox = 3"
@@ -82,12 +84,12 @@
           <div
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 3 }"
-            v-if="about_company_data && about_company_data.box_3_title"
-          >{{ about_company_data.box_3_title }}</div>
-          <div
-            class="AboutCompany__box-text"
-            v-if="about_company_data && about_company_data.box_2_description"
-          >{{ about_company_data.box_3_description }}</div>
+          >
+            {{ aboutCompanyData.box_3_title }}
+          </div>
+          <div class="AboutCompany__box-text">
+            {{ aboutCompanyData.box_3_description }}
+          </div>
         </div>
       </div>
     </div>
@@ -99,39 +101,37 @@ export default {
   name: 'AboutCompany',
 
   props: {
-    about_company_data: {
+    aboutCompanyData: {
       type: Object,
       required: true,
     },
   },
 
-  data() {
-    return {
-      activeBox: 0,
-    }
-  },
+  data: () => ({
+    activeBox: 0,
+  }),
 
   computed: {
     activeSvgOne() {
       if (this.activeBox === 1) {
-        return '#ffe100'
+        return '#ffe100';
       }
-      return '#323232'
+      return '#323232';
     },
     activeSvgTwo() {
       if (this.activeBox === 2) {
-        return '#ffe100'
+        return '#ffe100';
       }
-      return '#323232'
+      return '#323232';
     },
     activeSvgThree() {
       if (this.activeBox === 3) {
-        return '#ffe100'
+        return '#ffe100';
       }
-      return '#323232'
+      return '#323232';
     },
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 @import 'About-company';

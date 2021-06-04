@@ -1,50 +1,28 @@
 <template>
   <div class="layout">
-    <LazyHydrate  when-visible>  
-    <Header />
-    </LazyHydrate>
-    <LazyHydrate  ssr-only>
-      <nuxt />
-    </LazyHydrate>
-    <!-- <div v-if="isActiveInfo" class="popup">
-      <div class="popup-text">
-        W trosce o nasze wspólne bezpieczeństwo prosimy o umówienie się poprzez
-        kontakt telefoniczny.
-        <br />
-        <span>+48 603 630 299</span>
-        <div class="popup-btn" @click="isActiveInfo = false">ROZUMIEM</div>
-      </div>
-    </div> -->
-    <LazyHydrate  when-visible>  
-    <Cookies v-if="visibleCookies" @hideCookies="hideCookies" />
-    </LazyHydrate>
-    <LazyHydrate  when-visible>  
-    <Footer />
-    </LazyHydrate>
+    <header-nav />
+    <nuxt />
+    <cookies v-if="visibleCookies" @hideCookies="hideCookies" />
+    <footer-nav />
   </div>
 </template>
 
 <script>
-import Header from '~/components/Header.vue';
-import Footer from '~/components/Footer.vue';
+import HeaderNav from '~/components/Header.vue';
+import FooterNav from '~/components/Footer.vue';
 import Cookies from '~/components/Cookies.vue';
-import LazyHydrate from 'vue-lazy-hydration';
-
 
 export default {
   components: {
-    Header,
-    Footer,
+    HeaderNav,
+    FooterNav,
     Cookies,
-    LazyHydrate
   },
 
-  data() {
-    return {
-      visibleCookies: true,
-      isActiveInfo: true,
-    };
-  },
+  data: () => ({
+    visibleCookies: true,
+    isActiveInfo: true,
+  }),
 
   mounted() {
     if (Boolean(localStorage.cookies)) {

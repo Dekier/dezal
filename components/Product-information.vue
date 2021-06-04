@@ -99,22 +99,17 @@ export default {
     Gallery,
   },
 
-  data() {
-    return {
-      activeGallery: false,
-      activeImageIndex: null,
-    };
-  },
+  data: () => ({
+    activeGallery: false,
+    activeImageIndex: null,
+  }),
 
   methods: {
     urlStyle(url) {
       return `background-image: url(${url})`;
     },
     oddClass(id) {
-      if (id % 2 !== 0) {
-        return true;
-      }
-      return false;
+      return id % 2 !== 0 ? true : false;
     },
 
     showBigGallery(index) {

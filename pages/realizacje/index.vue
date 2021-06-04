@@ -197,19 +197,25 @@ export default {
 
         {
           id: 300,
-          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-300.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-14.jpg',
           category: 'rolety-dzień-noc',
         },
 
         {
           id: 301,
-          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-301.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-15.jpg',
           category: 'rolety-dzień-noc',
         },
 
         {
           id: 302,
-          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-302.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-16.jpg',
+          category: 'rolety-dzień-noc',
+        },
+
+        {
+          id: 303,
+          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-17.jpg',
           category: 'rolety-dzień-noc',
         },
 
@@ -337,8 +343,31 @@ export default {
           url: '/image/plisy/deżal-poznań-plisa-22.jpg',
           category: 'PLISY',
         },
-
-
+        {
+          id: 118,
+          url: '/image/plisy/deżal-poznań-plisa-23.jpg',
+          category: 'PLISY',
+        },
+        {
+          id: 119,
+          url: '/image/plisy/deżal-poznań-plisa-24.jpg',
+          category: 'PLISY',
+        },
+        {
+          id: 120,
+          url: '/image/plisy/deżal-poznań-plisa-25.jpg',
+          category: 'PLISY',
+        },
+        {
+          id: 121,
+          url: '/image/plisy/deżal-poznań-plisa-26.jpg',
+          category: 'PLISY',
+        },
+        {
+          id: 122,
+          url: '/image/plisy/deżal-poznań-plisa-27.jpg',
+          category: 'PLISY',
+        },
 
         {
           id: 20,
@@ -396,19 +425,30 @@ export default {
 
         {
           id: 200,
-          url: '/image/rolety/dezal-poznan-roleta-materiałowa-200.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-12.jpg',
           category: 'rolety-materiałowe',
         },
 
         {
           id: 201,
-          url: '/image/rolety/dezal-poznan-roleta-materiałowa-201.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-13.jpg',
           category: 'rolety-materiałowe',
         },
 
         {
           id: 202,
-          url: '/image/rolety/dezal-poznan-roleta-materiałowa-202.jpg',
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-14.jpg',
+          category: 'rolety-materiałowe',
+        },
+
+        {
+          id: 203,
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-15.jpg',
+          category: 'rolety-materiałowe',
+        },
+        {
+          id: 204,
+          url: '/image/rolety/dezal-poznan-roleta-materiałowa-16.jpg',
           category: 'rolety-materiałowe',
         },
 
@@ -467,14 +507,19 @@ export default {
         },
 
         {
-          id: 33227,
+          id: 3328,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-11.jpg',
           category: 'żaluzje-rzymskie',
         },
 
         {
-          id: 33237,
+          id: 3329,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-12.jpg',
+          category: 'żaluzje-rzymskie',
+        },
+        {
+          id: 3330,
+          url: '/image/rolety/dezal-poznan-roleta-rzymska-13.jpg',
           category: 'żaluzje-rzymskie',
         },
 
@@ -499,6 +544,32 @@ export default {
         {
           id: 41,
           url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-4.jpg',
+          category: 'ZALUZJE',
+        },
+
+        {
+          id: 421,
+          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-5.jpg',
+          category: 'ZALUZJE',
+        },
+        {
+          id: 419,
+          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-6.jpg',
+          category: 'ZALUZJE',
+        },
+        {
+          id: 418,
+          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-7.jpg',
+          category: 'ZALUZJE',
+        },
+        {
+          id: 417,
+          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-8.jpg',
+          category: 'ZALUZJE',
+        },
+        {
+          id: 416,
+          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-9.jpg',
           category: 'ZALUZJE',
         },
 

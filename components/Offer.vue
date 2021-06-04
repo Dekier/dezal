@@ -3,14 +3,18 @@
     <div class="Offer__center-container">
       <div class="Offer__title">{{ offerData.title }}</div>
       <div class="Offer__description">{{ offerData.description }}</div>
-      <div class="Offer__boxes-container" @click="lol()">
+      <div class="Offer__boxes-container">
         <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
-          <h3 class="Offer__box-title">{{ box.title }}</h3>
+          <h3 class="Offer__box-title">
+            {{ offerDataBoxes[`box_${index + 1}_title`] }}
+          </h3>
           <div class="Offer__box-image-container">
             <div :style="urlStyle(box.url)" class="Offer__box-image" />
           </div>
-          <p class="Offer__box-text" style="-webkit-box-orient: vertical;">{{ box.text }}</p>
-          <nuxt-link :to="box.link" class="Offer__box-btn" >
+          <p class="Offer__box-text" style="-webkit-box-orient: vertical;">
+            {{ offerDataBoxes[`box_${index + 1}_description`] }}
+          </p>
+          <nuxt-link :to="box.link" class="Offer__box-btn">
             Czytaj więcej
             <svg
               class="Offer__box-arrow"
@@ -37,87 +41,67 @@ export default {
       type: Object,
       required: true,
     },
-    offer_data_boxes: {
+    offerDataBoxes: {
       type: Object,
       required: true,
     },
   },
 
-  data() {
-    return {
-      activeTab: '',
-      boxesData: [
-        {
-          title: this.offer_data_boxes.box_1_title,
-          text: this.offer_data_boxes.box_1_description,
-          url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
-          link: '/rolety-dzien-noc',
-          type: 'dzien-noc',
-        },
-        {
-          title: this.offer_data_boxes.box_2_title,
-          text: this.offer_data_boxes.box_2_description,
-          url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
-          link: '/rolety-materialowe',
-          type: 'materialowe',
-        },
-        {
-          title: this.offer_data_boxes.box_3_title,
-          text: this.offer_data_boxes.box_3_description,
-          url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg',
-          link: '/rolety-rzymskie',
-          type: 'rzymskie',
-        },
-        {
-          title: this.offer_data_boxes.box_4_title,
-          text: this.offer_data_boxes.box_4_description,
-          url: '/image/plisy/deżal-poznań-plisa-1.jpg',
-          link: '/plisy',
-          type: 'plisy',
-        },
-        {
-          title: this.offer_data_boxes.box_5_title,
-          text: this.offer_data_boxes.box_5_description,
-          url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
-          link: '/zaluzje',
-          type: 'zaluzje',
-        },
-        {
-          title: this.offer_data_boxes.box_6_title,
-          text: this.offer_data_boxes.box_6_description,
-          url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
-          link: '/verticale',
-          type: 'verticale',
-        },
-        {
-          title: this.offer_data_boxes.box_7_title,
-          text: this.offer_data_boxes.box_7_description,
-          url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
-          link: '/moskitiery',
-          type: 'moskitiery',
-        },
-      ],
-    }
-  },
+  data: () => ({
+    activeTab: '',
+    boxesData: [
+      {
+        url: '/image/rolety/dezal-poznan-roleta-dzień-noc-2.jpg',
+        link: '/rolety-dzien-noc',
+        type: 'dzien-noc',
+      },
+      {
+        url: '/image/rolety/dezal-poznan-roleta-materiałowa-3.jpg',
+        link: '/rolety-materialowe',
+        type: 'materialowe',
+      },
+      {
+        url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg',
+        link: '/rolety-rzymskie',
+        type: 'rzymskie',
+      },
+      {
+        url: '/image/plisy/deżal-poznań-plisa-1.jpg',
+        link: '/plisy',
+        type: 'plisy',
+      },
+      {
+        url: '/image/zaluzje/deżal-poznań-żaluzja-drewniana-1.jpg',
+        link: '/zaluzje',
+        type: 'zaluzje',
+      },
+      {
+        url: '/image/verticale/deżal-poznań-roleta-verticale-1.jpg',
+        link: '/verticale',
+        type: 'verticale',
+      },
+      {
+        url: '/image/moskitiery/dezal-poznan-moskitiera-1.jpg',
+        link: '/moskitiery',
+        type: 'moskitiery',
+      },
+    ],
+  }),
 
   computed: {
     showBoxes() {
-      const newList = this.boxesData.filter((box) =>
+      return this.boxesData.filter(box =>
         this.offerData.showBoxes.includes(box.type)
-      )
-      return newList
+      );
     },
   },
 
   methods: {
     urlStyle(url) {
-      return `background-image: url(${url})`
+      return `background-image: url(${url})`;
     },
-    lol() {
-      this.$gtm.push({ event: 'heh'})
-    }
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
