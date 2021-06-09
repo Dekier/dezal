@@ -106,9 +106,22 @@ export default {
       appId: "1:1098134824316:web:03f74fc2d6433efa"
     },
     services: {
-      firestore: true
+      firestore: { 
+        enablePersistence: {
+          synchronizeTabs: true
+        }
+      }
     },
   },
 
-  build: {},
+  build: {
+    extend(config, { isServer }) {
+      if (isServer) {
+        config.externals = {
+          '@firebase/app': 'commonjs @firebase/app',
+          '@firebase/firestore': 'commonjs @firebase/firestore',
+        }
+      }
+    }
+  },
 };
