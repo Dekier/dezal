@@ -43,8 +43,9 @@
     background-image: url('/image/logo2.jpg');
     background-repeat: no-repeat;
     background-size: contain;
-    box-shadow: 0px 0px 5px 0px $color-gray;
+    box-shadow: 0px 0px 5px 0px rgba($color: $color-gray, $alpha: 0.3);
     margin: auto 0;
+    border-radius: 4px;
     justify-content: flex-start;
   }
 
@@ -236,23 +237,19 @@
 
 .Header__link:hover svg line.svg-top-left,
 .Header__link:hover svg line.svg-bottom-left {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .Header__link:hover svg line.svg-top-right,
 .Header__link:hover svg line.svg-bottom-right {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .svg-bottom-right--active {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .svg-bottom-left--active {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -262,9 +259,6 @@
 }
 
 .fade-enter,
-.fade-leave-to
-
-/* .fade-leave-active below version 2.1.8 */
-  {
+.fade-leave-to {
   opacity: 0;
 }

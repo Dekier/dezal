@@ -1,14 +1,14 @@
 <template>
   <div>
-    <ProductInformation :pageData="pageData" :bottom-images="bottomImages" />
-    <Offer :offerData="offerData" :offer_data_boxes="offer_data_boxes" />
+    <product-information :page-data="pageData" :bottom-images="bottomImages" />
+    <offer :offer-data="offerData" :offer-data-boxes="offer" />
   </div>
 </template>
 
 <script>
-import ProductInformation from '~/components/Product-information.vue'
-import Offer from '~/components/Offer.vue'
-import { fireDb } from '~/plugins/firebase.js'
+import ProductInformation from '~/components/Product-information.vue';
+import Offer from '~/components/Offer.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'RoletyRzymskie',
@@ -20,29 +20,27 @@ export default {
 
   transition: 'bounce',
 
-  data() {
-    return {
-      bottomImages: [
-        { id: 1, url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg' },
-        { id: 2, url: '/image/rolety/dezal-poznan-roleta-rzymska-2.jpg' },
-        { id: 3, url: '/image/rolety/dezal-poznan-roleta-rzymska-4.jpg' },
+  data: () => ({
+    bottomImages: [
+      { id: 1, url: '/image/rolety/dezal-poznan-roleta-rzymska-1.jpg' },
+      { id: 2, url: '/image/rolety/dezal-poznan-roleta-rzymska-2.jpg' },
+      { id: 3, url: '/image/rolety/dezal-poznan-roleta-rzymska-4.jpg' },
+    ],
+    offerData: {
+      title: 'Zobacz również',
+      description:
+        'Polecamy również nasze pozostałe produkty. W pełnej ofercie firmy Deżal znajdziesz:',
+      showBoxes: [
+        'dzien-noc',
+        'materialowe',
+        'plisy',
+        'zaluzje',
+        'verticale',
+        'moskitiery',
       ],
-      offerData: {
-        title: 'Zobacz również',
-        description:
-          'Polecamy poza tym inne produkty. W ofercie firmy Deżal znajdziemy wiele palet kolorów:',
-        showBoxes: [
-          'dzien-noc',
-          'materialowe',
-          'plisy',
-          'zaluzje',
-          'verticale',
-          'moskitiery',
-        ],
-      },
-      title: 'Rolety Rzymskie w Poznaniu od firmy Deżal.',
-    }
-  },
+    },
+    title: 'Rolety Rzymskie w Poznaniu od firmy Deżal.',
+  }),
   head() {
     return {
       title: this.title,
@@ -53,28 +51,21 @@ export default {
           content: 'Rolety Rzymskie w Poznaniu na Piątkowie. Montaż w cene!',
         },
       ],
-    }
+    };
   },
 
-  async asyncData({ app, params, error }) {
-    const ref_offer = fireDb.collection('main').doc('offer')
-    let snap_offer
-    try {
-      snap_offer = await ref_offer.get()
-    } catch (e) {
-      console.error(e)
-    }
-    return {
-      offer_data_boxes: snap_offer.data(),
-      pageData: [
+  computed: {
+    ...mapGetters(['offer']),
+    pageData() {
+      return [
         {
           id: 0,
-          title: snap_offer.data().box_3_title,
+          title: this.offer.box_3_title,
           url: '/image/rolety/dezal-poznan-roleta-rzymska-0.jpg',
-          description: snap_offer.data().box_3_description,
+          description: this.offer.box_3_description,
         },
-      ],
-    }
+      ];
+    },
   },
-}
+};
 </script>

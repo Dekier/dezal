@@ -42,9 +42,10 @@
     text-align: center;
     padding: 10px 0 20px;
     color: $color-title;
+    transition: all 300ms;
 
     &--active {
-      color: $color-yellow;
+      // color: $color-yellow;
     }
   }
 
@@ -58,28 +59,25 @@
   }
 
   &__box--active &__box-text {
-    color: #b7b7b7;
+    // color: #b7b7b7;
   }
 
   &__box {
-    width: 390px;
-    padding: 40px;
-    border: 1px solid #f2f2f2;
+    max-width: 370px;
+    width: 100%;
+    padding: 30px;
     transition: all 400ms;
     cursor: default;
+    border-radius: 8px;
 
     &--active {
-      background: $color-gray;
+      // background: $color-gray;
     }
 
     svg {
       margin: auto;
       display: block;
       padding-bottom: 30px;
-    }
-
-    &+& {
-      border-left: none;
     }
   }
 
@@ -94,15 +92,14 @@
     }
 
     &__boxes {
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     &__box {
-      margin: auto;
-
-      &+& {
-        border: 1px solid #f2f2f2;
-      }
+      margin: 0;
+      border: unset;
     }
   }
 

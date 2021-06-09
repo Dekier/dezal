@@ -1,20 +1,15 @@
-module.exports = {
-  mode: 'universal',
-  server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost
+export default {
+  target: 'server',
+
+  htmlAttrs: {
+    lang: 'pl',
   },
 
   /*
    ** Headers of the page
    */
   head: {
-    htmlAttrs: {
-      lang: 'pl',
-      amp: true,
-    },
-    title:
-      'Deżal: Rolety dzień - noc w Poznaniu jak i Rolety Rzymskie, Plisy. Gwarantowana dobra jakość.',
+    title: 'DEŻAL: nowoczesne żaluzje, plisy i rolety | Poznań i okolice.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,7 +18,7 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content:
-          'Szeroki wybór osłon okiennych w Poznaniu m.in. Rolet materiałowych, Rolet dzień-noc, Rolet rzymskich, Plis, Verticali, Żaluzji drewnianych i Aluminiowych.',
+          'Oferowane przez lokalną firmę DEŻAL Poznań rolety, plisy i żaluzje to najwyższej jakości osłony okienne. Indywidualna oferta, szczegółowy pomiar i szybka realizacja.',
       },
       { 'http-equiv': 'cache-control', content: 'max-age=604800, public' },
     ],
@@ -42,11 +37,6 @@ module.exports = {
   },
 
   /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-
-  /*
    ** Global CSS
    */
   css: ['@/assets/stylesheets/mixins/main-variables.scss'],
@@ -58,7 +48,6 @@ module.exports = {
     { src: '~/plugins/aos.js', ssr: false },
     { src: '~/plugins/vue-scrollto.js', ssr: false },
     { src: '~plugins/ga.js', ssr: false },
-    '~/plugins/firebase.js',
   ],
 
   pwa: {
@@ -72,28 +61,27 @@ module.exports = {
       iconFileName: 'logo-pwa.png',
     },
   },
+
+  router: {
+    middleware: ['redirect'],
+  },
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
     'nuxt-sass-resources-loader',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/firebase'
   ],
 
   styleResources: {
     scss: ['@/assets/stylesheets/mixins/*.scss', '@/assets/stylesheets/*.scss'],
   },
-
-  /*
-   ** Axios module configuration
-   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
-
   sitemap: {
+    hostname: 'https://dezalroletypoznan.pl',
+    gzip: true,
     routes: [
       '/kontakt',
       '/rolety-dzien-noc',
@@ -107,30 +95,33 @@ module.exports = {
     ],
   },
 
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    analyze: true,
-    extend(config, ctx) {
-      // Run ESLint on save
-      config.node = {
-        fs: 'empty',
-      }
-      if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-          options: {
-            fix: true,
-          },
-        })
+  firebase: {
+    config: {
+      apiKey: "AIzaSyAzEy6DqrnNLqqjLagqEnxmzYRMrJrYX8A",
+      authDomain: "dezal-e34b9.firebaseapp.com",
+      databaseURL: "https://dezal-e34b9.firebaseio.com",
+      projectId: "dezal-e34b9",
+      storageBucket: "dezal-e34b9.appspot.com",
+      messagingSenderId: "1098134824316",
+      appId: "1:1098134824316:web:03f74fc2d6433efa"
+    },
+    services: {
+      firestore: { 
+        enablePersistence: {
+          synchronizeTabs: true
+        }
       }
     },
   },
-}
+
+  build: {
+    extend(config, { isServer }) {
+      if (isServer) {
+        config.externals = {
+          '@firebase/app': 'commonjs @firebase/app',
+          '@firebase/firestore': 'commonjs @firebase/firestore',
+        }
+      }
+    }
+  },
+};

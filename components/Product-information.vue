@@ -16,7 +16,7 @@
       <div
         class="ProductInformation__center-picture"
         :class="{
-          'ProductInformation__center-picture--inverted': oddClass(data.id)
+          'ProductInformation__center-picture--inverted': oddClass(data.id),
         }"
       >
         <div
@@ -27,7 +27,7 @@
       <div
         class="ProductInformation__center-text"
         :class="{
-          'ProductInformation__center-text--inverted': oddClass(data.id)
+          'ProductInformation__center-text--inverted': oddClass(data.id),
         }"
       >
         <h2 class="ProductInformation__center-title">
@@ -36,6 +36,9 @@
         <p class="ProductInformation__product-description">
           {{ data.description }}
         </p>
+        <div class="ProductInformation__info">
+          W żaluzje, plisy i rolety zaopatrujemy Poznań i okolice.
+        </div>
       </div>
     </div>
     <div class="ProductInformation__bottom-container">
@@ -76,7 +79,7 @@
 </template>
 
 <script>
-import Gallery from '~/components/Gallery.vue'
+import Gallery from '~/components/Gallery.vue';
 
 export default {
   name: 'ProductInformation',
@@ -84,63 +87,57 @@ export default {
   props: {
     pageData: {
       type: Array,
-      required: true
+      required: true,
     },
     bottomImages: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
 
   components: {
-    Gallery
+    Gallery,
   },
 
-  data() {
-    return {
-      activeGallery: false,
-      activeImageIndex: null
-    }
-  },
+  data: () => ({
+    activeGallery: false,
+    activeImageIndex: null,
+  }),
 
   methods: {
     urlStyle(url) {
-      return `background-image: url(${url})`
+      return `background-image: url(${url})`;
     },
     oddClass(id) {
-      if (id % 2 !== 0) {
-        return true
-      }
-      return false
+      return id % 2 !== 0 ? true : false;
     },
 
     showBigGallery(index) {
-      this.activeGallery = true
-      this.activeImageIndex = index
+      this.activeGallery = true;
+      this.activeImageIndex = index;
     },
     exitGallery() {
-      this.activeGallery = false
+      this.activeGallery = false;
     },
 
     beforeImage() {
       if (this.activeImageIndex > 0) {
-        this.activeImageIndex--
+        this.activeImageIndex--;
       } else if (this.activeImageIndex === 0) {
-        this.activeImageIndex = this.bottomImages.length - 1
+        this.activeImageIndex = this.bottomImages.length - 1;
       }
     },
 
     nextImage() {
       if (this.bottomImages.length > this.activeImageIndex + 1) {
-        this.activeImageIndex++
+        this.activeImageIndex++;
       } else if (this.activeImageIndex + 1 === this.bottomImages.length) {
-        this.activeImageIndex = 0
+        this.activeImageIndex = 0;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
-
 
 <style lang="scss" scoped>
 @import 'Product-information';

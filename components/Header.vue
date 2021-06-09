@@ -29,114 +29,135 @@
       <transition name="fade">
         <nav v-if="showMobileBtn" class="Header__links-container-mobile">
           <nuxt-link
-            @mouseover="showDropDown = false"
-            @click.native="
-              ;(showMobileBtn = false), (showMobileDropDown = false)
-            "
             v-scroll-to="'#hero'"
             id="Header__home"
             class="Header__link-mobile"
             to="/"
-          >STRONA GŁÓWNA</nuxt-link>
-          <span @click="showMobileDropDown = !showMobileDropDown" class="Header__link-mobile">
+            @mouseover="showDropDown = false"
+            @click.native="
+              (showMobileBtn = false), (showMobileDropDown = false)
+            "
+            >STRONA GŁÓWNA</nuxt-link
+          >
+          <span
+            class="Header__link-mobile"
+            @click="showMobileDropDown = !showMobileDropDown"
+          >
             OFERTA
-            <svg class="Header__link-arrow" width="10" height="10" viewBox="0 0 129 129">
+            <svg
+              class="Header__link-arrow"
+              width="10"
+              height="10"
+              viewBox="0 0 129 129"
+            >
               <path
                 d="M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z"
               />
             </svg>
           </span>
           <transition name="fade">
-            <div v-if="showMobileDropDown" class="Header__dropdown-container-mobile">
+            <div
+              v-if="showMobileDropDown"
+              class="Header__dropdown-container-mobile"
+            >
+              <nuxt-link
+                class="Header__dropdown-link-mobile"
+                to="/rolety-dzien-noc"
+                @click.native="
+                  (showMobileDropDown = false), (showMobileBtn = false)
+                "
+                >Rolety Dzień-Noc</nuxt-link
+              >
+              <nuxt-link
+                class="Header__dropdown-link-mobile"
+                to="/rolety-materialowe"
+                @click.native="
+                  (showMobileDropDown = false), (showMobileBtn = false)
+                "
+                >Rolety Materiałowe</nuxt-link
+              >
+              <nuxt-link
+                class="Header__dropdown-link-mobile"
+                to="/rolety-rzymskie"
+                @click.native="
+                  (showMobileDropDown = false), (showMobileBtn = false)
+                "
+                >Rolety Rzymskie</nuxt-link
+              >
+              <nuxt-link
+                class="Header__dropdown-link-mobile"
+                to="/plisy"
+                @click.native="
+                  (showMobileDropDown = false), (showMobileBtn = false)
+                "
+                >PLISY</nuxt-link
+              >
               <nuxt-link
                 class="Header__dropdown-link-mobile"
                 @click.native="
-                  ;(showMobileDropDown = false), (showMobileBtn = false)
+                  (showMobileDropDown = false), (showMobileBtn = false)
                 "
-                to="/rolety-dzien-noc/"
-              >Rolety Dzien-Noc</nuxt-link>
+                to="/zaluzje"
+                >Żaluzje</nuxt-link
+              >
               <nuxt-link
                 class="Header__dropdown-link-mobile"
                 @click.native="
-                  ;(showMobileDropDown = false), (showMobileBtn = false)
+                  (showMobileDropDown = false), (showMobileBtn = false)
                 "
-                to="/rolety-materialowe/"
-              >Rolety Materiałowe</nuxt-link>
+                to="/verticale"
+                >verticale</nuxt-link
+              >
               <nuxt-link
                 class="Header__dropdown-link-mobile"
                 @click.native="
-                  ;(showMobileDropDown = false), (showMobileBtn = false)
+                  (showMobileDropDown = false), (showMobileBtn = false)
                 "
-                to="/rolety-rzymskie/"
-              >Rolety Rzymskie</nuxt-link>
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                @click.native="
-                  ;(showMobileDropDown = false), (showMobileBtn = false)
-                "
-                to="/plisy/"
-              >PLISY</nuxt-link>
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                @click.native="
-                  ;(showMobileDropDown = false), (showMobileBtn = false)
-                "
-                to="/zaluzje/"
-              >Żaluzje</nuxt-link>
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                @click.native="
-                  ;(showMobileDropDown = false), (showMobileBtn = false)
-                "
-                to="/verticale/"
-              >verticale</nuxt-link>
-              <nuxt-link
-                class="Header__dropdown-link-mobile"
-                @click.native="
-                  ;(showMobileDropDown = false), (showMobileBtn = false)
-                "
-                to="/moskitiery/"
-              >moskitiery</nuxt-link>
+                to="/moskitiery"
+                >moskitiery</nuxt-link
+              >
             </div>
           </transition>
           <nuxt-link
             class="Header__link-mobile"
+            to="/realizacje"
             @click.native="
-              ;(showMobileBtn = false), (showMobileDropDown = false)
+              (showMobileBtn = false), (showMobileDropDown = false)
             "
-            to="/realizacje/"
-          >REALIZACJE</nuxt-link>
+            >REALIZACJE</nuxt-link
+          >
           <nuxt-link
             class="Header__link-mobile"
+            to="/kontakt"
             @click.native="
-              ;(showMobileBtn = false), (showMobileDropDown = false)
+              (showMobileBtn = false), (showMobileDropDown = false)
             "
-            to="/kontakt/"
-          >KONTAKT</nuxt-link>
+            >KONTAKT</nuxt-link
+          >
         </nav>
       </transition>
       <div class="Header__links-container">
         <nuxt-link
-          @click.native=";(showMobileBtn = false), (showMobileDropDown = false)"
-          @mouseover.native="showDropDown = false"
           v-scroll-to="'#hero'"
           id="Header__home"
           class="Header__link"
           to="/"
+          @click.native="(showMobileBtn = false), (showMobileDropDown = false)"
+          @mouseover.native="showDropDown = false"
         >
           STRONA GŁÓWNA
           <svg class="Header__link-border" width="200" height="50">
             <line
-              class="svg-bottom-left"
               :class="{ 'svg-bottom-left--active': pageActive === 'home' }"
+              class="svg-bottom-left"
               x1="-100"
               y1="50"
               x2="100"
               y2="50"
             />
             <line
-              class="svg-bottom-right"
               :class="{ 'svg-bottom-right--active': pageActive === 'home' }"
+              class="svg-bottom-right"
               x1="100"
               y1="50"
               x2="300"
@@ -144,74 +165,94 @@
             />
           </svg>
         </nuxt-link>
-        <div @mouseover="showDropDown = true" v-scroll-to="'#offer'" class="Header__link">
+        <div
+          v-scroll-to="'#offer'"
+          class="Header__link"
+          @mouseover="showDropDown = true"
+        >
           OFERTA
           <svg class="Header__link-border" width="200" height="50">
             <line
-              class="svg-bottom-left"
               :class="{ 'svg-bottom-left--active': pageActive === 'offer' }"
+              class="svg-bottom-left"
               x1="-100"
               y1="50"
               x2="100"
               y2="50"
             />
             <line
-              class="svg-bottom-right"
               :class="{ 'svg-bottom-right--active': pageActive === 'offer' }"
+              class="svg-bottom-right"
               x1="100"
               y1="50"
               x2="300"
               y2="50"
             />
           </svg>
-          <svg class="Header__link-arrow" width="10" height="10" viewBox="0 0 129 129">
+          <svg
+            class="Header__link-arrow"
+            width="10"
+            height="10"
+            viewBox="0 0 129 129"
+          >
             <path
               d="M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z"
             />
           </svg>
         </div>
-        <div @mouseleave="showDropDown = false" v-if="showDropDown" class="Header__dropdown">
+        <div
+          v-if="showDropDown"
+          class="Header__dropdown"
+          @mouseleave="showDropDown = false"
+        >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native=";(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-dzien-noc/"
-          >Rolety Dzien-Noc</nuxt-link>
+            @click.native="(showDropDown = false), (pageActive = 'offer')"
+            to="/rolety-dzien-noc"
+            >Rolety Dzień-Noc</nuxt-link
+          >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native=";(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-materialowe/"
-          >Rolety Materiałowe</nuxt-link>
+            @click.native="(showDropDown = false), (pageActive = 'offer')"
+            to="/rolety-materialowe"
+            >Rolety Materiałowe</nuxt-link
+          >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native=";(showDropDown = false), (pageActive = 'offer')"
-            to="/rolety-rzymskie/"
-          >Rolety Rzymskie</nuxt-link>
+            @click.native="(showDropDown = false), (pageActive = 'offer')"
+            to="/rolety-rzymskie"
+            >Rolety Rzymskie</nuxt-link
+          >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native=";(showDropDown = false), (pageActive = 'offer')"
-            to="/plisy/"
-          >PLISY</nuxt-link>
+            @click.native="(showDropDown = false), (pageActive = 'offer')"
+            to="/plisy"
+            >PLISY</nuxt-link
+          >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native=";(showDropDown = false), (pageActive = 'offer')"
-            to="/zaluzje/"
-          >zaluzje</nuxt-link>
+            @click.native="(showDropDown = false), (pageActive = 'offer')"
+            to="/zaluzje"
+            >Żaluzje</nuxt-link
+          >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native=";(showDropDown = false), (pageActive = 'offer')"
-            to="/verticale/"
-          >verticale</nuxt-link>
+            @click.native="(showDropDown = false), (pageActive = 'offer')"
+            to="/verticale"
+            >verticale</nuxt-link
+          >
           <nuxt-link
             class="Header__dropdown-link"
-            @click.native=";(showDropDown = false), (pageActive = 'offer')"
-            to="/moskitiery/"
-          >moskitiery</nuxt-link>
+            @click.native="(showDropDown = false), (pageActive = 'offer')"
+            to="/moskitiery"
+            >moskitiery</nuxt-link
+          >
         </div>
         <nuxt-link
           @click.native="pageActive = 'real'"
           @mouseover.native="showDropDown = false"
           class="Header__link"
-          to="/realizacje/"
+          to="/realizacje"
         >
           REALIZACJE
           <svg class="Header__link-border" width="200" height="50">
@@ -237,7 +278,7 @@
           class="Header__link"
           @click.native="pageActive = 'contact'"
           @mouseover.native="showDropDown = false"
-          to="/kontakt/"
+          to="/kontakt"
         >
           KONTAKT
           <svg class="Header__link-border" width="200" height="50">
@@ -268,46 +309,44 @@
 export default {
   name: 'Header',
 
-  data() {
-    return {
-      mediaName: 'phone',
-      showMobileBtn: false,
-      showDropDown: false,
-      showMobileDropDown: false,
-      pageActive: 'home',
-    }
-  },
+  data: () => ({
+    mediaName: 'phone',
+    showMobileBtn: false,
+    showDropDown: false,
+    showMobileDropDown: false,
+    pageActive: 'home',
+  }),
 
   mounted() {
-    this.pageName()
+    this.pageName();
   },
 
   computed: {
     circleClass() {
-      return `Header__circle--${this.activeTab}`
+      return `Header__circle--${this.activeTab}`;
     },
   },
   methods: {
     pageName() {
       switch (this.$route.path) {
         case '/':
-          this.pageActive = 'home'
-          break
+          this.pageActive = 'home';
+          break;
         case '/realizacje':
-          this.pageActive = 'real'
-          break
+          this.pageActive = 'real';
+          break;
         case '/kontakt':
-          this.pageActive = 'contact'
-          break
+          this.pageActive = 'contact';
+          break;
         case '/rolety-materialowe':
-          this.pageActive = 'offer'
-          break
+          this.pageActive = 'offer';
+          break;
         default:
-          break
+          break;
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -183,11 +183,7 @@
           />
           <a
             :href="
-              `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${
-                formData.name
-              } ${formData.surname}%0A%0AMój nr telefonu to: ${
-                formData.number
-              } %0A%0AMoja wiadomość: %0A${formData.text}`
+              `mailto:dezal.rolety@gmail.com?subject=Zapytanie klienta z strony&body=Nazywam się: ${formData.name} ${formData.surname}%0A%0AMój nr telefonu to: ${formData.number} %0A%0AMoja wiadomość: %0A${formData.text}`
             "
             class="Contact__submit"
           >
@@ -213,18 +209,16 @@ export default {
 
   transition: 'bounce',
 
-  data() {
-    return {
-      formData: {
-        name: '',
-        surname: '',
-        email: '',
-        number: '',
-        text: ''
-      },
-      title: 'Deżal - Kontakt'
-    }
-  },
+  data: () => ({
+    formData: {
+      name: '',
+      surname: '',
+      email: '',
+      number: '',
+      text: '',
+    },
+    title: 'Deżal - Kontakt - Rolety Poznań',
+  }),
 
   head() {
     return {
@@ -233,12 +227,12 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Szybki telefon, szybka odpowiedź.'
-        }
-      ]
-    }
-  }
-}
+          content: 'Szybki telefon, szybka odpowiedź.',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
