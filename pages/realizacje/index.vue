@@ -81,6 +81,7 @@
             :src="imageData.url"
             :alt="imageAlt(imageData)"
             class="Realization__project-image"
+            @click="showBigGallery(index)"
           />
           <div
             class="Realization__hover-background"

@@ -9,7 +9,7 @@
             {{ offerDataBoxes[`box_${index + 1}_title`] }}
           </h3>
           <div class="Offer__box-image-container">
-            <div :style="urlStyle(box.url)" class="Offer__box-image" />
+            <img :src="box.url" class="Offer__box-image" :alt="box.link" />
           </div>
           <p class="Offer__box-text" style="-webkit-box-orient: vertical;">
             {{ offerDataBoxes[`box_${index + 1}_description`] }}
@@ -93,12 +93,6 @@ export default {
       return this.boxesData.filter(box =>
         this.offerData.showBoxes.includes(box.type)
       );
-    },
-  },
-
-  methods: {
-    urlStyle(url) {
-      return `background-image: url(${url})`;
     },
   },
 };
