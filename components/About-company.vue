@@ -113,21 +113,21 @@ export default {
 
   computed: {
     activeSvgOne() {
-      if (this.activeBox === 1) {
-        return '#ffe100';
-      }
+      // if (this.activeBox === 1) {
+      //   return '#ffe100';
+      // }
       return '#323232';
     },
     activeSvgTwo() {
-      if (this.activeBox === 2) {
-        return '#ffe100';
-      }
+      // if (this.activeBox === 2) {
+      //   return '#ffe100';
+      // }
       return '#323232';
     },
     activeSvgThree() {
-      if (this.activeBox === 3) {
-        return '#ffe100';
-      }
+      // if (this.activeBox === 3) {
+      //   return '#ffe100';
+      // }
       return '#323232';
     },
   },

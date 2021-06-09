@@ -107,6 +107,8 @@
   &__label {
     border: 1px solid $color-border;
     border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     padding: 0px 25px;
     min-height: 55px;
     box-sizing: border-box;
@@ -151,6 +153,8 @@
     border: 1px solid $color-border;
     padding: 0px 25px;
     width: 50%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
     &:last-child {
       border-left: none;
@@ -188,6 +192,8 @@
     width: 450px;
     min-height: 55px;
     margin: 0 auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 
     &:focus {
       outline: none;
@@ -260,6 +266,12 @@
     background: $color-yellow;
     cursor: pointer;
     text-decoration: none;
+    border-radius: 4px;
+    transition: box-shadow 300ms;
+
+    &:hover {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
     &:focus {
       outline: none;

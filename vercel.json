@@ -6,11 +6,13 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/now-builder",
       "config": {
+        "generateStaticRoutes": false,
         "serverFiles": [
           "middleware/**",
           "plugins/**",
           "lib/**",
-          "package.json"
+          "package.json",
+          "./.nuxt/dist/sitemap-routes.json"
         ]
       }
     }
