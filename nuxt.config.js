@@ -73,7 +73,8 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-sass-resources-loader',
     '@nuxtjs/sitemap',
-    '@nuxtjs/firebase'
+    '@nuxtjs/firebase',
+    '@nuxtjs/robots',
   ],
 
   styleResources: {
@@ -93,6 +94,10 @@ export default {
       '/moskitiery',
       '/realizacje',
     ],
+  },
+
+  robots: {
+    Sitemap: "./.nuxt/dist/sitemap-routes.json"
   },
 
   firebase: {
