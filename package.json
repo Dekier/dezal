@@ -20,7 +20,6 @@
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^0.1.1",
-    "@nuxtjs/vercel-builder": "^0.21.2",
     "cross-env": "^5.2.0",
     "eslint-config-prettier-standard": "^3.0.1",
     "eslint-config-standard": "^14.1.0",
@@ -29,7 +28,6 @@
     "nuxt": "^2.15.6"
   },
   "devDependencies": {
-    "aos": "^2.3.4",
     "babel-eslint": "^8.2.1",
     "css-loader": "4.2.0",
     "eslint": "^5.0.1",
