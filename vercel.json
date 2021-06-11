@@ -12,7 +12,7 @@
           "plugins/**",
           "lib/**",
           "package.json",
-          "./.nuxt/dist/sitemap-routes.json"
+          "/sitemap.xml"
         ]
       }
     }
