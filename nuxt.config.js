@@ -81,7 +81,7 @@ export default {
   },
   sitemap: {
     hostname: 'https://dezalroletypoznan.pl',
-    gzip: true,
+    gzip: false,
     routes: [
       '/kontakt',
       '/rolety-dzien-noc',
@@ -96,7 +96,7 @@ export default {
   },
 
   robots: {
-    Sitemap: "./.nuxt/dist/sitemap-routes.json"
+    Sitemap: "/sitemap.xml"
   },
 
   firebase: {
