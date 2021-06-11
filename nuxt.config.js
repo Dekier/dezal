@@ -96,7 +96,9 @@ export default {
   },
 
   robots: {
-    Sitemap: "/sitemap.xml"
+    UserAgent: '*',
+    Allow: '*',
+    Sitemap: "https://dezalroletypoznan.pl/sitemap.xml"
   },
 
   firebase: {
