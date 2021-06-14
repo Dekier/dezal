@@ -15,7 +15,8 @@
   }
 
   &__links-container,
-  &__offer-container {
+  &__offer-container,
+  &__open-hours-container {
     display: flex;
     flex-direction: column;
   }

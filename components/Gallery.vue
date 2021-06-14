@@ -28,9 +28,11 @@
         />
       </svg>
     </div>
-    <div
+    <img
+      loading="lazy"
       class="Gallery__image"
-      :style="{ 'background-image': `url(${getImage})` }"
+      :src="getImage"
+      alt="Dezal rolery pozan"
     />
   </div>
 </template>
@@ -50,25 +52,24 @@ export default {
 
   computed: {
     getImage() {
-      return this.images[this.index].url
+      return this.images[this.index].url;
     },
   },
 
   methods: {
     exit() {
-      this.$emit('exit')
+      this.$emit('exit');
     },
     beforeImage() {
-      this.$emit('beforeImage')
+      this.$emit('beforeImage');
     },
     nextImage() {
-      this.$emit('nextImage')
+      this.$emit('nextImage');
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 @import 'Gallery';
 </style>
-

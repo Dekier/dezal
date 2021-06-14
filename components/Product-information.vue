@@ -36,9 +36,9 @@
         <p class="ProductInformation__product-description">
           {{ data.description }}
         </p>
-        <div class="ProductInformation__info">
+        <p class="ProductInformation__info">
           W żaluzje, plisy i rolety zaopatrujemy Poznań i okolice.
-        </div>
+        </p>
       </div>
     </div>
     <div class="ProductInformation__bottom-container">
@@ -67,7 +67,7 @@
         </div>
       </div>
     </div>
-    <Gallery
+    <gallery
       v-if="activeGallery"
       :index="activeImageIndex"
       :images="bottomImages"

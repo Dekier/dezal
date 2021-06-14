@@ -48,9 +48,10 @@
     }
 
     svg {
-      left: 12px;
-      width: 30px;
-      top: 10px;
+      left: calc(50% + 2px);
+      width: 24px;
+      top: 50%;
+      transform: translate(-50%, -50%);
       position: relative;
     }
   }
@@ -70,23 +71,23 @@
     }
 
     svg {
-      left: 12px;
-      width: 30px;
-      top: 10px;
+      left: calc(50% + 2px);
+      width: 24px;
+      top: 50%;
       position: relative;
+      transform: translate(-50%, -50%);
     }
   }
 
   &__image {
-    width: 65%;
-    height: 65%;
+    max-width: 65%;
+    max-height: 65%;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
+    object-fit: contain;
+    border-radius: 4px;
   }
 
 

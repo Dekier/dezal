@@ -22,10 +22,10 @@
             </svg>
             Adres
           </div>
-          <div class="Contact__information-text">
+          <span class="Contact__information-text">
             ul. Jaroczyńskiego 41 <br />
             60-692 Poznań Piątkowo
-          </div>
+          </span>
           <div class="Contact__information-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,9 +40,9 @@
             </svg>
             Telefon
           </div>
-          <div class="Contact__information-text">
+          <span class="Contact__information-text">
             +48 603 630 299
-          </div>
+          </span>
           <div class="Contact__information-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,9 +61,9 @@
             </svg>
             Email
           </div>
-          <div class="Contact__information-text">
+          <span class="Contact__information-text">
             dezal.rolety@gmail.com
-          </div>
+          </span>
           <div class="Contact__information-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,10 +82,10 @@
             </svg>
             Godziny Otwarcia
           </div>
-          <div class="Contact__information-text">
+          <span class="Contact__information-text">
             pon. : 12:00 - 18:00 <br />
             wt.-pt. : 09:00 - 17:00
-          </div>
+          </span>
           <div class="Contact__information-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -125,11 +125,11 @@
             </svg>
             Dane do przelewu
           </div>
-          <div class="Contact__information-text">
+          <span class="Contact__information-text">
             Z.P.H.U. DEŻAL Dariusz Dekier <br />
             ul. Jaroczyńskiego 41, 60-692 Poznań<br />
             ING BANK ŚLĄSKI S.A. 83 1050 1520 1000 0090 6935 0826
-          </div>
+          </span>
         </div>
       </div>
       <div class="Contact__form-container">
