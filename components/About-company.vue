@@ -5,12 +5,12 @@
     class="AboutCompany__main-container"
   >
     <div class="AboutCompany__center-container">
-      <div class="AboutCompany__title">
+      <h2 class="AboutCompany__title">
         {{ aboutCompanyData.title }}
-      </div>
-      <div class="AboutCompany__description">
+      </h2>
+      <p class="AboutCompany__description">
         {{ aboutCompanyData.subtitle }}
-      </div>
+      </p>
       <div class="AboutCompany__boxes">
         <div
           @mouseover="activeBox = 1"
@@ -28,15 +28,15 @@
               />
             </g>
           </svg>
-          <div
+          <h3
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 1 }"
           >
             {{ aboutCompanyData.box_1_title }}
-          </div>
-          <div class="AboutCompany__box-text">
+          </h3>
+          <p class="AboutCompany__box-text">
             {{ aboutCompanyData.box_1_description }}
-          </div>
+          </p>
         </div>
         <div
           @mouseover="activeBox = 2"
@@ -55,15 +55,15 @@
               />
             </g>
           </svg>
-          <div
+          <h3
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 2 }"
           >
             {{ aboutCompanyData.box_2_title }}
-          </div>
-          <div class="AboutCompany__box-text">
+          </h3>
+          <p class="AboutCompany__box-text">
             {{ aboutCompanyData.box_2_description }}
-          </div>
+          </p>
         </div>
         <div
           @mouseover="activeBox = 3"
@@ -81,15 +81,15 @@
               />
             </g>
           </svg>
-          <div
+          <h3
             class="AboutCompany__box-title"
             :class="{ 'AboutCompany__box-title--active': activeBox === 3 }"
           >
             {{ aboutCompanyData.box_3_title }}
-          </div>
-          <div class="AboutCompany__box-text">
+          </h3>
+          <p class="AboutCompany__box-text">
             {{ aboutCompanyData.box_3_description }}
-          </div>
+          </p>
         </div>
       </div>
     </div>

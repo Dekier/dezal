@@ -70,7 +70,6 @@
           >MOSKITIERY</span
         >
       </div>
-      <!-- <transition-group class="Realization__projects" name="projects"> -->
       <div class="Realization__projects">
         <div
           v-for="(imageData, index) in allImages"
@@ -78,6 +77,7 @@
           class="Realization__project"
         >
           <img
+            loading="lazy"
             :src="imageData.url"
             :alt="imageAlt(imageData)"
             class="Realization__project-image"
@@ -96,9 +96,8 @@
           </div>
         </div>
       </div>
-      <!-- </transition-group> -->
     </div>
-    <Gallery
+    <gallery
       v-if="activeGallery"
       :index="activeImageIndex"
       :images="images"

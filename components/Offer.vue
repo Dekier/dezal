@@ -1,15 +1,20 @@
 <template>
   <div id="offer" class="Offer__main-container">
     <div class="Offer__center-container">
-      <div class="Offer__title">{{ offerData.title }}</div>
-      <div class="Offer__description">{{ offerData.description }}</div>
+      <h2 class="Offer__title">{{ offerData.title }}</h2>
+      <p class="Offer__description">{{ offerData.description }}</p>
       <div class="Offer__boxes-container">
         <div v-for="(box, index) in showBoxes" :key="index" class="Offer__box">
           <h3 class="Offer__box-title">
             {{ offerDataBoxes[`box_${index + 1}_title`] }}
           </h3>
           <div class="Offer__box-image-container">
-            <img :src="box.url" class="Offer__box-image" :alt="box.link" />
+            <img
+              loading="lazy"
+              :src="box.url"
+              class="Offer__box-image"
+              :alt="box.link"
+            />
           </div>
           <p class="Offer__box-text" style="-webkit-box-orient: vertical;">
             {{ offerDataBoxes[`box_${index + 1}_description`] }}

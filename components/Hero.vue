@@ -6,9 +6,9 @@
       <h1 class="Hero__title">
         {{ textData.title }}
       </h1>
-      <h2 class="Hero__description">
+      <p class="Hero__description">
         {{ textData.subtitle }}
-      </h2>
+      </p>
       <div class="Hero__btns-container">
         <div v-scroll-to="'#offer'" class="Hero__button">
           <span>{{ textData.button }}</span>
