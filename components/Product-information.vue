@@ -30,9 +30,9 @@
           'ProductInformation__center-text--inverted': oddClass(data.id),
         }"
       >
-        <h2 class="ProductInformation__center-title">
+        <h1 class="ProductInformation__center-title">
           {{ data.title }}
-        </h2>
+        </h1>
         <p class="ProductInformation__product-description">
           {{ data.description }}
         </p>
